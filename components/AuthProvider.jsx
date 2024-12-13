@@ -42,5 +42,12 @@ export default function AuthProvider({ children }) {
     }
   };
 
+  useEffect(() => {
+    const token = getToken();
+    if (token) {
+      fetchUserData(token);
+    }
+  }, [fetchUserData, getToken]);
+
   return children;
 }
