@@ -13,7 +13,7 @@ export default function OrderPage() {
     country: '',
     address: '',
     orderDescription: '',
-    notes: ''
+    notes: '',
   });
 
   const handleSubmit = (e) => {
@@ -30,7 +30,7 @@ export default function OrderPage() {
           <h1 className="font-poppins font-bold text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[160%] text-[#192B1A] w-full">
             please fill this form to proceed your order
           </h1>
-          
+
           <div className="flex flex-col items-center gap-16 sm:gap-[80px] lg:gap-[110px] w-full max-w-[420px]">
             <form className="flex flex-col items-start gap-6 sm:gap-[30px] lg:gap-[43px] w-full">
               {[
@@ -40,7 +40,7 @@ export default function OrderPage() {
                 { name: 'country', label: 'Country' },
                 { name: 'address', label: 'Address' },
                 { name: 'orderDescription', label: 'Order Description' },
-                { name: 'notes', label: 'Notes' }
+                { name: 'notes', label: 'Notes' },
               ].map((field) => (
                 <div key={field.name} className="flex flex-col items-start w-full">
                   <input
@@ -74,7 +74,7 @@ export default function OrderPage() {
                 </span>
               </div>
             </div>
-            
+
             <button
               onClick={handleSubmit}
               className="flex justify-center items-center px-4 py-3 sm:py-4 border-2 border-[#192B1A] rounded-2xl w-[100px] sm:w-[116px] h-[50px] sm:h-[67px]"
@@ -97,7 +97,7 @@ export default function OrderPage() {
                 className="object-cover"
               />
             </div>
-            
+
             <div className="flex flex-col items-center gap-2 sm:gap-4 w-full text-center">
               <h3 className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#BF1111]">
                 NOTE
@@ -107,14 +107,9 @@ export default function OrderPage() {
               </p>
             </div>
           </div>
-          
+
           <div className="w-[200px] sm:w-[250px] md:w-[300px] h-[200px] sm:h-[250px] md:h-[300px] relative">
-            <Image
-              src="/images/XBXBG 4.png"
-              alt="XBX Background"
-              fill
-              className="object-cover"
-            />
+            <Image src="/images/XBXBG 4.png" alt="XBX Background" fill className="object-cover" />
           </div>
         </div>
       </div>

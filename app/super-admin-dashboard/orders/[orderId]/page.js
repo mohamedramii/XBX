@@ -11,7 +11,7 @@ const OrderDetailsPage = () => {
     { name: 'All', count: 12 },
     { name: 'Completed', count: 8 },
     { name: 'Pending', count: 4 },
-    { name: 'Cancelled', count: 2 }
+    { name: 'Cancelled', count: 2 },
   ];
 
   const orders = [
@@ -24,7 +24,7 @@ const OrderDetailsPage = () => {
       status: 'Pending',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
+      image: '/images/laptopproduct.png',
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const OrderDetailsPage = () => {
       status: 'Delivered',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
+      image: '/images/laptopproduct.png',
     },
     {
       id: 3,
@@ -46,8 +46,8 @@ const OrderDetailsPage = () => {
       status: 'Cancelled',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
-    }
+      image: '/images/laptopproduct.png',
+    },
   ];
 
   const router = useRouter();
@@ -112,9 +112,7 @@ const OrderDetailsPage = () => {
                     : 'bg-[rgba(224,224,224,0.6)] text-[#787777] font-medium'
                 }`}
               >
-                <span className="text-base md:text-xl leading-[30px]">
-                  {category.name}
-                </span>
+                <span className="text-base md:text-xl leading-[30px]">{category.name}</span>
               </button>
             ))}
           </div>
@@ -123,7 +121,10 @@ const OrderDetailsPage = () => {
         {/* Orders List */}
         <div className="flex flex-col gap-5">
           {orders.map((order) => (
-            <div key={order.id} className="relative bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-[20px] overflow-hidden">
+            <div
+              key={order.id}
+              className="relative bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-[20px] overflow-hidden"
+            >
               <div className="flex flex-col md:flex-row">
                 {/* Product Image */}
                 <div className="w-full md:w-[169px] h-[144px] relative">
@@ -141,7 +142,8 @@ const OrderDetailsPage = () => {
                     {order.productName}
                   </h3>
                   <p className="font-poppins font-semibold text-xs md:text-[14px] leading-[21px] text-[#11A900]">
-                    Quantity : {order.quantity} | Price Per Piece : {order.pricePerPiece}$ | Total Price : {order.totalPrice}$ | Status : {order.status}
+                    Quantity : {order.quantity} | Price Per Piece : {order.pricePerPiece}$ | Total
+                    Price : {order.totalPrice}$ | Status : {order.status}
                   </p>
                   <p className="font-poppins font-semibold text-xs md:text-[14px] leading-[21px] text-[#061404]">
                     UserName : {order.username} | OrderDate : {order.orderDate}
@@ -150,15 +152,11 @@ const OrderDetailsPage = () => {
 
                 {/* Status Icon */}
                 {getStatusIcon(order.status) && (
-                  <div 
+                  <div
                     className="absolute hidden md:block"
                     style={getStatusIconStyle(order.status)}
                   >
-                    <Image
-                      src={getStatusIcon(order.status)}
-                      alt={order.status}
-                      fill
-                    />
+                    <Image src={getStatusIcon(order.status)} alt={order.status} fill />
                   </div>
                 )}
               </div>

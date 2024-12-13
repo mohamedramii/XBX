@@ -10,26 +10,26 @@ const NotificationPage = () => {
   const [selectedUserGroups, setSelectedUserGroups] = useState({
     allUsers: false,
     customers: false,
-    investors: false
+    investors: false,
   });
 
   const users = [
     {
       username: '@lordseif07',
       email: 'corosempi@gmail.com',
-      role: 'Customer'
+      role: 'Customer',
     },
     {
       username: '@corozan_45',
       email: 'corozan_45@gmail.com',
-      role: 'Customer'
-    }
+      role: 'Customer',
+    },
   ];
 
   const handleCheckboxChange = (group) => {
-    setSelectedUserGroups(prev => ({
+    setSelectedUserGroups((prev) => ({
       ...prev,
-      [group]: !prev[group]
+      [group]: !prev[group],
     }));
   };
 
@@ -37,7 +37,7 @@ const NotificationPage = () => {
     <>
       {/* Search Bar */}
       <div className="flex flex-row items-center px-3 sm:px-5 py-2 sm:py-[10px] gap-[5px] w-full bg-[#FBFBFB] border border-[#919191] rounded-[20px]">
-        <Image 
+        <Image
           src="/icons/search-dashboard.svg"
           width={20}
           height={20}
@@ -56,14 +56,21 @@ const NotificationPage = () => {
       {/* User List */}
       <div className="flex flex-col gap-4 sm:gap-5 w-full">
         {users.map((user, index) => (
-          <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center gap-[10px] w-full max-w-[678px]">
+          <div
+            key={index}
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-[10px] w-full max-w-[678px]"
+          >
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center px-4 sm:px-[31px] py-3 sm:py-[22px] w-full max-w-[618px] bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-[20px] gap-2 sm:gap-0">
               <span className="text-[14px] sm:text-[18px] font-medium">{user.username}</span>
-              <span className="text-[14px] sm:text-[18px] font-medium text-[#787777]">{user.email}</span>
-              <span className="text-[14px] sm:text-[18px] font-bold text-[#11A900]">{user.role}</span>
+              <span className="text-[14px] sm:text-[18px] font-medium text-[#787777]">
+                {user.email}
+              </span>
+              <span className="text-[14px] sm:text-[18px] font-bold text-[#11A900]">
+                {user.role}
+              </span>
             </div>
             <button className="p-2">
-              <Image 
+              <Image
                 src="/icons/close-dashboard-icon.svg"
                 width={35}
                 height={35}
@@ -81,20 +88,29 @@ const NotificationPage = () => {
     <div className="flex flex-col gap-4 sm:gap-[30px] w-full">
       {/* User Groups Selection */}
       <div className="flex flex-wrap items-center gap-3 sm:gap-[20px]">
-        <div className="flex flex-row items-center gap-[10px] cursor-pointer" onClick={() => handleCheckboxChange('allUsers')}>
-          <div 
+        <div
+          className="flex flex-row items-center gap-[10px] cursor-pointer"
+          onClick={() => handleCheckboxChange('allUsers')}
+        >
+          <div
             className={`w-[15px] sm:w-[20px] h-[15px] sm:h-[20px] border-2 border-[#11A900] ${selectedUserGroups.allUsers ? 'bg-[#11A900]' : 'bg-[#FBFBFB]'}`}
           />
           <span className="text-[14px] sm:text-[18px] font-medium">All XBX Users</span>
         </div>
-        <div className="flex flex-row items-center gap-[10px] cursor-pointer" onClick={() => handleCheckboxChange('customers')}>
-          <div 
+        <div
+          className="flex flex-row items-center gap-[10px] cursor-pointer"
+          onClick={() => handleCheckboxChange('customers')}
+        >
+          <div
             className={`w-[15px] sm:w-[20px] h-[15px] sm:h-[20px] border-2 border-[#11A900] ${selectedUserGroups.customers ? 'bg-[#11A900]' : 'bg-[#FBFBFB]'}`}
           />
           <span className="text-[14px] sm:text-[18px] font-medium">Customers</span>
         </div>
-        <div className="flex flex-row items-center gap-[10px] cursor-pointer" onClick={() => handleCheckboxChange('investors')}>
-          <div 
+        <div
+          className="flex flex-row items-center gap-[10px] cursor-pointer"
+          onClick={() => handleCheckboxChange('investors')}
+        >
+          <div
             className={`w-[15px] sm:w-[20px] h-[15px] sm:h-[20px] border-2 border-[#11A900] ${selectedUserGroups.investors ? 'bg-[#11A900]' : 'bg-[#FBFBFB]'}`}
           />
           <span className="text-[14px] sm:text-[18px] font-medium">Investors</span>
@@ -115,7 +131,7 @@ const NotificationPage = () => {
                 Notification
               </h1>
             </div>
-            
+
             {/* Category Tabs */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-[10px] w-full">
               <button
@@ -147,12 +163,15 @@ const NotificationPage = () => {
 
         {/* Warning Text */}
         <p className="text-[14px] sm:text-[18px] text-[#787777] leading-[20px] sm:leading-[27px]">
-          Before sending any notification to users, ensure that the message is free of spelling errors and uses clear, professional language.
+          Before sending any notification to users, ensure that the message is free of spelling
+          errors and uses clear, professional language.
         </p>
 
         {/* Notification Content */}
         <div className="flex flex-col gap-2 sm:gap-[10px] w-full">
-          <h2 className="text-[16px] sm:text-[18px] md:text-[20px] font-semibold">Notification Content</h2>
+          <h2 className="text-[16px] sm:text-[18px] md:text-[20px] font-semibold">
+            Notification Content
+          </h2>
           <textarea
             className="w-full h-[80px] sm:h-[100px] bg-[rgba(255,255,255,0.6)] border border-[#11A900] rounded-[20px] p-4 resize-none outline-none text-sm sm:text-base"
             value={notificationContent}

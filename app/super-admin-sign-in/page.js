@@ -1,24 +1,29 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { useRouter } from 'next/navigation'
-import { useDispatch, useSelector } from 'react-redux'
-import { loginSuperAdmin, selectSuperAdminUser, selectIsLoading, selectError } from '@/redux/slices/adminSlice'
-import { setToken } from '@/utils/auth'
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  loginSuperAdmin,
+  selectSuperAdminUser,
+  selectIsLoading,
+  selectError,
+} from '@/redux/slices/adminSlice';
+import { setToken } from '@/utils/auth';
 
 export default function SuperAdminSignIn() {
-  const router = useRouter()
-  const dispatch = useDispatch()
-  const superAdminUser = useSelector(selectSuperAdminUser)
-  const isLoading = useSelector(selectIsLoading)
-  const globalError = useSelector(selectError)
-  
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const superAdminUser = useSelector(selectSuperAdminUser);
+  const isLoading = useSelector(selectIsLoading);
+  const globalError = useSelector(selectError);
+
   const [formData, setFormData] = useState({
     userName: '',
-    password: ''
-  })
-  const [error, setError] = useState('')
+    password: '',
+  });
+  const [error, setError] = useState('');
 
   useEffect(() => {
     console.log('Current superAdminUser state:', superAdminUser);
@@ -28,12 +33,12 @@ export default function SuperAdminSignIn() {
       // Remove any existing admin token
       localStorage.removeItem('adminToken');
       document.cookie = 'adminToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-      
+
       setTimeout(() => {
         router.push('/super-admin-dashboard/overview');
       }, 100);
     }
-  }, [superAdminUser, router])
+  }, [superAdminUser, router]);
 
   useEffect(() => {
     if (globalError) {
@@ -43,39 +48,39 @@ export default function SuperAdminSignIn() {
   }, [globalError]);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setError('')
-    console.log('Submitting with data:', formData)
+    e.preventDefault();
+    setError('');
+    console.log('Submitting with data:', formData);
 
     try {
       // Remove any existing admin token before super admin login
       localStorage.removeItem('adminToken');
       document.cookie = 'adminToken=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-      
-      const result = await dispatch(loginSuperAdmin(formData)).unwrap()
-      console.log('Login result:', result)
-      
+
+      const result = await dispatch(loginSuperAdmin(formData)).unwrap();
+      console.log('Login result:', result);
+
       if (result.AccessToken) {
-        setToken(result.AccessToken, 'superAdmin')
-        console.log('Redirecting to dashboard...')
+        setToken(result.AccessToken, 'superAdmin');
+        console.log('Redirecting to dashboard...');
         setTimeout(() => {
-          router.push('/super-admin-dashboard/overview')
-        }, 100)
+          router.push('/super-admin-dashboard/overview');
+        }, 100);
       }
     } catch (err) {
-      console.error('Login error details:', err)
-      setError(err.message || 'Invalid credentials')
+      console.error('Login error details:', err);
+      setError(err.message || 'Invalid credentials');
     }
-  }
+  };
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
-    }))
-    setError('') // Clear error when user types
-  }
+      [name]: value,
+    }));
+    setError(''); // Clear error when user types
+  };
 
   return (
     <main className="min-h-screen w-full bg-[#FDFDFD] relative overflow-hidden">
@@ -104,16 +109,12 @@ export default function SuperAdminSignIn() {
 
             <div className="space-y-5">
               {/* Error Message */}
-              {error && (
-                <div className="text-red-500 text-center font-poppins">
-                  {error}
-                </div>
-              )}
+              {error && <div className="text-red-500 text-center font-poppins">{error}</div>}
 
               {/* Username Input */}
               <div className="relative">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="userName"
                   value={formData.userName}
                   onChange={handleInputChange}
@@ -125,8 +126,8 @@ export default function SuperAdminSignIn() {
 
               {/* Password Input */}
               <div className="relative">
-                <input 
-                  type="password" 
+                <input
+                  type="password"
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
@@ -137,7 +138,7 @@ export default function SuperAdminSignIn() {
               </div>
 
               {/* Sign In Button */}
-              <button 
+              <button
                 type="submit"
                 disabled={isLoading}
                 className="w-full h-[60px] flex justify-center items-center px-[20px] bg-[#11A900] rounded-[100px] transition-opacity hover:opacity-90 disabled:opacity-50"
@@ -161,7 +162,7 @@ export default function SuperAdminSignIn() {
         <BackgroundDots />
       </div>
     </main>
-  )
+  );
 }
 
 // Separate component for background dots
@@ -174,7 +175,7 @@ function BackgroundDots() {
           src="/pattern/circles-dashboard-signin.svg"
           width={400}
           height={497.41}
-          className='object-contain'
+          className="object-contain"
           alt="Background pattern"
         />
       </div>
@@ -185,10 +186,10 @@ function BackgroundDots() {
           src="/pattern/circles-dashboard-signin.svg"
           width={400}
           height={497.41}
-          className='object-contain'
+          className="object-contain"
           alt="Background pattern"
         />
       </div>
     </>
-  )
+  );
 }

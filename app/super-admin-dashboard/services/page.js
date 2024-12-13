@@ -11,27 +11,29 @@ const ServicesPage = () => {
     {
       id: 1,
       title: 'Mern Stack Development',
-      description: 'The MERN stack is a powerful framework for building modern web applications, combining MongoDB, Express.js, React.js, and Node.js. MongoDB serves as a scalable NoSQL database, enabling flexible data storage, while Express.js simplifies backend logic and API development. React.js powers dynamic and interactive user interfaces through its component-based architecture, enhancing modularity and reusability.',
+      description:
+        'The MERN stack is a powerful framework for building modern web applications, combining MongoDB, Express.js, React.js, and Node.js. MongoDB serves as a scalable NoSQL database, enabling flexible data storage, while Express.js simplifies backend logic and API development. React.js powers dynamic and interactive user interfaces through its component-based architecture, enhancing modularity and reusability.',
       image: '/images/laptopproduct.png',
       status: 'Available',
       price: 299,
       purchases: 12,
       category: 'programming',
       uploadedBy: '@corozan09',
-      uploadDate: '12 Oct 2024'
+      uploadDate: '12 Oct 2024',
     },
     {
       id: 2,
       title: 'Mern Stack Development',
-      description: 'The MERN stack is a powerful framework for building modern web applications, combining MongoDB, Express.js, React.js, and Node.js. MongoDB serves as a scalable NoSQL database, enabling flexible data storage, while Express.js simplifies backend logic and API development. React.js powers dynamic and interactive user interfaces through its component-based architecture, enhancing modularity and reusability.',
+      description:
+        'The MERN stack is a powerful framework for building modern web applications, combining MongoDB, Express.js, React.js, and Node.js. MongoDB serves as a scalable NoSQL database, enabling flexible data storage, while Express.js simplifies backend logic and API development. React.js powers dynamic and interactive user interfaces through its component-based architecture, enhancing modularity and reusability.',
       image: '/images/laptopproduct.png',
       status: 'Available',
       price: 299,
       purchases: 12,
       category: 'programming',
       uploadedBy: '@corozan09',
-      uploadDate: '12 Oct 2024'
-    }
+      uploadDate: '12 Oct 2024',
+    },
   ];
 
   return (
@@ -75,7 +77,10 @@ const ServicesPage = () => {
         {/* Services List */}
         <div className="flex flex-col gap-6 md:gap-8">
           {services.map((service) => (
-            <div key={service.id} className="relative bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden">
+            <div
+              key={service.id}
+              className="relative bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden"
+            >
               <div className="flex flex-col md:flex-row">
                 {/* Service Image */}
                 <div className="w-full md:w-[324px] h-[200px] md:h-[288px] relative">

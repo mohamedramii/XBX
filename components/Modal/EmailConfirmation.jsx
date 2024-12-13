@@ -42,9 +42,9 @@ export default function EmailConfirmation({ onClose, onContinue, onChangeEmail }
 
         {/* Description */}
         <p className="text-gray-600 w-[418px] font-semibold text-[14px] lg:text-[16px] text-center leading-relaxed z-10">
-          We will send a confirmation code to the email address you provide.
-          Please ensure you have access to this email account. If you would
-          like to use a different email, please update it before proceeding.
+          We will send a confirmation code to the email address you provide. Please ensure you have
+          access to this email account. If you would like to use a different email, please update it
+          before proceeding.
         </p>
 
         {/* Circle and Logo Wrapper */}

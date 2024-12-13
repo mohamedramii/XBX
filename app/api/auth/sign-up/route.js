@@ -28,16 +28,10 @@ export async function POST(request) {
       });
     } else {
       console.error('Sign-up failed:', signUpData);
-      return NextResponse.json(
-        { error: signUpData.error || 'Sign-up failed' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: signUpData.error || 'Sign-up failed' }, { status: 400 });
     }
   } catch (error) {
     console.error('Error in sign-up API route:', error);
-    return NextResponse.json(
-      { error: 'Server error', details: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Server error', details: error.message }, { status: 500 });
   }
 }

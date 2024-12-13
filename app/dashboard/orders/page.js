@@ -10,19 +10,55 @@ const OrdersPage = () => {
   const categories = [
     { name: 'All Users', count: 12 },
     { name: 'XBX Customers', count: 8 },
-    { name: 'XBX Investors', count: 4 }
+    { name: 'XBX Investors', count: 4 },
   ];
 
   const users = [
     { username: '@lordseif07', email: 'corosempi@gmail.com', orders: 12, status: 'active' },
     { username: '@lordseif07', email: 'corosempi@gmail.com', orders: 0, status: 'inactive' },
     { username: '@lordseif07', email: 'corosempi@gmail.com', orders: 3, status: 'pending' },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 0, status: 'inactive', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 6, status: 'active', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 6, status: 'active', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 5, status: 'pending', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 6, status: 'active', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 6, status: 'active', verified: true }
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 0,
+      status: 'inactive',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 6,
+      status: 'active',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 6,
+      status: 'active',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 5,
+      status: 'pending',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 6,
+      status: 'active',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 6,
+      status: 'active',
+      verified: true,
+    },
   ];
 
   const router = useRouter();
@@ -111,18 +147,28 @@ const OrdersPage = () => {
                 {user.username}
               </span>
               {user.verified && (
-                <div className="flex justify-center items-center w-[20px] sm:w-[28px] h-[20px] sm:h-[28px] rounded-full" style={{ backgroundColor: `${getStatusColor(user.status)}33` }}>
-                  <img src={getStatusIcon(user.status)} alt={`${user.status} icon`} className="w-4 sm:w-6 h-4 sm:h-6" />
+                <div
+                  className="flex justify-center items-center w-[20px] sm:w-[28px] h-[20px] sm:h-[28px] rounded-full"
+                  style={{ backgroundColor: `${getStatusColor(user.status)}33` }}
+                >
+                  <img
+                    src={getStatusIcon(user.status)}
+                    alt={`${user.status} icon`}
+                    className="w-4 sm:w-6 h-4 sm:h-6"
+                  />
                 </div>
               )}
             </div>
             <span className="font-poppins font-medium text-[14px] sm:text-[18px] text-[#787777]">
               {user.email}
             </span>
-            <span className="font-poppins font-bold text-[14px] sm:text-[18px]" style={{ color: getStatusColor(user.status) }}>
+            <span
+              className="font-poppins font-bold text-[14px] sm:text-[18px]"
+              style={{ color: getStatusColor(user.status) }}
+            >
               {user.orders} orders
             </span>
-            <button 
+            <button
               className="font-poppins font-bold text-[14px] sm:text-[18px] text-[#11A900]"
               onClick={() => handleViewOrder(user.username.replace('@', ''))}
             >

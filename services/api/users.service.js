@@ -7,12 +7,12 @@ class UsersService {
       const response = await api.get(ENDPOINTS.users.list, { params });
       return {
         success: true,
-        data: response.data
+        data: response.data,
       };
     } catch (error) {
       return {
         success: false,
-        error: error.response?.data?.message || 'Failed to fetch users'
+        error: error.response?.data?.message || 'Failed to fetch users',
       };
     }
   }
@@ -22,12 +22,12 @@ class UsersService {
       const response = await api.get(ENDPOINTS.users.getById.replace(':id', id));
       return {
         success: true,
-        data: response.data
+        data: response.data,
       };
     } catch (error) {
       return {
         success: false,
-        error: error.response?.data?.message || 'Failed to fetch user'
+        error: error.response?.data?.message || 'Failed to fetch user',
       };
     }
   }
@@ -37,12 +37,12 @@ class UsersService {
       const response = await api.post(ENDPOINTS.users.create, userData);
       return {
         success: true,
-        data: response.data
+        data: response.data,
       };
     } catch (error) {
       return {
         success: false,
-        error: error.response?.data?.message || 'Failed to create user'
+        error: error.response?.data?.message || 'Failed to create user',
       };
     }
   }
@@ -52,12 +52,12 @@ class UsersService {
       const response = await api.put(ENDPOINTS.users.update.replace(':id', id), userData);
       return {
         success: true,
-        data: response.data
+        data: response.data,
       };
     } catch (error) {
       return {
         success: false,
-        error: error.response?.data?.message || 'Failed to update user'
+        error: error.response?.data?.message || 'Failed to update user',
       };
     }
   }
@@ -66,12 +66,12 @@ class UsersService {
     try {
       await api.delete(ENDPOINTS.users.delete.replace(':id', id));
       return {
-        success: true
+        success: true,
       };
     } catch (error) {
       return {
         success: false,
-        error: error.response?.data?.message || 'Failed to delete user'
+        error: error.response?.data?.message || 'Failed to delete user',
       };
     }
   }

@@ -11,7 +11,7 @@ export default function OrderPage({ params }) {
     country: '',
     address: '',
     orderDescription: '',
-    notes: ''
+    notes: '',
   });
 
   const handleSubmit = (e) => {
@@ -28,7 +28,7 @@ export default function OrderPage({ params }) {
           <h1 className="font-poppins font-bold text-[40px] leading-[160%] text-[#192B1A] w-full">
             please fill this form to procced your order
           </h1>
-          
+
           <div className="flex flex-col items-center gap-[110px] w-[420px]">
             <form className="flex flex-col items-start gap-[43px] w-full">
               {[
@@ -38,7 +38,7 @@ export default function OrderPage({ params }) {
                 { name: 'country', label: 'Country' },
                 { name: 'address', label: 'Address' },
                 { name: 'orderDescription', label: 'Order Description' },
-                { name: 'notes', label: 'notes' }
+                { name: 'notes', label: 'notes' },
               ].map((field) => (
                 <div key={field.name} className="flex flex-col items-start gap-[40px] w-full">
                   <input
@@ -56,22 +56,28 @@ export default function OrderPage({ params }) {
           {/* Price Section */}
           <div className="flex flex-row justify-between items-center w-full gap-[48px] h-[174px]">
             <div className="relative w-[260px] h-[174px]">
-              <h3 className="absolute font-poppins font-bold text-[28px] leading-[160%] text-[#BF1111] top-0">Price</h3>
+              <h3 className="absolute font-poppins font-bold text-[28px] leading-[160%] text-[#BF1111] top-0">
+                Price
+              </h3>
               <div className="absolute top-[60px] font-poppins font-bold text-[24px] leading-[160%] text-[#192B1A]">
                 BEFORE SALE
-                <span className="absolute left-[193px] top-[3px] font-medium text-[20px]">20500</span>
+                <span className="absolute left-[193px] top-[3px] font-medium text-[20px]">
+                  20500
+                </span>
               </div>
               <div className="absolute top-[136px] font-poppins font-bold text-[24px] leading-[160%] text-[#192B1A]">
                 AFTER SALE
                 <span className="absolute left-[183px] font-bold text-[24px]">20000</span>
               </div>
             </div>
-            
+
             <button
               onClick={handleSubmit}
               className="flex justify-center items-center px-4 py-4 border-2 border-[#192B1A] rounded-2xl w-[116px] h-[67px]"
             >
-              <span className="font-poppins font-bold text-[22px] leading-[160%] text-[#192B1A]">SUBMIT</span>
+              <span className="font-poppins font-bold text-[22px] leading-[160%] text-[#192B1A]">
+                SUBMIT
+              </span>
             </button>
           </div>
         </div>
@@ -86,7 +92,7 @@ export default function OrderPage({ params }) {
               height={431}
               className="object-cover"
             />
-            
+
             <div className="flex flex-col items-center gap-4 w-full">
               <h3 className="font-poppins font-bold text-[24px] leading-[160%] text-[#BF1111] text-center w-full">
                 NOTE
@@ -96,13 +102,8 @@ export default function OrderPage({ params }) {
               </p>
             </div>
           </div>
-          
-          <Image
-            src="/XBXBG.png"
-            alt="XBX Background"
-            width={300}
-            height={300}
-          />
+
+          <Image src="/XBXBG.png" alt="XBX Background" width={300} height={300} />
         </div>
       </div>
     </div>

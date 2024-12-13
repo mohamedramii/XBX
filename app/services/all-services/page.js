@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const AllServices = () => {
   const router = useRouter();
@@ -13,46 +13,79 @@ const AllServices = () => {
   const services = [
     {
       title: 'Mobile App Development',
-      description: 'Crafting intuitive and powerful mobile applications for iOS and Android platforms. Our team specializes in creating seamless user experiences with modern technologies and frameworks.',
+      description:
+        'Crafting intuitive and powerful mobile applications for iOS and Android platforms. Our team specializes in creating seamless user experiences with modern technologies and frameworks.',
       workingHours: '20 - 25 hours',
       category: 'Mobile Development',
-      images: ['/images/all-services-imgs.svg', '/images/all-services-imgs.svg', '/images/all-services-imgs.svg']
+      images: [
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+      ],
     },
     {
       title: 'Web Application Design',
-      description: 'Building responsive and dynamic web applications using cutting-edge technologies. We focus on creating scalable solutions that meet modern business needs.',
+      description:
+        'Building responsive and dynamic web applications using cutting-edge technologies. We focus on creating scalable solutions that meet modern business needs.',
       workingHours: '30 - 35 hours',
       category: 'Web Development',
-      images: ['/images/all-services-imgs.svg', '/images/all-services-imgs.svg', '/images/all-services-imgs.svg']
+      images: [
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+      ],
     },
     {
       title: 'UI/UX Design Services',
-      description: 'Creating beautiful and functional user interfaces with a focus on user experience. Our design process ensures both aesthetic appeal and practical usability.',
+      description:
+        'Creating beautiful and functional user interfaces with a focus on user experience. Our design process ensures both aesthetic appeal and practical usability.',
       workingHours: '15 - 20 hours',
       category: 'Design',
-      images: ['/images/all-services-imgs.svg', '/images/all-services-imgs.svg', '/images/all-services-imgs.svg']
+      images: [
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+      ],
     },
     {
       title: 'AI Integration Services',
-      description: 'Implementing cutting-edge artificial intelligence solutions to enhance your applications. From machine learning to natural language processing, we bring smart features to your projects.',
+      description:
+        'Implementing cutting-edge artificial intelligence solutions to enhance your applications. From machine learning to natural language processing, we bring smart features to your projects.',
       workingHours: '40 - 45 hours',
       category: 'AI & ML',
-      images: ['/images/all-services-imgs.svg', '/images/all-services-imgs.svg', '/images/all-services-imgs.svg']
+      images: [
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+      ],
     },
     {
       title: 'Cloud Infrastructure',
-      description: 'Setting up and managing robust cloud infrastructure for your applications. We ensure scalability, security, and optimal performance for your digital solutions.',
+      description:
+        'Setting up and managing robust cloud infrastructure for your applications. We ensure scalability, security, and optimal performance for your digital solutions.',
       workingHours: '25 - 30 hours',
       category: 'Cloud Services',
-      images: ['/images/all-services-imgs.svg', '/images/all-services-imgs.svg', '/images/all-services-imgs.svg']
-    }
+      images: [
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+        '/images/all-services-imgs.svg',
+      ],
+    },
   ];
 
-  const categories = ['All', 'Mobile Development', 'Web Development', 'Design', 'AI & ML', 'Cloud Services'];
+  const categories = [
+    'All',
+    'Mobile Development',
+    'Web Development',
+    'Design',
+    'AI & ML',
+    'Cloud Services',
+  ];
 
-  const filteredServices = selectedCategory === 'All' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
+  const filteredServices =
+    selectedCategory === 'All'
+      ? services
+      : services.filter((service) => service.category === selectedCategory);
 
   return (
     <main className="relative w-full max-w-[full] mx-auto">
@@ -75,7 +108,11 @@ const AllServices = () => {
               A Diverse Journey of Creativity and Achievement
             </h1>
             <p className="text-[16px] sm:text-[18px] md:text-[22px] w-full max-w-[885px] text-center text-[#2C3C2D] mb-6 sm:mb-8 font-regular">
-              Explore this showcase of diverse projects we have worked on across various fields. From creative design to strategic planning and the implementation of unique ideas, each project reflects a rich journey of challenges and innovation. Here, you'll find a blend of skills and expertise, always aimed at delivering added value and leaving a distinctive mark in every domain we engage with.
+              Explore this showcase of diverse projects we have worked on across various fields.
+              From creative design to strategic planning and the implementation of unique ideas,
+              each project reflects a rich journey of challenges and innovation. Here, you'll find a
+              blend of skills and expertise, always aimed at delivering added value and leaving a
+              distinctive mark in every domain we engage with.
             </p>
           </div>
         </div>
@@ -88,7 +125,7 @@ const AllServices = () => {
           <h2 className="font-poppins font-bold text-[22px] sm:text-[24px] md:text-[28px] text-[#2C3C2D]">
             The Creativity and Diversity Showcase
           </h2>
-          <div 
+          <div
             className="absolute left-2 sm:left-9 -top-4 w-[50px] sm:w-[74px] h-[50px] sm:h-[74px] bg-[#FBFBFB] border border-[#11A900] rounded-[16px] flex items-center justify-center cursor-pointer"
             onClick={() => setIsFilterOpen(!isFilterOpen)}
           >
@@ -101,12 +138,16 @@ const AllServices = () => {
             />
           </div>
           {/* Filter Menu */}
-          <div className={`absolute left-[60px] sm:left-[100px] -top-4 bg-white border border-[#11A900] rounded-[16px] transition-all duration-300 overflow-hidden ${isFilterOpen ? 'w-[200px] sm:w-[300px] opacity-100' : 'w-0 opacity-0 pointer-events-none'}`}>
+          <div
+            className={`absolute left-[60px] sm:left-[100px] -top-4 bg-white border border-[#11A900] rounded-[16px] transition-all duration-300 overflow-hidden ${isFilterOpen ? 'w-[200px] sm:w-[300px] opacity-100' : 'w-0 opacity-0 pointer-events-none'}`}
+          >
             <div className="p-4">
-              <h3 className="font-poppins font-semibold text-[16px] sm:text-[18px] text-[#2C3C2D] mb-4">Filter by Category</h3>
+              <h3 className="font-poppins font-semibold text-[16px] sm:text-[18px] text-[#2C3C2D] mb-4">
+                Filter by Category
+              </h3>
               <div className="flex flex-col gap-2">
                 {categories.map((category, index) => (
-                  <div 
+                  <div
                     key={index}
                     className={`cursor-pointer p-2 rounded-lg transition-colors text-[14px] sm:text-[16px] ${selectedCategory === category ? 'bg-[#11A900] text-white' : 'hover:bg-[#F4F4F4] text-[#2C3C2D]'}`}
                     onClick={() => {
@@ -125,7 +166,10 @@ const AllServices = () => {
         {/* Services List */}
         <div className="flex flex-col gap-8 w-full max-w-[1440px] px-2 sm:px-8">
           {filteredServices.map((service, index) => (
-            <div key={index} className="flex flex-col md:flex-row justify-between items-start md:items-center py-8 sm:py-[42px] border-b border-[#B9B9B9] gap-8 sm:gap-0">
+            <div
+              key={index}
+              className="flex flex-col md:flex-row justify-between items-start md:items-center py-8 sm:py-[42px] border-b border-[#B9B9B9] gap-8 sm:gap-0"
+            >
               <div className="flex flex-col gap-6 sm:gap-[39px] w-full max-w-[600px]">
                 <h3 className="font-poppins font-semibold text-[22px] sm:text-[24px] md:text-[28px] text-[#3CB82E]">
                   {service.title}
@@ -147,24 +191,28 @@ const AllServices = () => {
                   </p>
                 </div>
 
-                <div className='w-full flex justify-between'>
-                <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[18px] sm:text-[20px] md:text-[22px] text-[#717171]">
-                    Category
-                  </span>
-                  <p className="font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] text-[#192B1A]">
-                    {service.category}
-                  </p>
+                <div className="w-full flex justify-between">
+                  <div className="flex flex-col gap-2">
+                    <span className="font-poppins font-semibold text-[18px] sm:text-[20px] md:text-[22px] text-[#717171]">
+                      Category
+                    </span>
+                    <p className="font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] text-[#192B1A]">
+                      {service.category}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() =>
+                      router.push(
+                        `/services/request?category=${encodeURIComponent(service.category)}&service=${encodeURIComponent(service.title)}`
+                      )
+                    }
+                    className="flex flex-row justify-center items-center p-3 sm:p-[12px_14px] gap-[8px] w-[150px] sm:w-[160px] border-2 border-[#192B1A] rounded-[16px]"
+                  >
+                    <span className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] text-[#0D0D0D]">
+                      Start Service
+                    </span>
+                  </button>
                 </div>
-                <button 
-                  onClick={() => router.push(`/services/request?category=${encodeURIComponent(service.category)}&service=${encodeURIComponent(service.title)}`)}
-                  className="flex flex-row justify-center items-center p-3 sm:p-[12px_14px] gap-[8px] w-[150px] sm:w-[160px] border-2 border-[#192B1A] rounded-[16px]"
-                >
-                  <span className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] text-[#0D0D0D]">Start Service</span>
-                </button>
-
-                </div>
-                
               </div>
               <div className="relative w-full max-w-[540px] h-auto flex justify-center md:justify-end">
                 <div className="relative w-[263px] h-[394px] mr-auto">
@@ -189,7 +237,7 @@ const AllServices = () => {
                     alt={service.title}
                     fill
                     className="rounded-[16px] object-cover"
-                  /> 
+                  />
                 </div>
               </div>
             </div>
@@ -204,7 +252,7 @@ const AllServices = () => {
               REQUEST SERVICE
             </div>
           </div>
-          
+
           {/* Pagination Container */}
           <div className="flex flex-row items-center p-0 gap-[20px] sm:gap-[30px] w-full max-w-[631px] h-[61px] self-stretch justify-center">
             {/* Numbers Container */}
@@ -230,7 +278,7 @@ const AllServices = () => {
                 </div>
               ))}
             </div>
-            
+
             {/* Next Button */}
             <div className="flex flex-col justify-center items-center p-[8px] gap-[10px] w-[34px] h-[34px] bg-[rgba(136,209,128,0.6)] border border-black rounded-[17px] cursor-pointer">
               <Image
@@ -245,7 +293,7 @@ const AllServices = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default AllServices
+export default AllServices;

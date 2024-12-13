@@ -1,6 +1,6 @@
 // components/Header.jsx
 
-"use client";
+'use client';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearUser } from '../redux/slices/userSlice';
@@ -8,7 +8,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { removeToken } from '../utils/token';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import styles from './Header.module.css'; 
+import styles from './Header.module.css';
 import '../styles/toggle.css';
 
 const Header = () => {
@@ -49,9 +49,11 @@ const Header = () => {
     <header className="flex justify-between h-[120px] items-center w-full p-4 bg-[#E6F4E4] dark:bg-[#18281B] px-20 transition-colors duration-300">
       {/* Logo */}
       <div className="flex items-center">
-        <h1 className="text-[56px] font-black uppercase text-[#0D0D0D] dark:text-[#FBFBFB] transition-colors duration-300">XBX</h1>
+        <h1 className="text-[56px] font-black uppercase text-[#0D0D0D] dark:text-[#FBFBFB] transition-colors duration-300">
+          XBX
+        </h1>
       </div>
-   
+
       {/* Search bar, icons and toggle */}
       <div className="flex items-center space-x-6">
         {/* Search Bar */}

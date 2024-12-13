@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -8,7 +8,8 @@ const InvestmentOpportunities = () => {
   const investmentProjects = [
     {
       title: 'Hotel',
-      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+      description:
+        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
       image: '/images/invest-opportunities-img.svg',
       details: {
         availableShares: '100 Shares',
@@ -18,8 +19,8 @@ const InvestmentOpportunities = () => {
         totalPrice: '10000 $',
         currentInvestors: '18 Investor',
         remainingShares: '24 Shares',
-        projectValue: '50% of the Project Value'
-      }
+        projectValue: '50% of the Project Value',
+      },
     },
     // Add more projects as needed
   ];
@@ -36,7 +37,7 @@ const InvestmentOpportunities = () => {
       {/* Projects List */}
       <div className="flex flex-col items-start w-full max-w-[1441px]">
         {investmentProjects.map((project, index) => (
-          <div 
+          <div
             key={index}
             className="w-full border-b border-[#B9B9B9] px-[32px] md:px-[145px] pb-[41px] mb-[66px]"
           >
@@ -55,14 +56,9 @@ const InvestmentOpportunities = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="relative w-full lg:w-[404px] h-[360px] rounded-[24px] overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={project.image} alt={project.title} fill className="object-cover" />
               </div>
             </div>
 
@@ -144,12 +140,11 @@ const InvestmentOpportunities = () => {
                     {project.details.remainingShares}
                   </span>
                 </div>
-
               </div>
             </div>
 
-            <div className='w-full flex justify-center mt-8'>
-              <button 
+            <div className="w-full flex justify-center mt-8">
+              <button
                 onClick={() => router.push(`/investment/${index + 1}`)}
                 className="flex justify-center items-center w-[157px] h-[67px] bg-[#2C3C2D] border-2 border-[#2C3C2D] rounded-[16px]"
               >
@@ -158,7 +153,6 @@ const InvestmentOpportunities = () => {
                 </span>
               </button>
             </div>
-            
           </div>
         ))}
       </div>

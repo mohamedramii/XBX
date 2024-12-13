@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -28,18 +28,22 @@ const ProductsPage = () => {
   return (
     <main className="w-full min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[700px] w-full bg-[url('/images/heroprodcts.png')] bg-cover bg-center flex items-center justify-center 
-      px-4 sm:px-8 md:px-12 lg:px-0">
+      <section
+        className="relative h-[700px] w-full bg-[url('/images/heroprodcts.png')] bg-cover bg-center flex items-center justify-center 
+      px-4 sm:px-8 md:px-12 lg:px-0"
+      >
         <div className="flex flex-col items-center gap-[43px] max-w-[885px] w-full px-4 text-center">
           <div className="flex flex-col items-center gap-8 w-full">
             <h1 className="font-poppins font-bold text-[32px] sm:text-[36px] md:text-[40px] leading-[160%] text-[#FBFBFB] w-full">
               Empowering Your Business Growth
             </h1>
             <p className="font-poppins font-semibold text-[18px] sm:text-[20px] md:text-[22px] leading-[160%] text-[#FBFBFB] w-full">
-              We provide innovative financing solutions to support businesses and retail stores. Achieve your goals and expand your operations with ease through flexible terms and a simple process. Start your journey to success today!
+              We provide innovative financing solutions to support businesses and retail stores.
+              Achieve your goals and expand your operations with ease through flexible terms and a
+              simple process. Start your journey to success today!
             </p>
           </div>
-          
+
           <button className="flex justify-center items-center w-[120px] sm:w-[130px] md:w-[140px] h-[50px] sm:h-[60px] md:h-[67px] border-2 border-[#FBFBFB] rounded-2xl">
             <span className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[22px] leading-[160%] text-white">
               start now
@@ -56,11 +60,14 @@ const ProductsPage = () => {
               Flexible Financing for Businesses
             </h2>
             <p className="font-poppins font-semibold text-base sm:text-lg md:text-xl leading-[160%] text-[#192B1A]">
-              Here, I provide the financing you need to acquire the products and resources essential for your business growth. Whether you're looking to purchase equipment, stock up on inventory, or invest in new technologies, our funding solutions are designed to meet your specific requirements and help you move forward with confidence.
+              Here, I provide the financing you need to acquire the products and resources essential
+              for your business growth. Whether you're looking to purchase equipment, stock up on
+              inventory, or invest in new technologies, our funding solutions are designed to meet
+              your specific requirements and help you move forward with confidence.
             </p>
           </div>
           <div className="flex justify-center">
-            <Image 
+            <Image
               src="/images/XBXBG 4.png"
               alt="XBX Background"
               width={300}
@@ -78,10 +85,12 @@ const ProductsPage = () => {
             Targeted Industries for Financing Support
           </h2>
           <p className="font-poppins font-semibold text-lg sm:text-xl leading-[160%] text-[#192B1A]">
-            We are dedicated to supporting and providing products for these industries. Our goal is to offer the necessary resources and financing to help drive growth and success in these sectors
+            We are dedicated to supporting and providing products for these industries. Our goal is
+            to offer the necessary resources and financing to help drive growth and success in these
+            sectors
           </p>
         </div>
-        
+
         <div className="flex flex-col items-center justify-center gap-6 w-auto mx-auto py-0">
           <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
             {industries.map((industry, index) => (
@@ -107,7 +116,7 @@ const ProductsPage = () => {
           </div>
         </div>
 
-        <button 
+        <button
           onClick={() => router.push('/products/details')}
           className="mx-auto mt-8 flex justify-center items-center w-[150px] sm:w-[160px] md:w-[175px] h-[50px] sm:h-[60px] md:h-[67px] border-2 border-[#0D0D0D] rounded-2xl font-poppins font-bold text-[18px] sm:text-[20px] md:text-[22px] leading-[160%] text-[#192B1A]"
         >
@@ -123,18 +132,27 @@ const ProductsPage = () => {
               Steps to Obtain Support and Products
             </h2>
             <p className="font-poppins font-semibold text-base sm:text-lg md:text-xl leading-[160%] text-black">
-              submit Your Application: Fill out the application form with the necessary details about your business and the products you need.
-              <br/><br/>
-              Assessment and Review: Our team will review your application and assess your requirements to ensure we offer the best solutions.
-              <br/><br/>
-              Approval and Offer: Once your application is approved, we will provide you with tailored financing options and product solutions.
-              <br/><br/>
-              Product Delivery: After confirming your selection, we will arrange for the delivery of the products and disbursement of the funding.
-              <br/><br/>
-              Support and Follow-up: We offer continuous support to ensure your business grows and thrives with the resources provided.
+              submit Your Application: Fill out the application form with the necessary details
+              about your business and the products you need.
+              <br />
+              <br />
+              Assessment and Review: Our team will review your application and assess your
+              requirements to ensure we offer the best solutions.
+              <br />
+              <br />
+              Approval and Offer: Once your application is approved, we will provide you with
+              tailored financing options and product solutions.
+              <br />
+              <br />
+              Product Delivery: After confirming your selection, we will arrange for the delivery of
+              the products and disbursement of the funding.
+              <br />
+              <br />
+              Support and Follow-up: We offer continuous support to ensure your business grows and
+              thrives with the resources provided.
             </p>
           </div>
-          
+
           <button className="flex justify-center items-center w-[200px] sm:w-[220px] md:w-[249px] h-[50px] sm:h-[60px] md:h-[67px] border-2 border-[#0D0D0D] rounded-2xl">
             <span className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[22px] leading-[160%] text-[#192B1A]">
               submit Application

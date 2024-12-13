@@ -30,10 +30,10 @@ export const loginSuperAdmin = createAsyncThunk(
   async ({ userName, password }, { rejectWithValue }) => {
     try {
       console.log('Sending request with:', { userName, password });
-      
+
       // Clear any existing admin tokens
       removeToken('admin');
-      
+
       const response = await fetch('https://xbx-server.vercel.app/superAdmin/signIn', {
         method: 'POST',
         headers: {
@@ -55,7 +55,7 @@ export const loginSuperAdmin = createAsyncThunk(
       return {
         AccessToken: data.AccessToken,
         id: data.adminID,
-        name: data.superAdminName
+        name: data.superAdminName,
       };
     } catch (error) {
       console.error('API Error:', error);
@@ -65,13 +65,10 @@ export const loginSuperAdmin = createAsyncThunk(
 );
 
 // Logout thunks
-export const logoutAdmin = createAsyncThunk(
-  'admin/logoutAdmin',
-  async (_, { dispatch }) => {
-    removeToken('admin');
-    dispatch(resetState());
-  }
-);
+export const logoutAdmin = createAsyncThunk('admin/logoutAdmin', async (_, { dispatch }) => {
+  removeToken('admin');
+  dispatch(resetState());
+});
 
 export const logoutSuperAdmin = createAsyncThunk(
   'admin/logoutSuperAdmin',

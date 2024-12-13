@@ -78,10 +78,7 @@ export default function EmailVerificationPage() {
       }
     } catch (error) {
       console.error('Email verification error:', error);
-      alert(
-        error.response?.data?.error ||
-          'Invalid verification code. Please try again.'
-      );
+      alert(error.response?.data?.error || 'Invalid verification code. Please try again.');
     }
   };
 
@@ -92,9 +89,7 @@ export default function EmailVerificationPage() {
       alert('Verification email has been resent.');
     } catch (error) {
       console.error('Resend email verification error:', error);
-      alert(
-        error.response?.data?.error || 'Error resending verification email.'
-      );
+      alert(error.response?.data?.error || 'Error resending verification email.');
     }
   };
 
@@ -123,12 +118,7 @@ export default function EmailVerificationPage() {
         </div>
 
         <div className="text-center z-10">
-          <Image
-            src='/images/xbxlogo.svg'
-            width={436.67}
-            height={150}
-            alt="XBX Logo"
-          />
+          <Image src="/images/xbxlogo.svg" width={436.67} height={150} alt="XBX Logo" />
           <p className="mt-4 text-primary font-medium text-lg lg:text-xl">
             Transforming Ideas into Innovative Solutions
           </p>
@@ -140,20 +130,15 @@ export default function EmailVerificationPage() {
         <div className="w-full max-w-[90%] lg:max-w-[500px] flex flex-col justify-center items-center">
           {/* Logo for Mobile */}
           <div className="flex lg:hidden text-center mb-4 items-center justify-center">
-            <Image
-              src="/pattern/xbxlogo.svg"
-              width={200}
-              height={80}
-              alt="XBX Logo"
-            />
+            <Image src="/pattern/xbxlogo.svg" width={200} height={80} alt="XBX Logo" />
           </div>
 
           <h2 className="text-[40px] lg:text-[55px] text-primary font-semibold text-center">
             Verify Your Email
           </h2>
           <p className="text-gray-600 text-[16px] lg:text-[20px] text-center mb-6">
-            We've sent a verification code to your email address. Please enter
-            the code below to verify your email.
+            We've sent a verification code to your email address. Please enter the code below to
+            verify your email.
           </p>
 
           {/* Verification Code Input */}

@@ -10,26 +10,26 @@ const NotificationPage = () => {
   const [selectedUserGroups, setSelectedUserGroups] = useState({
     allUsers: false,
     customers: false,
-    investors: false
+    investors: false,
   });
 
   const users = [
     {
       username: '@lordseif07',
       email: 'corosempi@gmail.com',
-      role: 'Customer'
+      role: 'Customer',
     },
     {
       username: '@corozan_45',
       email: 'corozan_45@gmail.com',
-      role: 'Customer'
-    }
+      role: 'Customer',
+    },
   ];
 
   const handleCheckboxChange = (group) => {
-    setSelectedUserGroups(prev => ({
+    setSelectedUserGroups((prev) => ({
       ...prev,
-      [group]: !prev[group]
+      [group]: !prev[group],
     }));
   };
 
@@ -37,7 +37,7 @@ const NotificationPage = () => {
     <>
       {/* Search Bar */}
       <div className="flex items-center px-4 md:px-5 py-2.5 gap-1.5 w-full bg-[#FBFBFB] border border-[#919191] rounded-[20px]">
-        <Image 
+        <Image
           src="/icons/search-dashboard.svg"
           width={30}
           height={30}
@@ -63,7 +63,7 @@ const NotificationPage = () => {
               <span className="text-base md:text-lg font-bold text-[#11A900]">{user.role}</span>
             </div>
             <button className="p-1.5 md:p-2 hover:bg-red-50 rounded-lg transition-colors">
-              <Image 
+              <Image
                 src="/icons/close-dashboard-icon.svg"
                 width={40}
                 height={40}
@@ -82,21 +82,21 @@ const NotificationPage = () => {
       {/* User Groups Selection */}
       <div className="flex flex-wrap md:flex-row items-center gap-4 md:gap-5">
         <div className="flex items-center gap-2.5">
-          <div 
+          <div
             className={`w-5 h-5 bg-[${selectedUserGroups.allUsers ? '#11A900' : '#FBFBFB'}] border-2 border-[#11A900] cursor-pointer`}
             onClick={() => handleCheckboxChange('allUsers')}
           />
           <span className="text-base md:text-lg font-medium">All XBX Users</span>
         </div>
         <div className="flex items-center gap-2.5">
-          <div 
+          <div
             className={`w-5 h-5 bg-[${selectedUserGroups.customers ? '#11A900' : '#FBFBFB'}] border-2 border-[#11A900] cursor-pointer`}
             onClick={() => handleCheckboxChange('customers')}
           />
           <span className="text-base md:text-lg font-medium">Customers</span>
         </div>
         <div className="flex items-center gap-2.5">
-          <div 
+          <div
             className={`w-5 h-5 bg-[${selectedUserGroups.investors ? '#11A900' : '#FBFBFB'}] border-2 border-[#11A900] cursor-pointer`}
             onClick={() => handleCheckboxChange('investors')}
           />
@@ -119,7 +119,7 @@ const NotificationPage = () => {
                   Notification
                 </h1>
               </div>
-              
+
               {/* Category Tabs */}
               <div className="flex items-center gap-2.5 flex-wrap">
                 <button
@@ -146,12 +146,17 @@ const NotificationPage = () => {
             </div>
 
             {/* Tab Content */}
-            {selectedTab === 'specific' ? renderSpecificUsersContent() : renderBroadcastingContent()}
+            {selectedTab === 'specific'
+              ? renderSpecificUsersContent()
+              : renderBroadcastingContent()}
           </div>
 
           {/* Warning Text */}
           <p className="text-sm md:text-lg text-[#787777] leading-relaxed">
-            Before sending any notification to users, ensure that the message is free of spelling errors and uses clear, professional language. Double-check for proper grammar, tone, and formatting. Remember, notifications represent our platform, so they should be polished and easy to understand to maintain our credibility and user trust.
+            Before sending any notification to users, ensure that the message is free of spelling
+            errors and uses clear, professional language. Double-check for proper grammar, tone, and
+            formatting. Remember, notifications represent our platform, so they should be polished
+            and easy to understand to maintain our credibility and user trust.
           </p>
 
           {/* Notification Content */}

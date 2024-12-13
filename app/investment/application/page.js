@@ -1,17 +1,17 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
-import Image from 'next/image'
+import React, { useState } from 'react';
+import Image from 'next/image';
 
 const ApplicationForm = () => {
-  const [selectedFile, setSelectedFile] = useState(null)
+  const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (event) => {
-    const file = event.target.files[0]
+    const file = event.target.files[0];
     if (file) {
-      setSelectedFile(file)
+      setSelectedFile(file);
     }
-  }
+  };
 
   return (
     <main className="w-full min-h-screen bg-white px-4 sm:px-8 lg:px-[122px] py-10 sm:py-16">
@@ -112,12 +112,7 @@ const ApplicationForm = () => {
                     </div>
                   ) : (
                     <div className="w-[104px] h-[104px] bg-[#99EB91] rounded-full flex items-center justify-center">
-                      <Image
-                        src="/icons/add-pic.svg"
-                        alt="Add picture"
-                        width={40}
-                        height={40}
-                      />
+                      <Image src="/icons/add-pic.svg" alt="Add picture" width={40} height={40} />
                     </div>
                   )}
                 </label>
@@ -133,7 +128,7 @@ const ApplicationForm = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default ApplicationForm
+export default ApplicationForm;

@@ -87,12 +87,7 @@ export default function SignUpPage() {
         </div>
 
         <div className="text-center z-10">
-          <Image
-            src='/images/xbxlogo.svg'
-            width={436.67}
-            height={150}
-            alt="XBX Logo"
-          />
+          <Image src="/images/xbxlogo.svg" width={436.67} height={150} alt="XBX Logo" />
           <p className="mt-4 text-primary font-medium text-lg lg:text-xl ">
             Transforming Ideas into Innovative Solutions
           </p>
@@ -104,36 +99,32 @@ export default function SignUpPage() {
         <div className="w-full max-w-[90%] lg:max-w-[500px] flex flex-col justify-center items-center lg:scale-90">
           {/* Logo for Mobile */}
           <div className="flex lg:hidden text-center mb-4 items-center justify-center">
-            <Image
-              src="/pattern/xbxlogo.svg"
-              width={200}
-              height={80}
-              alt="XBX Logo"
-            />
-            
-            
+            <Image src="/pattern/xbxlogo.svg" width={200} height={80} alt="XBX Logo" />
           </div>
 
-          <button className="flex items-center justify-center absolute -right-44 top-5  text-white font-poppins font-semibold text-lg leading-8 w-40 h-8" onClick={handleSkip}>
-            <p className='text-[#11a900] mr-2'>
-              
-              Skip for now
-              </p> 
-              <Image src="/icons/arrow-skip-sign.svg" alt="Skip Icon" width={20} height={20} className="mr-2" />
-
+          <button
+            className="flex items-center justify-center absolute -right-44 top-5  text-white font-poppins font-semibold text-lg leading-8 w-40 h-8"
+            onClick={handleSkip}
+          >
+            <p className="text-[#11a900] mr-2">Skip for now</p>
+            <Image
+              src="/icons/arrow-skip-sign.svg"
+              alt="Skip Icon"
+              width={20}
+              height={20}
+              className="mr-2"
+            />
           </button>
 
-          
-
-          <h2 className="text-[35px] lg:text-[50px] text-primary font-semibold text-center mb-4">Create an account</h2>
+          <h2 className="text-[35px] lg:text-[50px] text-primary font-semibold text-center mb-4">
+            Create an account
+          </h2>
           <p className="text-gray-600 text-[16px] lg:text-[20px] text-center mb-6 text-nowrap">
             Join a Community of Innovators Your Future Awaits!
           </p>
           <form onSubmit={handleSignUp} className="space-y-4 w-full">
             <div className="mb-4">
-              <label className="block mb-2 font-medium text-secondary text-[18px]">
-                Username
-              </label>
+              <label className="block mb-2 font-medium text-secondary text-[18px]">Username</label>
               <input
                 type="text"
                 className="w-full h-[45px] lg:h-[60px] px-4 border border-gray-300 rounded-[10px] lg:rounded-[20px]"
@@ -144,9 +135,7 @@ export default function SignUpPage() {
               />
             </div>
             <div className="mb-4">
-              <label className="block mb-2 font-medium text-secondary text-[18px]">
-                Email
-              </label>
+              <label className="block mb-2 font-medium text-secondary text-[18px]">Email</label>
               <input
                 type="email"
                 className="w-full h-[45px] lg:h-[60px] px-4 border border-gray-300 rounded-[10px] lg:rounded-[20px]"
@@ -157,9 +146,7 @@ export default function SignUpPage() {
               />
             </div>
             <div className="mb-4">
-              <label className="block mb-2 font-medium text-secondary text-[18px]">
-                Password
-              </label>
+              <label className="block mb-2 font-medium text-secondary text-[18px]">Password</label>
               <input
                 type="password"
                 className="w-full h-[45px] lg:h-[60px] px-4 border border-gray-300 rounded-[10px] lg:rounded-[20px]"
@@ -211,10 +198,10 @@ export default function SignUpPage() {
       {/* Show the Popup if showPopup is true */}
       {showPopup && (
         <EmailConfirmation
-        onClose={() => setShowPopup(false)}
-        onContinue={handleContinue}
-        onChangeEmail={handleChangeEmail}
-      />
+          onClose={() => setShowPopup(false)}
+          onContinue={handleContinue}
+          onChangeEmail={handleChangeEmail}
+        />
       )}
     </div>
   );

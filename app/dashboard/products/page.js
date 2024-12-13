@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const ProductsPage = () => {
-  const [activeCategory, setActiveCategory] = useState('all-products')
+  const [activeCategory, setActiveCategory] = useState('all-products');
 
   const products = [
     {
@@ -18,7 +18,7 @@ const ProductsPage = () => {
       uploadedBy: '@corozan09',
       uploadDate: '12 Oct 2024',
       image: '/images/laptopproduct.png',
-      available: true
+      available: true,
     },
     {
       id: 2,
@@ -31,9 +31,9 @@ const ProductsPage = () => {
       uploadDate: '12 Oct 2024',
       image: '/images/laptopproduct.png',
       available: true,
-      canEdit: true
-    }
-  ]
+      canEdit: true,
+    },
+  ];
 
   const orders = [
     {
@@ -45,7 +45,7 @@ const ProductsPage = () => {
       status: 'Pending',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
+      image: '/images/laptopproduct.png',
     },
     {
       id: 2,
@@ -56,24 +56,22 @@ const ProductsPage = () => {
       status: 'Delivered',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
-    }
-  ]
+      image: '/images/laptopproduct.png',
+    },
+  ];
 
   const renderContent = () => {
     if (activeCategory === 'orders') {
       return (
         <div className="flex flex-col gap-[20px] w-full">
           {orders.map((order) => (
-            <div key={order.id} className="relative w-full h-auto sm:h-[144px] bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] flex flex-col sm:flex-row">
+            <div
+              key={order.id}
+              className="relative w-full h-auto sm:h-[144px] bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] flex flex-col sm:flex-row"
+            >
               {/* Product Image */}
               <div className="relative w-full sm:w-[169px] h-[144px] shadow-[0px_5px_10px_rgba(0,0,0,0.25)]">
-                <Image
-                  src={order.image}
-                  alt={order.title}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={order.image} alt={order.title} fill className="object-cover" />
               </div>
 
               {/* Order Info */}
@@ -120,21 +118,19 @@ const ProductsPage = () => {
             </div>
           ))}
         </div>
-      )
+      );
     }
 
     return (
       <div className="flex flex-col gap-[20px] sm:gap-[30px] w-full">
         {products.map((product) => (
-          <div key={product.id} className="relative w-full h-auto sm:h-[288px] bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] flex flex-col sm:flex-row">
+          <div
+            key={product.id}
+            className="relative w-full h-auto sm:h-[288px] bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] flex flex-col sm:flex-row"
+          >
             {/* Product Image */}
             <div className="relative w-full sm:w-[324px] h-[200px] sm:h-[288px] shadow-[0px_5px_10px_rgba(0,0,0,0.25)]">
-              <Image
-                src={product.image}
-                alt={product.title}
-                fill
-                className="object-cover"
-              />
+              <Image src={product.image} alt={product.title} fill className="object-cover" />
             </div>
 
             {/* Product Info */}
@@ -175,8 +171,8 @@ const ProductsPage = () => {
           </div>
         ))}
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <div className="flex-1 bg-[#F4F4F4] overflow-y-auto">
@@ -200,18 +196,22 @@ const ProductsPage = () => {
                   { key: 'all-products', label: 'All Products' },
                   { key: 'uploaded-by-you', label: 'Uploaded By You' },
                   { key: 'uploaded-by-others', label: 'Uploaded By Others' },
-                  { key: 'orders', label: 'Orders' }
+                  { key: 'orders', label: 'Orders' },
                 ].map((cat) => (
-                  <button 
+                  <button
                     key={cat.key}
                     onClick={() => setActiveCategory(cat.key)}
                     className={`flex justify-center items-center px-4 py-[2px] gap-[5px] h-[30px] sm:h-[40px] rounded-[20px] text-sm sm:text-base ${
-                      activeCategory === cat.key ? 'bg-[rgba(17,169,0,0.3)]' : 'bg-[rgba(224,224,224,0.6)]'
+                      activeCategory === cat.key
+                        ? 'bg-[rgba(17,169,0,0.3)]'
+                        : 'bg-[rgba(224,224,224,0.6)]'
                     }`}
                   >
-                    <span className={`font-poppins font-medium sm:font-bold text-[14px] sm:text-[20px] leading-[30px] ${
-                      activeCategory === cat.key ? 'text-[#11A900]' : 'text-[#787777]'
-                    }`}>
+                    <span
+                      className={`font-poppins font-medium sm:font-bold text-[14px] sm:text-[20px] leading-[30px] ${
+                        activeCategory === cat.key ? 'text-[#11A900]' : 'text-[#787777]'
+                      }`}
+                    >
                       {cat.label}
                     </span>
                   </button>
@@ -221,7 +221,9 @@ const ProductsPage = () => {
               {/* Add New Button */}
               <Link href="/dashboard/products/add">
                 <button className="flex items-center justify-center gap-2.5 px-3 sm:px-4 py-[2px] w-[120px] sm:w-[160px] h-[35px] sm:h-[40px] bg-[#11A900] rounded-[20px]">
-                  <span className="font-poppins font-semibold text-[14px] sm:text-[20px] leading-[30px] text-white">Add New</span>
+                  <span className="font-poppins font-semibold text-[14px] sm:text-[20px] leading-[30px] text-white">
+                    Add New
+                  </span>
                   <Image
                     src="/icons/add-new-product-dashboard.svg"
                     width={14}
@@ -238,7 +240,7 @@ const ProductsPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductsPage
+export default ProductsPage;

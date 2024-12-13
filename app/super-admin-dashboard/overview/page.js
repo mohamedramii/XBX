@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
 const OverviewPage = () => {
   const statisticsCards = [
@@ -40,7 +40,7 @@ const OverviewPage = () => {
       description: 'Including Investments',
       iconBg: 'rgba(17, 169, 0, 0.1)',
     },
-  ]
+  ];
 
   const latestOrders = [
     {
@@ -75,7 +75,7 @@ const OverviewPage = () => {
       totalPrice: '99$',
       paid: true,
     },
-  ]
+  ];
 
   return (
     <div className="relative w-full max-w-[1154px] mx-auto  p-6  flex flex-col gap-6 sm:gap-12">
@@ -136,30 +136,54 @@ const OverviewPage = () => {
         <table className="w-full text-left text-[12px] sm:text-base md:text-xl">
           <thead>
             <tr className="border-b border-[#B7B7B7]">
-              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">userName</th>
-              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">Category</th>
-              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">OrderDate</th>
-              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">OrderTime</th>
-              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">TotalPrice</th>
-              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">paid</th>
+              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">
+                userName
+              </th>
+              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">
+                Category
+              </th>
+              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">
+                OrderDate
+              </th>
+              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">
+                OrderTime
+              </th>
+              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">
+                TotalPrice
+              </th>
+              <th className="py-2 sm:py-[15px] px-2 sm:px-[10px] font-medium text-[#061404]">
+                paid
+              </th>
             </tr>
           </thead>
           <tbody>
             {latestOrders.map((order, index) => (
               <tr key={index} className="border-b border-[#B7B7B7] last:border-none">
-                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">{order.userName}</td>
-                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">{order.category}</td>
-                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">{order.orderDate}</td>
-                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">{order.orderTime}</td>
-                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">{order.totalPrice}</td>
-                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#11A900] font-medium">{order.paid ? 'True' : 'False'}</td>
+                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">
+                  {order.userName}
+                </td>
+                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">
+                  {order.category}
+                </td>
+                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">
+                  {order.orderDate}
+                </td>
+                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">
+                  {order.orderTime}
+                </td>
+                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#061404] font-medium">
+                  {order.totalPrice}
+                </td>
+                <td className="py-2 sm:py-[15px] px-2 sm:px-[10px] text-[#11A900] font-medium">
+                  {order.paid ? 'True' : 'False'}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default OverviewPage
+export default OverviewPage;

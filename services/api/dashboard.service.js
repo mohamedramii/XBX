@@ -7,12 +7,12 @@ class DashboardService {
       const response = await api.get(ENDPOINTS.dashboard.overview);
       return {
         success: true,
-        data: response.data
+        data: response.data,
       };
     } catch (error) {
       return {
         success: false,
-        error: error.response?.data?.message || 'Failed to fetch overview data'
+        error: error.response?.data?.message || 'Failed to fetch overview data',
       };
     }
   }
@@ -22,12 +22,12 @@ class DashboardService {
       const response = await api.get(ENDPOINTS.dashboard.stats);
       return {
         success: true,
-        data: response.data
+        data: response.data,
       };
     } catch (error) {
       return {
         success: false,
-        error: error.response?.data?.message || 'Failed to fetch stats'
+        error: error.response?.data?.message || 'Failed to fetch stats',
       };
     }
   }

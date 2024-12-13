@@ -1,38 +1,40 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const ProductsPage = () => {
-  const [activeCategory, setActiveCategory] = useState('all-products')
+  const [activeCategory, setActiveCategory] = useState('all-products');
 
   const products = [
     {
       id: 1,
       title: 'HP Victus 15-fa0031dx Gaming Laptop',
-      description: 'Operating system: Windows 11 Home From a rejuvenated Start menu, to new ways to connect to your favorite people, news, games, and content—Windows 11 is the place to think, express, and create in a natural way, Good Quality with a high end,12th Generation Intel Core i5-12450H 12th Gen Intel Core processor distributes performance where you need it the most — saving you time and increasing your ability to do the things you actually want...',
+      description:
+        'Operating system: Windows 11 Home From a rejuvenated Start menu, to new ways to connect to your favorite people, news, games, and content—Windows 11 is the place to think, express, and create in a natural way, Good Quality with a high end,12th Generation Intel Core i5-12450H 12th Gen Intel Core processor distributes performance where you need it the most — saving you time and increasing your ability to do the things you actually want...',
       price: '1,232$',
       purchases: 201,
       category: 'Devices and Technology',
       uploadedBy: '@corozan09',
       uploadDate: '12 Oct 2024',
       image: '/images/laptopproduct.png',
-      available: true
+      available: true,
     },
     {
       id: 2,
       title: 'HP Victus 15-fa0031dx Gaming Laptop',
-      description: 'Operating system: Windows 11 Home From a rejuvenated Start menu, to new ways to connect to your favorite people, news, games, and content—Windows 11 is the place to think, express, and create in a natural way, Good Quality with a high end,12th Generation Intel Core i5-12450H 12th Gen Intel Core processor distributes performance where you need it the most — saving you time and increasing your ability to do the things you actually want...',
+      description:
+        'Operating system: Windows 11 Home From a rejuvenated Start menu, to new ways to connect to your favorite people, news, games, and content—Windows 11 is the place to think, express, and create in a natural way, Good Quality with a high end,12th Generation Intel Core i5-12450H 12th Gen Intel Core processor distributes performance where you need it the most — saving you time and increasing your ability to do the things you actually want...',
       price: '1,232$',
       purchases: 201,
       category: 'Devices and Technology',
       uploadedBy: '@corozan09',
       uploadDate: '12 Oct 2024',
       image: '/images/laptopproduct.png',
-      available: true
-    }
-  ]
+      available: true,
+    },
+  ];
 
   const orders = [
     {
@@ -44,7 +46,7 @@ const ProductsPage = () => {
       status: 'Pending',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
+      image: '/images/laptopproduct.png',
     },
     {
       id: 2,
@@ -55,7 +57,7 @@ const ProductsPage = () => {
       status: 'Delivered',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
+      image: '/images/laptopproduct.png',
     },
     {
       id: 3,
@@ -66,7 +68,7 @@ const ProductsPage = () => {
       status: 'Pending',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
+      image: '/images/laptopproduct.png',
     },
     {
       id: 4,
@@ -77,9 +79,9 @@ const ProductsPage = () => {
       status: 'Delivered',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
-    }
-  ]
+      image: '/images/laptopproduct.png',
+    },
+  ];
 
   return (
     <div className="w-full min-h-screen bg-[#F4F4F4] p-4 md:p-8">
@@ -104,11 +106,11 @@ const ProductsPage = () => {
                   : 'bg-[rgba(224,224,224,0.6)]'
               }`}
             >
-              <span className={`font-inter font-bold text-base md:text-xl ${
-                activeCategory === 'all-products'
-                  ? 'text-[#11A900]'
-                  : 'text-[#787777]'
-              }`}>
+              <span
+                className={`font-inter font-bold text-base md:text-xl ${
+                  activeCategory === 'all-products' ? 'text-[#11A900]' : 'text-[#787777]'
+                }`}
+              >
                 All Products
               </span>
             </button>
@@ -120,11 +122,11 @@ const ProductsPage = () => {
                   : 'bg-[rgba(224,224,224,0.6)]'
               }`}
             >
-              <span className={`font-poppins font-medium text-base md:text-xl ${
-                activeCategory === 'orders'
-                  ? 'text-[#11A900]'
-                  : 'text-[#787777]'
-              }`}>
+              <span
+                className={`font-poppins font-medium text-base md:text-xl ${
+                  activeCategory === 'orders' ? 'text-[#11A900]' : 'text-[#787777]'
+                }`}
+              >
                 Orders
               </span>
             </button>
@@ -135,7 +137,10 @@ const ProductsPage = () => {
           /* Products List */
           <div className="flex flex-col gap-6 md:gap-8">
             {products.map((product) => (
-              <div key={product.id} className="relative bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden">
+              <div
+                key={product.id}
+                className="relative bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden"
+              >
                 <div className="flex flex-col md:flex-row">
                   {/* Product Image */}
                   <div className="w-full md:w-[324px] h-[200px] md:h-[288px] relative">
@@ -156,7 +161,8 @@ const ProductsPage = () => {
                       {product.description}
                     </p>
                     <p className="font-poppins font-semibold text-xs md:text-sm text-[#11A900]">
-                      Available | {product.price} | Purchases({product.purchases}) | {product.category}
+                      Available | {product.price} | Purchases({product.purchases}) |{' '}
+                      {product.category}
                     </p>
                     <p className="font-poppins font-semibold text-xs md:text-sm text-[#061404]">
                       UploadedBy : {product.uploadedBy} | UploadDate : {product.uploadDate}
@@ -177,7 +183,10 @@ const ProductsPage = () => {
           /* Orders List */
           <div className="flex flex-col gap-5">
             {orders.map((order) => (
-              <div key={order.id} className="relative bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden">
+              <div
+                key={order.id}
+                className="relative bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-lg overflow-hidden"
+              >
                 <div className="flex flex-col md:flex-row">
                   {/* Order Image */}
                   <div className="w-full md:w-[169px] h-[144px] relative">
@@ -195,7 +204,8 @@ const ProductsPage = () => {
                       {order.title}
                     </h2>
                     <p className="font-poppins font-semibold text-xs md:text-sm text-[#11A900]">
-                      Quantity : {order.quantity} | Price Per Piece : {order.pricePerPiece} | Total Price : {order.totalPrice} | Status : {order.status}
+                      Quantity : {order.quantity} | Price Per Piece : {order.pricePerPiece} | Total
+                      Price : {order.totalPrice} | Status : {order.status}
                     </p>
                     <p className="font-poppins font-semibold text-xs md:text-sm text-[#061404]">
                       UserName : {order.username} | OrderDate : {order.orderDate}
@@ -205,11 +215,7 @@ const ProductsPage = () => {
                   {/* Status Icon */}
                   {order.status === 'Delivered' && (
                     <div className="absolute hidden md:block right-0 top-[-22px] w-[200px] h-[200px]">
-                      <Image
-                        src="/icons/Delivered - icon.svg"
-                        alt="Delivered"
-                        fill
-                      />
+                      <Image src="/icons/Delivered - icon.svg" alt="Delivered" fill />
                     </div>
                   )}
                 </div>
@@ -219,7 +225,7 @@ const ProductsPage = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductsPage
+export default ProductsPage;

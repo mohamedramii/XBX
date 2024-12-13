@@ -1,5 +1,5 @@
 // apis/auth.js
-import axiosInstance from "../../utils/axios";
+import axiosInstance from '../../utils/axios';
 
 // تسجيل مستخدم جديد
 export const signup = (user) => axiosInstance.post(`/user/signup`, user);

@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const messages = [
   {
@@ -13,8 +13,9 @@ const messages = [
     isVerified: true,
     unreadCount: 2,
     timestamp: '7:08 PM 12 Dec 2024',
-    message: 'Hello , I need more details about HP Victus 15-fa0031dx Gaming Laptop . Can you clarify its features and availability?',
-    isUnread: true
+    message:
+      'Hello , I need more details about HP Victus 15-fa0031dx Gaming Laptop . Can you clarify its features and availability?',
+    isUnread: true,
   },
   {
     id: 2,
@@ -24,8 +25,9 @@ const messages = [
     isVerified: true,
     unreadCount: 0,
     timestamp: '2:08 PM 12 Dec 2024',
-    message: "Hi , I'm interested in investing in Revolutionizing the Way We Rent and Stay. Could you provide me with details about current opportunities and the project's roadmap?",
-    isUnread: false
+    message:
+      "Hi , I'm interested in investing in Revolutionizing the Way We Rent and Stay. Could you provide me with details about current opportunities and the project's roadmap?",
+    isUnread: false,
   },
   {
     id: 3,
@@ -35,8 +37,9 @@ const messages = [
     isVerified: true,
     unreadCount: 0,
     timestamp: '2:08 PM 12 Dec 2024',
-    message: "Hi , I'm interested in investing in Revolutionizing the Way We Rent and Stay. Could you provide me with details about current opportunities and the project's roadmap?",
-    isUnread: false
+    message:
+      "Hi , I'm interested in investing in Revolutionizing the Way We Rent and Stay. Could you provide me with details about current opportunities and the project's roadmap?",
+    isUnread: false,
   },
   {
     id: 4,
@@ -46,8 +49,9 @@ const messages = [
     isVerified: false,
     unreadCount: 8,
     timestamp: '7:08 PM 12 Dec 2024',
-    message: 'Hello , I need more details about HP Victus 15-fa0031dx Gaming Laptop . Can you clarify its features and availability?',
-    isUnread: true
+    message:
+      'Hello , I need more details about HP Victus 15-fa0031dx Gaming Laptop . Can you clarify its features and availability?',
+    isUnread: true,
   },
   {
     id: 5,
@@ -57,10 +61,11 @@ const messages = [
     isVerified: false,
     unreadCount: 0,
     timestamp: '2:38 AM 12 Dec 2024',
-    message: "Hi [Admin 2's Name], could you share the latest list of products available on the platform? I need it for an upcoming update/report. If there have been any recent additions or removals, please include those as well. Thanks!",
-    isUnread: false
-  }
-]
+    message:
+      "Hi [Admin 2's Name], could you share the latest list of products available on the platform? I need it for an upcoming update/report. If there have been any recent additions or removals, please include those as well. Thanks!",
+    isUnread: false,
+  },
+];
 
 export default function InboxPage() {
   return (
@@ -70,7 +75,9 @@ export default function InboxPage() {
         {/* Title */}
         <div className="flex items-center gap-2.5">
           <div className="w-2.5 md:w-[10px] h-[50px] bg-[#11A900]" />
-          <h1 className="text-2xl md:text-[30px] font-semibold font-poppins text-[#061404]">Inbox</h1>
+          <h1 className="text-2xl md:text-[30px] font-semibold font-poppins text-[#061404]">
+            Inbox
+          </h1>
         </div>
 
         {/* Categories */}
@@ -79,13 +86,19 @@ export default function InboxPage() {
             <span className="text-base md:text-xl font-bold font-poppins text-[#11A900]">All</span>
           </button>
           <button className="h-10 px-4 flex items-center justify-center bg-[rgba(224,224,224,0.6)] rounded-[20px] transition-colors">
-            <span className="text-base md:text-xl font-normal font-poppins text-[#787777]">Admins</span>
+            <span className="text-base md:text-xl font-normal font-poppins text-[#787777]">
+              Admins
+            </span>
           </button>
           <button className="h-10 px-4 flex items-center justify-center bg-[rgba(224,224,224,0.6)] rounded-[20px] transition-colors">
-            <span className="text-base md:text-xl font-normal font-poppins text-[#787777]">Clients</span>
+            <span className="text-base md:text-xl font-normal font-poppins text-[#787777]">
+              Clients
+            </span>
           </button>
           <button className="h-10 px-4 flex items-center justify-center bg-[rgba(224,224,224,0.6)] rounded-[20px] transition-colors">
-            <span className="text-base md:text-xl font-normal font-poppins text-[#787777]">Investors</span>
+            <span className="text-base md:text-xl font-normal font-poppins text-[#787777]">
+              Investors
+            </span>
           </button>
         </div>
       </div>
@@ -108,9 +121,11 @@ export default function InboxPage() {
                   {message.username}
                 </span>
                 <div className="hidden md:block w-0 h-5 border-l-2 border-black" />
-                <span className={`text-base md:text-xl ${
-                  message.isUnread ? 'font-semibold text-[#11A900]' : 'font-medium text-[#AEADAD]'
-                }`}>
+                <span
+                  className={`text-base md:text-xl ${
+                    message.isUnread ? 'font-semibold text-[#11A900]' : 'font-medium text-[#AEADAD]'
+                  }`}
+                >
                   {message.userType}
                 </span>
                 {message.isVerified && (
@@ -141,5 +156,5 @@ export default function InboxPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }

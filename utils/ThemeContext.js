@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext();
@@ -10,7 +10,7 @@ export function ThemeProvider({ children }) {
     // Check if user has a theme preference in localStorage
     const storedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
       setIsDarkMode(true);
       document.documentElement.classList.add('dark');
@@ -18,7 +18,7 @@ export function ThemeProvider({ children }) {
   }, []);
 
   const toggleTheme = () => {
-    setIsDarkMode(prev => {
+    setIsDarkMode((prev) => {
       const newTheme = !prev;
       localStorage.setItem('theme', newTheme ? 'dark' : 'light');
       if (newTheme) {
@@ -31,9 +31,7 @@ export function ThemeProvider({ children }) {
   };
 
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>{children}</ThemeContext.Provider>
   );
 }
 

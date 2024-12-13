@@ -1,8 +1,8 @@
-"use client";
-import { useSelector } from "react-redux";
-import Image from "next/image";
-import Header from "../components/Header";
-import Footer from "../components/Footer"; 
+'use client';
+import { useSelector } from 'react-redux';
+import Image from 'next/image';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function HomePage() {
   const user = useSelector((state) => state.user.userDetails);
@@ -45,10 +45,9 @@ export default function HomePage() {
               WELCOME TO <span className="text-[#0FCD1C]">XBX</span>
             </h1>
             <p className="text-[1.375rem] w-full max-w-[52.8125em] text-center text-white mb-4">
-              Explore our comprehensive range of services designed to elevate
-              your ideas into impactful solutions. From cutting-edge industrial
-              automation to creative digital marketing strategies, our expert
-              team is dedicated to helping you achieve your goals.
+              Explore our comprehensive range of services designed to elevate your ideas into
+              impactful solutions. From cutting-edge industrial automation to creative digital
+              marketing strategies, our expert team is dedicated to helping you achieve your goals.
             </p>
             <button className="w-[270px] h-16 bg-gradient-to-b from-[#11510D] to-[#03230F] border border-[#FBFBFB] dark:border-dark-secondary shadow-lg rounded-2xl text-[#EBEEF4] font-bold text-2xl hover:opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0FCD1C]">
               Contact Us
@@ -75,7 +74,7 @@ export default function HomePage() {
             height={300}
             className="absolute bottom-0 right-0 opacity-20"
           />
-            <Image
+          <Image
             src="/pattern/bwithheart.png"
             alt="Heart Pattern"
             width={300}
@@ -119,17 +118,16 @@ export default function HomePage() {
             {/* Right Item (Paragraph) */}
             <div className="w-full md:w-[595px]">
               <p className="font-poppins font-normal text-[20px] leading-[160%] text-[#0D0D0D] dark:text-[#FBFBFB] transition-colors duration-300">
-                We are XBX, an industrial and commercial company created by
-                innovators from around the globe, specializing in technological
-                services and digital transformation solutions. Our mission is to
-                be your primary partner in turning every idea into an achievement
-                and every system into advanced technology. We transform your
-                vision into a tangible reality.
+                We are XBX, an industrial and commercial company created by innovators from around
+                the globe, specializing in technological services and digital transformation
+                solutions. Our mission is to be your primary partner in turning every idea into an
+                achievement and every system into advanced technology. We transform your vision into
+                a tangible reality.
               </p>
               <p className="font-poppins font-normal text-[20px] leading-[160%] text-[#0D0D0D] dark:text-[#FBFBFB] transition-colors duration-300 mt-4">
-                Our core goal is to convert everything we touch into technology
-                and drive progress across all sectors we serve, from heavy
-                industries to daily services, along with support and development.
+                Our core goal is to convert everything we touch into technology and drive progress
+                across all sectors we serve, from heavy industries to daily services, along with
+                support and development.
               </p>
             </div>
           </div>
@@ -153,7 +151,7 @@ export default function HomePage() {
           {/* Left Section */}
           <div className="relative w-[991px] l:w-[1200px]  h-[412px] overflow-hidden flex flex-col justify-center items-start">
             {/* Background Image */}
-          
+
             {/* White Rectangle */}
             <Image
               src="/pattern/rec-white.svg"
@@ -184,7 +182,9 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[24px] font-bold text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">Vision</h3>
+                  <h3 className="text-[24px] font-bold text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
+                    Vision
+                  </h3>
                   <p className="text-[16px] text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
                     To be the leading technology partner in industrial and digital transformation
                   </p>
@@ -203,7 +203,9 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[24px] font-bold text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">Mission</h3>
+                  <h3 className="text-[24px] font-bold text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
+                    Mission
+                  </h3>
                   <p className="text-[16px] text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
                     Empowering businesses through innovative technological solutions
                   </p>
@@ -222,7 +224,9 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[24px] font-bold text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">Values</h3>
+                  <h3 className="text-[24px] font-bold text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
+                    Values
+                  </h3>
                   <p className="text-[16px] text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
                     Innovation, Excellence, Integrity, and Customer Success
                   </p>
@@ -251,8 +255,8 @@ export default function HomePage() {
             What We Offer
           </h2>
           <p className="text-center text-[#0D0D0D] dark:text-[#FBFBFB] font-medium text-[24px] leading-[160%] max-w-[899px] transition-colors duration-300">
-            At <span className="text-[#0FCD1C]">XBX</span>, we provide integrated solutions across various domains,
-            including:
+            At <span className="text-[#0FCD1C]">XBX</span>, we provide integrated solutions across
+            various domains, including:
           </p>
         </div>
 
@@ -264,7 +268,6 @@ export default function HomePage() {
           height={424}
           className="absolute top-[178px] right-[50px]  transition-opacity duration-300"
         />
-    
 
         {/* Main Content */}
         <div className="max-w-[1234px] mx-auto flex flex-col md:flex-row items-start md:items-center gap-8 relative px-4">
@@ -287,15 +290,15 @@ export default function HomePage() {
                 (XBX Marketing)
               </h3>
               <p className="font-poppins font-medium text-[20px] leading-[170%] text-[#FBFBFB] text-start">
-                - Digital marketing (SEO, paid advertising, and performance
-                analysis).
-                <br /><br />
+                - Digital marketing (SEO, paid advertising, and performance analysis).
+                <br />
+                <br />
                 - Social media marketing.
-                <br /><br />
+                <br />
+                <br />
                 - Traditional and creative advertising campaigns.
-                <br /><br />
-                - Production of distinctive marketing content to enhance brand
-                awareness.
+                <br />
+                <br />- Production of distinctive marketing content to enhance brand awareness.
               </p>
             </div>
           </div>
@@ -445,10 +448,12 @@ export default function HomePage() {
                   </h4>
                   <p className="font-poppins font-normal text-[20px] leading-[160%] text-[#192B1A] dark:text-[#FBFBFB] transition-colors duration-300">
                     - Support individuals and businesses to achieve their full potential.
-                    <br /><br />
-                    - Develop sustainable solutions that enhance operational efficiency and improve quality of life.
-                    <br /><br />
-                    - Promote creativity and innovation across all sectors we serve.
+                    <br />
+                    <br />
+                    - Develop sustainable solutions that enhance operational efficiency and improve
+                    quality of life.
+                    <br />
+                    <br />- Promote creativity and innovation across all sectors we serve.
                   </p>
                 </div>
 
@@ -584,12 +589,17 @@ export default function HomePage() {
               {/* Our Values Description */}
               <p className="font-poppins font-normal text-[22px] leading-[42px] text-[#192B1A] dark:text-[#FBFBFB] transition-colors duration-300">
                 - Creativity: We constantly strive to create new ideas and solutions.
-                <br /><br />
+                <br />
+                <br />
                 - Quality: We adhere to the highest quality standards in everything we provide.
-                <br /><br />
-                - Partnership: We build long-term relationships with our clients and partners, as success is what matters most to us.
-                <br /><br />
-                - Sustainability: We aim to balance technology with environmental responsibility and our duty towards humanity, developing technologies to assist people, not to surpass them.
+                <br />
+                <br />
+                - Partnership: We build long-term relationships with our clients and partners, as
+                success is what matters most to us.
+                <br />
+                <br />- Sustainability: We aim to balance technology with environmental
+                responsibility and our duty towards humanity, developing technologies to assist
+                people, not to surpass them.
               </p>
             </div>
           </div>
@@ -647,8 +657,14 @@ export default function HomePage() {
 
               {/* Policy Details */}
               <div className="font-poppins font-normal text-[22px] leading-[33px] text-[#FBFBFB] space-y-8">
-                <p>- Data Collection: We only collect data to improve the services we offer our clients.</p>
-                <p>- Data Usage: No personal information is shared with third parties without prior consent.</p>
+                <p>
+                  - Data Collection: We only collect data to improve the services we offer our
+                  clients.
+                </p>
+                <p>
+                  - Data Usage: No personal information is shared with third parties without prior
+                  consent.
+                </p>
                 <p>- Security: We utilize the latest technologies to ensure data protection.</p>
                 <p>- Client Rights: Our clients have full control over their data.</p>
               </div>
@@ -661,19 +677,20 @@ export default function HomePage() {
       <div className="relative w-full bg-transparent dark:bg-[#0e1b0f] py-20 overflow-hidden">
         {/* Background Pattern Layer */}
         <div className="absolute inset-0 pointer-events-none">
-        <Image
+          <Image
             src="/pattern/heart.png"
             alt="Heart Icon"
             width={424}
             height={424}
             className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          /><Image
-          src="/pattern/heart.png"
-          alt="Heart Icon"
-          width={424}
-          height={424}
-          className="absolute top-[6rem] right-0 transform translate-x-[8rem] -translate-y-1/2"
-        />
+          />
+          <Image
+            src="/pattern/heart.png"
+            alt="Heart Icon"
+            width={424}
+            height={424}
+            className="absolute top-[6rem] right-0 transform translate-x-[8rem] -translate-y-1/2"
+          />
         </div>
 
         {/* Content Layer */}
@@ -685,7 +702,9 @@ export default function HomePage() {
                 Why Choose <span className="text-[#0FCD1C]">XBX</span>?
               </h2>
               <p className="text-[22px] w-auto leading-[190%] font-medium text-[#192B1A] dark:text-[#E7FFE7]">
-                Because we do not merely aim to provide services; we strive to participate in your success. We believe that our partnership begins with understanding your needs and ends with achieving your goals in an innovative and efficient manner.
+                Because we do not merely aim to provide services; we strive to participate in your
+                success. We believe that our partnership begins with understanding your needs and
+                ends with achieving your goals in an innovative and efficient manner.
               </p>
             </div>
 
@@ -724,12 +743,7 @@ export default function HomePage() {
               {/* Email Info */}
               <div className="flex flex-col items-start">
                 <div className="flex flex-row items-center gap-2">
-                  <Image
-                    src="/icons/email.svg"
-                    alt="Email Icon"
-                    width={32}
-                    height={32}
-                  />
+                  <Image src="/icons/email.svg" alt="Email Icon" width={32} height={32} />
                   <p className="text-[32px] leading-[64px] font-bold text-[#0D0D0D] dark:text-[#FBFBFB]">
                     Email:
                   </p>
@@ -742,12 +756,7 @@ export default function HomePage() {
               {/* Phone Number Info */}
               <div className="flex flex-col items-start">
                 <div className="flex flex-row items-center gap-2">
-                  <Image
-                    src="/icons/phone.svg"
-                    alt="Phone Icon"
-                    width={32}
-                    height={32}
-                  />
+                  <Image src="/icons/phone.svg" alt="Phone Icon" width={32} height={32} />
                   <p className="text-[32px] leading-[64px] font-bold text-[#0D0D0D] dark:text-[#FBFBFB]">
                     Phone Number:
                   </p>
@@ -761,6 +770,5 @@ export default function HomePage() {
         </div>
       </div>
     </div>
-    
   );
 }

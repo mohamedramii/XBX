@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
 
@@ -29,16 +29,13 @@ const ProductDetails = () => {
           Targeted Industries for Financing Support
         </h1>
         <p className="font-poppins font-semibold text-base sm:text-lg md:text-[24px] leading-[160%] text-[#192B1A]">
-          we are dedicated to supporting and providing products for these industries. our goal is to offer the necessary resources and financing to help drive growth and success in these sectors
+          we are dedicated to supporting and providing products for these industries. our goal is to
+          offer the necessary resources and financing to help drive growth and success in these
+          sectors
         </p>
       </div>
       <div className="hidden lg:block">
-        <Image
-          src="/images/XBXBG 4.png"
-          alt="XBX Background"
-          width={300}
-          height={300}
-        />
+        <Image src="/images/XBXBG 4.png" alt="XBX Background" width={300} height={300} />
       </div>
     </div>
   );
@@ -46,20 +43,15 @@ const ProductDetails = () => {
   const pagination = (
     <div className="flex flex-col items-center gap-8 sm:gap-[33px] w-[124px] h-auto">
       <div className="flex flex-row items-center gap-6 w-[124px] h-[50px]">
-        <button 
+        <button
           onClick={handleBack}
           className={`w-[50px] h-[50px] rounded-full border border-black ${currentPage === 1 ? 'bg-[#B6E2B1]' : 'bg-[rgba(136,209,128,0.6)]'} flex items-center justify-center`}
         >
           {currentPage === 2 && (
-            <Image
-              src="/icons/back-arrow.svg"
-              alt="Previous page"
-              width={24}
-              height={24}
-            />
+            <Image src="/icons/back-arrow.svg" alt="Previous page" width={24} height={24} />
           )}
         </button>
-        <button 
+        <button
           onClick={handleNext}
           className={`w-[50px] h-[50px] rounded-full border border-black ${currentPage === 2 ? 'bg-[#B6E2B1]' : 'bg-[rgba(136,209,128,0.6)]'} flex items-center justify-center`}
         >
@@ -79,8 +71,12 @@ const ProductDetails = () => {
           page {currentPage} of 2
         </p>
         <div className="flex flex-row items-center gap-2">
-          <div className={`w-[10px] sm:w-[17.33px] h-2 sm:h-4 rounded-full ${currentPage === 1 ? 'bg-[#192B1A]' : 'bg-[#4EAD43]'}`} />
-          <div className={`w-[8px] sm:w-[13px] h-[6px] sm:h-3 rounded-full ${currentPage === 2 ? 'bg-[#192B1A]' : 'bg-[#4EAD43]'}`} />
+          <div
+            className={`w-[10px] sm:w-[17.33px] h-2 sm:h-4 rounded-full ${currentPage === 1 ? 'bg-[#192B1A]' : 'bg-[#4EAD43]'}`}
+          />
+          <div
+            className={`w-[8px] sm:w-[13px] h-[6px] sm:h-3 rounded-full ${currentPage === 2 ? 'bg-[#192B1A]' : 'bg-[#4EAD43]'}`}
+          />
         </div>
       </div>
     </div>
@@ -93,9 +89,9 @@ const ProductDetails = () => {
       items: [
         'Luxury Jewelry: Rings, bracelets, necklaces.',
         'Watches: Traditional, smart, sports watches',
-        'Accessories: Sunglasses, decorative pins, cufflinks.'
+        'Accessories: Sunglasses, decorative pins, cufflinks.',
       ],
-      image: '/images/jewelry.png'
+      image: '/images/jewelry.png',
     },
     {
       id: 2,
@@ -104,10 +100,10 @@ const ProductDetails = () => {
         'Skin Care Products: Moisturizing creams, sunscreens, anti-aging products.',
         'Hair Care Products: Shampoo, balm, oils, hair treatment products.',
         'Health Products: Nutritional supplements, vitamins, home medical equipment.',
-        'Perfumes: Men\'s perfumes, women\'s perfumes, body sprays.',
-        'Makeup: Lipstick, foundation, mascara, eyeshadow.'
+        "Perfumes: Men's perfumes, women's perfumes, body sprays.",
+        'Makeup: Lipstick, foundation, mascara, eyeshadow.',
       ],
-      image: '/images/beauty.png'
+      image: '/images/beauty.png',
     },
     {
       id: 3,
@@ -115,9 +111,9 @@ const ProductDetails = () => {
       items: [
         'Cars: Sports cars, luxury vehicles',
         'Motorcycles: Racing and classic bikes',
-        'Accessories: Tires, audio systems, and navigation tools.'
+        'Accessories: Tires, audio systems, and navigation tools.',
       ],
-      image: '/images/cars.png'
+      image: '/images/cars.png',
     },
     {
       id: 4,
@@ -125,9 +121,9 @@ const ProductDetails = () => {
       items: [
         'Foods: Fast food, packaged meals.',
         'Beverages: Juices, tea, coffee, soft drinks, alcoholic beverages.',
-        'Dietary Products: Health supplements and nutrition aids'
+        'Dietary Products: Health supplements and nutrition aids',
       ],
-      image: '/images/nutrition.png'
+      image: '/images/nutrition.png',
     },
     {
       id: 5,
@@ -135,19 +131,19 @@ const ProductDetails = () => {
       items: [
         'Industrial Equipment: Tools, machinery, safety equipment',
         'Motorcycles: Racing and classic bikes',
-        'Technical Devices: Measuring tools, detectors, and precision instruments'
+        'Technical Devices: Measuring tools, detectors, and precision instruments',
       ],
-      image: '/images/industrial.png'
+      image: '/images/industrial.png',
     },
     {
       id: 6,
       title: 'Games and Hobbies',
       items: [
-        'Children\'s Toys: Dolls, electronic toys, video games.',
-        'Hobby Tools: Art supplies, drones, model kits.'
+        "Children's Toys: Dolls, electronic toys, video games.",
+        'Hobby Tools: Art supplies, drones, model kits.',
       ],
-      image: '/images/games.png'
-    }
+      image: '/images/games.png',
+    },
   ];
 
   const page2Categories = [
@@ -157,30 +153,30 @@ const ProductDetails = () => {
       items: [
         'Electronics: Smartphones, laptops, tablets.',
         'Home Appliances: Refrigerators, washing machines, microwaves.',
-        'Entertainment Devices: TVs, sound systems, cameras.'
+        'Entertainment Devices: TVs, sound systems, cameras.',
       ],
-      image: '/images/tech.png'
+      image: '/images/tech.png',
     },
     {
       id: 8,
       title: 'Clothing and Fashion',
       items: [
-        'Men\'s Clothing: Shirts, suits, trousers, sportswear.',
-        'Women\'s Clothing: Dresses, skirts, blouses, lingerie.',
-        'Children\'s Clothing: Babywear, playwear, school uniforms.',
+        "Men's Clothing: Shirts, suits, trousers, sportswear.",
+        "Women's Clothing: Dresses, skirts, blouses, lingerie.",
+        "Children's Clothing: Babywear, playwear, school uniforms.",
         'Footwear: Sports shoes, high heels, formal shoes.',
-        'Accessories: Belts, hats, scarves.'
+        'Accessories: Belts, hats, scarves.',
       ],
-      image: '/images/fashion.png'
+      image: '/images/fashion.png',
     },
     {
       id: 9,
       title: 'Furniture and Decor',
       items: [
         'Indoor Furniture: Chairs, sofas, dining tables.',
-        'Outdoor Furniture: Garden sets, outdoor umbrellas, patio furniture.'
+        'Outdoor Furniture: Garden sets, outdoor umbrellas, patio furniture.',
       ],
-      image: '/images/furniture.png'
+      image: '/images/furniture.png',
     },
     {
       id: 10,
@@ -188,18 +184,18 @@ const ProductDetails = () => {
       items: [
         'Fitness Equipment: Treadmills, bicycles, yoga mats.',
         'Sportswear: Athletic shoes, outdoor and gym clothing.',
-        'Sports Tools: Balls, rackets, and other equipment.'
+        'Sports Tools: Balls, rackets, and other equipment.',
       ],
-      image: '/images/sports.png'
+      image: '/images/sports.png',
     },
     {
       id: 11,
       title: 'Eco-friendly Products',
       items: [
         'Sustainable Items: Solar-powered devices.',
-        'Eco-Friendly Products: Recyclable bags, biodegradable utensils.'
+        'Eco-Friendly Products: Recyclable bags, biodegradable utensils.',
       ],
-      image: '/images/eco.png'
+      image: '/images/eco.png',
     },
     {
       id: 12,
@@ -209,10 +205,10 @@ const ProductDetails = () => {
         'Products: Wooden, stone, metal items.',
         'Handicrafts: Pottery, handmade rugs.',
         'Books and Publications: Novels, educational books, magazines.',
-        'Musical Instruments: Guitars, pianos, wind and string instruments, drums.'
+        'Musical Instruments: Guitars, pianos, wind and string instruments, drums.',
       ],
-      image: '/images/art.png'
-    }
+      image: '/images/art.png',
+    },
   ];
 
   const currentCategories = currentPage === 1 ? page1Categories : page2Categories;
@@ -222,12 +218,12 @@ const ProductDetails = () => {
       <div className="relative">
         {/* Header Section */}
         {headerSection}
-        
+
         {/* Main Content */}
         <div className="relative w-full max-w-[1200px] mx-auto pt-[40px] sm:pt-[60px] md:pt-[80px] pb-[40px] sm:pb-[60px] md:pb-[80px] px-4 sm:px-8">
           {currentCategories.map((category, index) => (
-            <div 
-              key={category.id} 
+            <div
+              key={category.id}
               className="mb-[64px] sm:mb-[80px] md:mb-[104px] flex flex-col lg:flex-row items-start gap-8 md:gap-[56px]"
             >
               {/* For even/odd handling, we flip the order for mobile and rely on CSS for large screens */}
@@ -240,7 +236,7 @@ const ProductDetails = () => {
                     {category.title}
                   </h2>
                 </div>
-                
+
                 <div className="relative ml-4 sm:ml-9 pl-4 sm:pl-8">
                   <div className="absolute left-[-4px] sm:left-[6px] top-[15px] bottom-[15px] w-[1px] bg-[#192B1A]" />
                   <div className="flex flex-col gap-4 sm:gap-6">
@@ -256,7 +252,9 @@ const ProductDetails = () => {
                 </div>
               </div>
 
-              <div className={`relative w-full max-w-[425px] h-[200px] sm:h-[250px] md:h-[306px] flex-shrink-0 order-1 lg:order-${index % 2 === 0 ? '2' : '1'} mx-auto`}>
+              <div
+                className={`relative w-full max-w-[425px] h-[200px] sm:h-[250px] md:h-[306px] flex-shrink-0 order-1 lg:order-${index % 2 === 0 ? '2' : '1'} mx-auto`}
+              >
                 <div className="absolute w-[70%] sm:w-[80%] h-[60%] sm:h-[70%] right-0 bottom-0 rounded-[16px] sm:rounded-[32px] overflow-hidden">
                   <Image
                     src={category.image}
@@ -266,12 +264,7 @@ const ProductDetails = () => {
                   />
                 </div>
                 <div className="absolute w-[75%] sm:w-[85%] h-[65%] sm:h-[75%] left-0 top-0 rounded-[16px] sm:rounded-[32px] overflow-hidden">
-                  <Image
-                    src={category.image}
-                    alt={category.title}
-                    fill
-                    className="object-cover"
-                  />
+                  <Image src={category.image} alt={category.title} fill className="object-cover" />
                 </div>
               </div>
             </div>
@@ -279,9 +272,7 @@ const ProductDetails = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex justify-center mb-10 sm:mb-20">
-          {pagination}
-        </div>
+        <div className="flex justify-center mb-10 sm:mb-20">{pagination}</div>
       </div>
     </main>
   );

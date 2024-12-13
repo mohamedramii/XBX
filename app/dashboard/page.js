@@ -1,46 +1,88 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { redirect } from 'next/navigation'
+import { useState } from 'react';
+import { redirect } from 'next/navigation';
 
 const DashboardPage = () => {
-  redirect('/dashboard/overview')
+  redirect('/dashboard/overview');
 
   const stats = [
     {
       label: 'Total Users',
       value: '1,150',
       description: 'Including normal users and investors',
-      icon: 'users'
+      icon: 'users',
     },
     {
       label: 'Total Investors',
       value: '400',
       description: 'Including only verified investors',
-      icon: 'investors'
+      icon: 'investors',
     },
     {
       label: 'Total Sales',
       value: '12,000$',
       description: 'Including Store ,Services',
-      icon: 'sales'
+      icon: 'sales',
     },
     {
       label: 'Total Investments',
       value: '5,221$',
       description: 'Including Investments',
-      icon: 'investments'
-    }
-  ]
+      icon: 'investments',
+    },
+  ];
 
   const orders = [
-    { userName: 'lordseif07', category: 'Services', date: '30 Nov 2024', time: '22:20', price: '2,002$', paid: true },
-    { userName: 'ali_mo23', category: 'Services', date: '30 Nov 2024', time: '19:34', price: '32$', paid: true },
-    { userName: 'ahmed0Saleh', category: 'Services', date: '30 Nov 2024', time: '14:2', price: '229$', paid: true },
-    { userName: 'mohsen_aa90', category: 'Products', date: '30 Nov 2024', time: '9:01', price: '99$', paid: true },
-    { userName: 'mohsen_aa90', category: 'Products', date: '30 Nov 2024', time: '9:01', price: '99$', paid: true },
-    { userName: 'mohsen_aa90', category: 'Products', date: '30 Nov 2024', time: '9:01', price: '99$', paid: true }
-  ]
+    {
+      userName: 'lordseif07',
+      category: 'Services',
+      date: '30 Nov 2024',
+      time: '22:20',
+      price: '2,002$',
+      paid: true,
+    },
+    {
+      userName: 'ali_mo23',
+      category: 'Services',
+      date: '30 Nov 2024',
+      time: '19:34',
+      price: '32$',
+      paid: true,
+    },
+    {
+      userName: 'ahmed0Saleh',
+      category: 'Services',
+      date: '30 Nov 2024',
+      time: '14:2',
+      price: '229$',
+      paid: true,
+    },
+    {
+      userName: 'mohsen_aa90',
+      category: 'Products',
+      date: '30 Nov 2024',
+      time: '9:01',
+      price: '99$',
+      paid: true,
+    },
+    {
+      userName: 'mohsen_aa90',
+      category: 'Products',
+      date: '30 Nov 2024',
+      time: '9:01',
+      price: '99$',
+      paid: true,
+    },
+    {
+      userName: 'mohsen_aa90',
+      category: 'Products',
+      date: '30 Nov 2024',
+      time: '9:01',
+      price: '99$',
+      paid: true,
+    },
+  ];
 
   return (
     <div className="space-y-[30px]">
@@ -53,7 +95,10 @@ const DashboardPage = () => {
       {/* Stats Grid */}
       <div className="grid grid-cols-4 gap-5">
         {stats.map((stat, index) => (
-          <div key={index} className="bg-white p-[26px_20px] rounded-[20px] shadow-[0px_5px_10px_rgba(0,0,0,0.1)]">
+          <div
+            key={index}
+            className="bg-white p-[26px_20px] rounded-[20px] shadow-[0px_5px_10px_rgba(0,0,0,0.1)]"
+          >
             <div className="flex justify-between items-center mb-2.5">
               <div>
                 <p className="text-[13px] font-semibold text-[#8A8A8A] mb-1">{stat.label}</p>
@@ -83,12 +128,24 @@ const DashboardPage = () => {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-[#B7B7B7]">
-                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">userName</th>
-                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">Category</th>
-                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">OrderDate</th>
-                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">OrderTime</th>
-                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">TotalPrice</th>
-                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">paid</th>
+                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">
+                    userName
+                  </th>
+                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">
+                    Category
+                  </th>
+                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">
+                    OrderDate
+                  </th>
+                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">
+                    OrderTime
+                  </th>
+                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">
+                    TotalPrice
+                  </th>
+                  <th className="text-left py-[15px] px-[10px] text-xl font-medium text-[#061404]">
+                    paid
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -99,7 +156,9 @@ const DashboardPage = () => {
                     <td className="py-[15px] px-[10px] text-xl text-[#061404]">{order.date}</td>
                     <td className="py-[15px] px-[10px] text-xl text-[#061404]">{order.time}</td>
                     <td className="py-[15px] px-[10px] text-xl text-[#061404]">{order.price}</td>
-                    <td className="py-[15px] px-[10px] text-xl text-[#11A900]">{order.paid ? 'True' : 'False'}</td>
+                    <td className="py-[15px] px-[10px] text-xl text-[#11A900]">
+                      {order.paid ? 'True' : 'False'}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -108,7 +167,7 @@ const DashboardPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardPage
+export default DashboardPage;

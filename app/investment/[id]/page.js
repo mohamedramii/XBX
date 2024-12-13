@@ -1,11 +1,10 @@
-'use client'
+'use client';
 
-import React from 'react'
-import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const InvestmentDetails = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <main className="w-full min-h-screen bg-white px-4 sm:px-8 lg:px-[122px] py-10 sm:py-16">
@@ -24,16 +23,18 @@ const InvestmentDetails = () => {
                   description
                 </span>
                 <p className="font-poppins font-semibold text-base sm:text-[20px] leading-[160%] text-[#192B1A]">
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+                  It is a long established fact that a reader will be distracted by the readable
+                  content of a page when looking at its layout. The point of using Lorem Ipsum is
+                  that it has a more-or-less normal distribution of letters
                 </p>
               </div>
 
-              <div className="w-full lg:w-[404px] h-[300px] sm:h-[360px] relative">
-                <Image
-                  src="/images/modern-business.png"
-                  alt="Modern business buildings"
-                  fill
-                  className="rounded-[24px] object-cover"
+              <div className="w-full lg:w-[404px] h-[300px] sm:h-[360px] relative bg-[#F8F8F8] rounded-[24px]">
+                <img
+                  src="/images/invest-opportunities-img.svg"
+                  alt="Investment opportunity"
+                  className="w-full h-full rounded-[24px] object-contain"
+                  style={{ maxWidth: '100%', maxHeight: '100%' }}
                 />
               </div>
             </div>
@@ -146,11 +147,14 @@ const InvestmentDetails = () => {
               Steps of Investment
             </h2>
             <p className="font-poppins font-semibold text-base sm:text-[20px] leading-[160%] text-black">
-              Fill out the form and provide accurate information about yourself. Upload a copy of your ID card or passport. Once your identity is verified, you can start investing directly in any project we offer (There is no need to repeat the steps every time you wish to invest)
+              Fill out the form and provide accurate information about yourself. Upload a copy of
+              your ID card or passport. Once your identity is verified, you can start investing
+              directly in any project we offer (There is no need to repeat the steps every time you
+              wish to invest)
             </p>
           </div>
 
-          <button 
+          <button
             onClick={() => router.push('/investment/application')}
             className="w-[249px] h-[67px] flex justify-center items-center px-4 py-[16px] gap-[8px] border-2 border-[#0D0D0D] rounded-[16px]"
           >
@@ -161,7 +165,7 @@ const InvestmentDetails = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default InvestmentDetails
+export default InvestmentDetails;

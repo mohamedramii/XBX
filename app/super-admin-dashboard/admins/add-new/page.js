@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const AddNewAdmin = () => {
   const [formData, setFormData] = useState({
@@ -12,33 +12,33 @@ const AddNewAdmin = () => {
       investments: false,
       store: false,
       services: false,
-      notification: false
-    }
-  })
+      notification: false,
+    },
+  });
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   const handleCheckboxChange = (authority) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       authorities: {
         ...prev.authorities,
-        [authority]: !prev.authorities[authority]
-      }
-    }))
-  }
+        [authority]: !prev.authorities[authority],
+      },
+    }));
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     // Add form submission logic here
-    console.log(formData)
-  }
+    console.log(formData);
+  };
 
   return (
     <div className="flex flex-col items-start p-0 gap-[30px] absolute w-[1105px] h-[555px] left-[382px] top-[120px]">
@@ -52,7 +52,11 @@ const AddNewAdmin = () => {
             </h1>
           </div>
           <p className="font-poppins font-normal text-[18px] leading-[27px] text-[#787777] w-[1105px]">
-            When adding new admins, please ensure that they understand their responsibilities clearly. It is essential that they are aware of the importance of accuracy and integrity in all tasks they undertake. Your role in providing guidance and support to new admins is vital for maintaining our standards and ensuring smooth operations. Thank you for your leadership in this process.
+            When adding new admins, please ensure that they understand their responsibilities
+            clearly. It is essential that they are aware of the importance of accuracy and integrity
+            in all tasks they undertake. Your role in providing guidance and support to new admins
+            is vital for maintaining our standards and ensuring smooth operations. Thank you for
+            your leadership in this process.
           </p>
         </div>
 
@@ -114,7 +118,7 @@ const AddNewAdmin = () => {
                 investments: 'Investments',
                 store: 'Store',
                 services: 'Services',
-                notification: 'Notification'
+                notification: 'Notification',
               }).map(([key, label]) => (
                 <div key={key} className="flex flex-row items-center gap-[10px]">
                   <input
@@ -145,7 +149,7 @@ const AddNewAdmin = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AddNewAdmin
+export default AddNewAdmin;

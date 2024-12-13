@@ -1,56 +1,56 @@
-"use client";
+'use client';
 
-import { useParams, useRouter } from "next/navigation";
-import Image from "next/image";
-import { useState } from "react";
-import Link from "next/link";
+import { useParams, useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { useState } from 'react';
+import Link from 'next/link';
 
 const ProductPage = () => {
   const params = useParams();
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState("description");
+  const [activeTab, setActiveTab] = useState('description');
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
   const [quantity] = useState(1);
 
   // Mock product data - replace with your actual data
   const product = {
-    title: "Men Watch",
+    title: 'Men Watch',
     description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
-    materials: "High-quality stainless steel and genuine leather",
-    warranty: "2 years international warranty",
-    additionalServices: "Free shipping and gift wrapping available",
-    image: "/images/watches/1.png",
-    sizes: ["24", "26", "28"],
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+    materials: 'High-quality stainless steel and genuine leather',
+    warranty: '2 years international warranty',
+    additionalServices: 'Free shipping and gift wrapping available',
+    image: '/images/watches/1.png',
+    sizes: ['24', '26', '28'],
     colors: [
-      { name: "gold", bg: "#F5D7B2" },
-      { name: "silver", bg: "#DDDDDD" },
-      { name: "black", bg: "#0E0E0E" },
+      { name: 'gold', bg: '#F5D7B2' },
+      { name: 'silver', bg: '#DDDDDD' },
+      { name: 'black', bg: '#0E0E0E' },
     ],
     price: 299,
-    minOrderQuantity: "It is a long established fact",
+    minOrderQuantity: 'It is a long established fact',
     deliveryTime:
-      "It is a long established fact It is a long established fact It is a long established fact It is a",
+      'It is a long established fact It is a long established fact It is a long established fact It is a',
     paymentMethods:
-      "It is a long established fact It is a long established fact It is a long established fact It is a",
+      'It is a long established fact It is a long established fact It is a long established fact It is a',
     relatedProducts: [
-      { image: "/images/watches/2.png", name: "Classic Watch", width: 303, height: 379 },
-      { image: "/images/watches/3.png", name: "Sport Watch", width: 338, height: 386 },
-      { image: "/images/watches/4.png", name: "Smart Watch", width: 355, height: 379 },
-      { image: "/images/watches/5.png", name: "Luxury Watch", width: 374, height: 386 },
+      { image: '/images/watches/2.png', name: 'Classic Watch', width: 303, height: 379 },
+      { image: '/images/watches/3.png', name: 'Sport Watch', width: 338, height: 386 },
+      { image: '/images/watches/4.png', name: 'Smart Watch', width: 355, height: 379 },
+      { image: '/images/watches/5.png', name: 'Luxury Watch', width: 374, height: 386 },
     ],
   };
 
   const getTabContent = () => {
     switch (activeTab) {
-      case "description":
+      case 'description':
         return product.description;
-      case "materials":
+      case 'materials':
         return product.materials;
-      case "warranty":
+      case 'warranty':
         return product.warranty;
-      case "additionalServices":
+      case 'additionalServices':
         return product.additionalServices;
       default:
         return product.description;
@@ -58,26 +58,17 @@ const ProductPage = () => {
   };
 
   return (
-    <main 
-      className="w-full max-w-[1440px] mx-auto flex flex-col items-start p-0 gap-[64px] mt-[142px] px-4 sm:px-8 lg:px-0"
-    >
+    <main className="w-full max-w-[1440px] mx-auto flex flex-col items-start p-0 gap-[64px] mt-[142px] px-4 sm:px-8 lg:px-0">
       {/* Container for main product section */}
       <div className="flex flex-col items-center p-0 gap-[52px] w-full">
-        
         {/* Top section with images and product details */}
         <div className="flex flex-col lg:flex-row justify-center items-center p-0 gap-[57px] w-full h-auto">
-          
           {/* Left side: Product images */}
           <div className="flex flex-col items-start p-0 gap-[16px] w-full max-w-[654px]">
             {/* First row of images */}
             <div className="flex flex-col sm:flex-row items-center gap-[16px] w-full h-auto">
               <div className="box-border w-full sm:w-[319px] h-[390px] bg-white border border-[#9C9C9C] rounded-[16px] relative overflow-hidden">
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={product.image} alt={product.title} fill className="object-cover" />
               </div>
               <div className="box-border w-full sm:w-[319px] h-[390px] bg-white border border-[#9C9C9C] rounded-[16px]" />
             </div>
@@ -90,8 +81,8 @@ const ProductPage = () => {
                 style={{
                   background:
                     "linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/images/watches/5.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
                 }}
               >
                 <span className="font-poppins font-bold text-[20px] sm:text-[24px] md:text-[28px] leading-[160%] text-[#FBFBFB]">
@@ -110,19 +101,19 @@ const ProductPage = () => {
               </h1>
               <div className="relative w-full max-w-[560px] h-auto">
                 <div className="flex flex-wrap items-center gap-[24px] w-full">
-                  {["description", "materials", "warranty", "additionalServices"].map((tab) => (
+                  {['description', 'materials', 'warranty', 'additionalServices'].map((tab) => (
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
                       className={`font-poppins text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] ${
-                        activeTab === tab ? "text-[#192B1A]" : "text-[#818C82]"
+                        activeTab === tab ? 'text-[#192B1A]' : 'text-[#818C82]'
                       }`}
                     >
                       {tab}
                     </button>
                   ))}
                 </div>
-                {activeTab === "description" && (
+                {activeTab === 'description' && (
                   <div className="border border-[#192B1A] w-[80px] sm:w-[100px] md:w-[113px] mt-2" />
                 )}
               </div>
@@ -144,7 +135,7 @@ const ProductPage = () => {
                       key={size}
                       onClick={() => setSelectedSize(size)}
                       className={`flex justify-center items-center p-2 w-[46px] h-[54px] border border-[#192B1A] rounded-[16px] ${
-                        selectedSize === size ? "bg-[#192B1A] text-white" : "text-[#192B1A]"
+                        selectedSize === size ? 'bg-[#192B1A] text-white' : 'text-[#192B1A]'
                       } font-poppins font-bold text-[20px] sm:text-[22px] md:text-[24px]`}
                     >
                       {size}
@@ -169,7 +160,7 @@ const ProductPage = () => {
                     >
                       <span
                         className={`font-poppins font-bold text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] ${
-                          color.name === "black" ? "text-[#FBFBFB]" : "text-[#192B1A]"
+                          color.name === 'black' ? 'text-[#FBFBFB]' : 'text-[#192B1A]'
                         }`}
                       >
                         {color.name}
@@ -251,11 +242,11 @@ const ProductPage = () => {
             <div
               key={index}
               className="flex flex-col items-center gap-[24px]"
-              style={{ width: item.width + "px", height: (item.height + 62) + "px" }}
+              style={{ width: item.width + 'px', height: item.height + 62 + 'px' }}
             >
               <div
                 className="relative"
-                style={{ width: item.width + "px", height: item.height + "px" }}
+                style={{ width: item.width + 'px', height: item.height + 'px' }}
               >
                 <Image src={item.image} alt={item.name} fill className="object-cover" />
               </div>

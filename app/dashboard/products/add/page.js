@@ -1,11 +1,11 @@
-'use client'
-import Image from 'next/image'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import ProductsService from '@/services/api/products.service'
+'use client';
+import Image from 'next/image';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import ProductsService from '@/services/api/products.service';
 
 export default function AddProductPage() {
-  const router = useRouter()
+  const router = useRouter();
   const [formData, setFormData] = useState({
     title: '',
     overView: '',
@@ -21,52 +21,52 @@ export default function AddProductPage() {
     sizes: '',
     shippingTime: '',
     cover: null,
-    gallery: []
-  })
+    gallery: [],
+  });
 
-  const [coverPreview, setCoverPreview] = useState(null)
-  const [galleryPreviews, setGalleryPreviews] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState('')
+  const [coverPreview, setCoverPreview] = useState(null);
+  const [galleryPreviews, setGalleryPreviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const categories = ['None', 'Electronics', 'Clothing', 'Books', 'Home & Garden']
+  const categories = ['None', 'Electronics', 'Clothing', 'Books', 'Home & Garden'];
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsLoading(true)
-    setError('')
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
 
     try {
-      const productData = new FormData()
-      
+      const productData = new FormData();
+
       // Add required type field
-      productData.append('type', 'Products')
+      productData.append('type', 'Products');
 
       // Add all text fields
-      Object.keys(formData).forEach(key => {
+      Object.keys(formData).forEach((key) => {
         if (key !== 'cover' && key !== 'gallery' && formData[key]) {
-          productData.append(key, formData[key])
+          productData.append(key, formData[key]);
         }
-      })
+      });
 
       // Add cover image
       if (formData.cover) {
-        productData.append('cover', formData.cover)
+        productData.append('cover', formData.cover);
       }
 
       // Add gallery images
-      formData.gallery.forEach(image => {
-        productData.append('gallery', image)
-      })
+      formData.gallery.forEach((image) => {
+        productData.append('gallery', image);
+      });
 
-      await ProductsService.addProduct(productData)
-      router.push('/dashboard/products')
+      await ProductsService.addProduct(productData);
+      router.push('/dashboard/products');
     } catch (err) {
-      setError(err.message || 'Failed to add product. Please try again.')
+      setError(err.message || 'Failed to add product. Please try again.');
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <div className="relative w-[1104px] h-[1804px] flex flex-col items-start p-0 gap-5">
@@ -99,7 +99,8 @@ export default function AddProductPage() {
           className="box-border w-full h-[100px] bg-white/60 border border-[#11A900] rounded-[20px] p-4 resize-none"
         />
         <p className="w-full h-[46px] font-poppins font-normal text-sm text-[#787777]">
-          Provide a concise and clear overview of the product. Highlight its main purpose, key features, and how it benefits users.
+          Provide a concise and clear overview of the product. Highlight its main purpose, key
+          features, and how it benefits users.
         </p>
       </div>
 
@@ -134,10 +135,10 @@ export default function AddProductPage() {
                 type="file"
                 accept="image/*"
                 onChange={(e) => {
-                  const file = e.target.files[0]
+                  const file = e.target.files[0];
                   if (file) {
-                    setFormData({ ...formData, cover: file })
-                    setCoverPreview(URL.createObjectURL(file))
+                    setFormData({ ...formData, cover: file });
+                    setCoverPreview(URL.createObjectURL(file));
                   }
                 }}
                 className="hidden"
@@ -183,15 +184,15 @@ export default function AddProductPage() {
                     type="file"
                     accept="image/*"
                     onChange={(e) => {
-                      const file = e.target.files[0]
+                      const file = e.target.files[0];
                       if (file && index < 6) {
-                        const newGallery = [...formData.gallery]
-                        newGallery[index] = file
-                        setFormData({ ...formData, gallery: newGallery })
-                        
-                        const newPreviews = [...galleryPreviews]
-                        newPreviews[index] = URL.createObjectURL(file)
-                        setGalleryPreviews(newPreviews)
+                        const newGallery = [...formData.gallery];
+                        newGallery[index] = file;
+                        setFormData({ ...formData, gallery: newGallery });
+
+                        const newPreviews = [...galleryPreviews];
+                        newPreviews[index] = URL.createObjectURL(file);
+                        setGalleryPreviews(newPreviews);
                       }
                     }}
                     className="hidden"
@@ -203,7 +204,8 @@ export default function AddProductPage() {
           </div>
         </div>
         <p className="w-full font-poppins font-normal text-sm text-[#787777]">
-          Ensure that all gallery and cover photos are of high quality, clear, and professionally presented.
+          Ensure that all gallery and cover photos are of high quality, clear, and professionally
+          presented.
         </p>
       </div>
 
@@ -324,5 +326,5 @@ export default function AddProductPage() {
         {isLoading ? 'Adding...' : 'Add Product'}
       </button>
     </div>
-  )
+  );
 }

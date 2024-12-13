@@ -1,59 +1,59 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const AdminsManagement = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Admins')
-  
+  const [selectedCategory, setSelectedCategory] = useState('All Admins');
+
   const categories = [
     { name: 'All Admins', count: 13 },
     { name: 'Super Admins', count: 0 },
     { name: 'Investments Admins', count: 0 },
     { name: 'Services Admins', count: 0 },
     { name: 'Store Admins', count: 0 },
-    { name: 'Others', count: 0 }
-  ]
+    { name: 'Others', count: 0 },
+  ];
 
   const admins = [
     {
       id: 1,
       username: '@lordseif07',
       items: 13,
-      type: ['invest', 'store', 'service']
+      type: ['invest', 'store', 'service'],
     },
     {
       id: 2,
       username: '@lordseif07',
       items: 52,
-      type: ['store']
+      type: ['store'],
     },
     {
       id: 3,
       username: '@lordseif07',
       items: 1,
-      type: ['super']
+      type: ['super'],
     },
     {
       id: 4,
       username: '@lordseif07',
       items: 22,
-      type: ['invest']
+      type: ['invest'],
     },
     {
       id: 5,
       username: '@lordseif07',
       items: 102,
-      type: ['invest', 'store', 'notification']
+      type: ['invest', 'store', 'notification'],
     },
     {
       id: 6,
       username: '@lordseif07',
       items: 22,
-      type: ['invest']
-    }
-  ]
+      type: ['invest'],
+    },
+  ];
 
   return (
     <div className="w-full min-h-screen bg-[#F4F4F4] p-4 md:p-8 lg:p-12">
@@ -82,9 +82,7 @@ const AdminsManagement = () => {
                         : 'bg-[rgba(224,224,224,0.6)] text-[#787777] font-medium'
                     }`}
                 >
-                  <span className="font-poppins leading-[30px]">
-                    {category.name}
-                  </span>
+                  <span className="font-poppins leading-[30px]">{category.name}</span>
                 </button>
               ))}
             </div>
@@ -107,8 +105,8 @@ const AdminsManagement = () => {
               />
             </div>
 
-            <Link 
-              href="/super-admin-dashboard/admins/add-new" 
+            <Link
+              href="/super-admin-dashboard/admins/add-new"
               className="flex justify-center items-center py-0.5 px-4 gap-2.5 bg-[#11A900] rounded-[20px] text-white font-poppins font-semibold text-base md:text-xl leading-[30px] h-10 md:w-[160px]"
             >
               Add New
@@ -156,7 +154,7 @@ const AdminsManagement = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdminsManagement
+export default AdminsManagement;

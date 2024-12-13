@@ -7,7 +7,7 @@ const publicRoutes = [
   '/sign-up',
   '/email-verification',
   '/admin-sign-in',
-  '/super-admin-sign-in'
+  '/super-admin-sign-in',
 ];
 
 export function middleware(request) {
@@ -79,7 +79,6 @@ export const config = {
     '/dashboard/:path*',
     '/super-admin-dashboard/:path*',
     '/admin-sign-in',
-    '/super-admin-sign-in'
-  ]
+    '/super-admin-sign-in',
+  ],
 };
-

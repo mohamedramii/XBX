@@ -1,156 +1,158 @@
 .toggleContainer {
-    position: relative;
-  }
-  
-  .background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: var(--blue-background);
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    transition: all 250ms ease-in;
-  }
-  
-  .toggleCheckbox {
-    display: none;
-  }
-  
-  .toggleCheckbox:checked ~ .background {
-    background: var(--indigo-background);
-  }
-  
-  .toggleLabel {
-    width: 120px; 
-    height: 60px; 
-    background: #E6F4E4;
-    border-radius: 100px;
-    border: 5px solid #11A900;
-    display: flex;
-    position: relative;
-    transition: all 350ms ease-in;
-    cursor: pointer;
-  }
-  
-  .toggleCheckbox:checked + .toggleLabel {
-    background: #2d2d2d;
-    border-color: #3a3a3a;
-  }
-  
-  .toggleLabelBackground {
-    width: 30px; 
-    height: 30px; 
-    border-radius: 50%;
-    position: absolute;
-    background: #11A900;
-    left: 10px; 
-    top: 10px; 
-    transition: all 150ms ease-in;
-  }
-  
-  .toggleCheckbox:checked + .toggleLabel .toggleLabelBackground {
-    left: 70px; 
-    background: #fff;
-  }
-  
-  :global(.dark) .toggleLabel {
-    background: #2d2d2d;
-    border-color: #3a3a3a;
-  }
-  
-  :global(.dark) .toggleLabelBackground {
-    background: #fff;
-    left: 70px;
-  }
-  
-  .toggleLabelBackground::before,
-  .toggleLabelBackground::after {
-    content: "";
-    position: absolute;
-    background: var(--white);
-    border-radius: 50%;
-    transition: all 150ms ease-in;
-  }
-  
-  .toggleLabelBackground::before {
-    width: 15px;
-    height: 15px;
-    top: -20px;
-    left: -8px;
-  }
-  
-  .toggleLabelBackground::after {
-    width: 15px;
-    height: 15px;
-    left: 15px;
-    top: 8px;
-  }
-  
-  .toggleLabel::before {
-    content: "";
-    width: 30px; 
-    height: 30px; 
-    border: 5px solid var(--yellow-border);
-    top: 15px;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--blue-background);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all 250ms ease-in;
+}
+
+.toggleCheckbox {
+  display: none;
+}
+
+.toggleCheckbox:checked ~ .background {
+  background: var(--indigo-background);
+}
+
+.toggleLabel {
+  width: 120px;
+  height: 60px;
+  background: #e6f4e4;
+  border-radius: 100px;
+  border: 5px solid #11a900;
+  display: flex;
+  position: relative;
+  transition: all 350ms ease-in;
+  cursor: pointer;
+}
+
+.toggleCheckbox:checked + .toggleLabel {
+  background: #2d2d2d;
+  border-color: #3a3a3a;
+}
+
+.toggleLabelBackground {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  background: #11a900;
+  left: 10px;
+  top: 10px;
+  transition: all 150ms ease-in;
+}
+
+.toggleCheckbox:checked + .toggleLabel .toggleLabelBackground {
+  left: 70px;
+  background: #fff;
+}
+
+:global(.dark) .toggleLabel {
+  background: #2d2d2d;
+  border-color: #3a3a3a;
+}
+
+:global(.dark) .toggleLabelBackground {
+  background: #fff;
+  left: 70px;
+}
+
+.toggleLabelBackground::before,
+.toggleLabelBackground::after {
+  content: '';
+  position: absolute;
+  background: var(--white);
+  border-radius: 50%;
+  transition: all 150ms ease-in;
+}
+
+.toggleLabelBackground::before {
+  width: 15px;
+  height: 15px;
+  top: -20px;
+  left: -8px;
+}
+
+.toggleLabelBackground::after {
+  width: 15px;
+  height: 15px;
+  left: 15px;
+  top: 8px;
+}
+
+.toggleLabel::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 5px solid var(--yellow-border);
+  top: 15px;
+  left: 10px;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--yellow-background);
+  transition: all 350ms ease-in;
+  animation: reverse 350ms forwards;
+}
+
+.toggleLabel::after {
+  content: '';
+  position: absolute;
+  box-shadow:
+    var(--gray-dots) -10px 0 0 2px,
+    var(--gray-dots) -20px 12px 0 -2px;
+  left: 90px;
+  top: 25px;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 250ms ease-in;
+}
+
+.toggleCheckbox:checked + .toggleLabel::before {
+  background: var(--white);
+  border-color: var(--gray-border);
+  animation: switch 350ms forwards;
+}
+
+.toggleCheckbox:checked + .toggleLabel::after {
+  transition-delay: 350ms;
+  opacity: 1;
+}
+
+@keyframes switch {
+  0% {
     left: 10px;
-    position: absolute;
-    border-radius: 50%;
-    background: var(--yellow-background);
-    transition: all 350ms ease-in;
-    animation: reverse 350ms forwards;
   }
-  
-  .toggleLabel::after {
-    content: "";
-    position: absolute;
-    box-shadow: var(--gray-dots) -10px 0 0 2px, var(--gray-dots) -20px 12px 0 -2px;
-    left: 90px;
-    top: 25px;
-    width: 8px;
-    height: 8px;
-    background: transparent;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 250ms ease-in;
+  60% {
+    left: 10px;
+    width: 80px;
   }
-  
-  .toggleCheckbox:checked + .toggleLabel::before {
-    background: var(--white);
-    border-color: var(--gray-border);
-    animation: switch 350ms forwards;
+  100% {
+    left: 80px;
+    width: 30px;
   }
-  
-  .toggleCheckbox:checked + .toggleLabel::after {
-    transition-delay: 350ms;
-    opacity: 1;
+}
+
+@keyframes reverse {
+  0% {
+    left: 80px;
+    width: 30px;
   }
-  
-  @keyframes switch {
-    0% {
-      left: 10px;
-    }
-    60% {
-      left: 10px;
-      width: 80px;
-    }
-    100% {
-      left: 80px;
-      width: 30px;
-    }
+  60% {
+    left: 50px;
+    width: 80px;
   }
-  
-  @keyframes reverse {
-    0% {
-      left: 80px;
-      width: 30px;
-    }
-    60% {
-      left: 50px;
-      width: 80px;
-    }
-    100% {
-      left: 10px;
-      width: 30px;
-    }
+  100% {
+    left: 10px;
+    width: 30px;
   }
+}

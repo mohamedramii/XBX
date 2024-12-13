@@ -7,7 +7,7 @@ class AuthService {
     try {
       const response = await api.post(ENDPOINTS.auth.adminSignIn, {
         userName: username,
-        password: password
+        password: password,
       });
 
       const { AccessToken, adminID, adminName } = response.data;
@@ -15,30 +15,30 @@ class AuthService {
       if (AccessToken) {
         // Store token
         localStorage.setItem('adminToken', AccessToken);
-        
+
         // Set cookie for server-side auth checks
         Cookies.set('adminToken', AccessToken, { expires: 7 });
-        
+
         return {
           success: true,
           data: {
             token: AccessToken,
             user: {
               id: adminID,
-              name: adminName
-            }
-          }
+              name: adminName,
+            },
+          },
         };
       }
-      
+
       return {
         success: false,
-        error: 'No token received'
+        error: 'No token received',
       };
     } catch (error) {
       return {
         success: false,
-        error: error.response?.data?.message || 'Authentication failed'
+        error: error.response?.data?.message || 'Authentication failed',
       };
     }
   }
@@ -48,14 +48,14 @@ class AuthService {
       // Clear tokens and cookies
       localStorage.removeItem('adminToken');
       Cookies.remove('adminToken');
-      
+
       return {
-        success: true
+        success: true,
       };
     } catch (error) {
       return {
         success: false,
-        error: 'Failed to clear authentication data'
+        error: 'Failed to clear authentication data',
       };
     }
   }
@@ -64,33 +64,33 @@ class AuthService {
     try {
       const refreshToken = localStorage.getItem('refreshToken');
       const response = await api.post(ENDPOINTS.auth.refreshToken, { refreshToken });
-      
+
       const { AccessToken, adminID, adminName } = response.data;
 
       if (AccessToken) {
         localStorage.setItem('adminToken', AccessToken);
         Cookies.set('adminToken', AccessToken, { expires: 7 });
-        
+
         return {
           success: true,
           data: {
             token: AccessToken,
             user: {
               id: adminID,
-              name: adminName
-            }
-          }
+              name: adminName,
+            },
+          },
         };
       }
-      
+
       return {
         success: false,
-        error: 'No token received'
+        error: 'No token received',
       };
     } catch (error) {
       return {
         success: false,
-        error: error.response?.data?.message || 'Token refresh failed'
+        error: error.response?.data?.message || 'Token refresh failed',
       };
     }
   }

@@ -1,20 +1,20 @@
-'use client'
+'use client';
 
-import React from 'react'
-import Image from 'next/image'
-import { useSearchParams } from 'next/navigation'
+import React from 'react';
+import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 
 const RequestService = () => {
-  const searchParams = useSearchParams()
-  const category = searchParams.get('category')
-  const service = searchParams.get('service')
+  const searchParams = useSearchParams();
+  const category = searchParams.get('category');
+  const service = searchParams.get('service');
 
   const dummyImages = [
     '/images/all-services-imgs.svg',
     '/images/all-services-imgs.svg',
     '/images/all-services-imgs.svg',
-    '/images/all-services-imgs.svg'
-  ]
+    '/images/all-services-imgs.svg',
+  ];
 
   return (
     <main className="w-full min-h-screen bg-white px-4 sm:px-8 lg:px-[122px] py-10 sm:py-16">
@@ -53,7 +53,9 @@ const RequestService = () => {
                   description
                 </h2>
                 <p className="font-poppins font-semibold text-base sm:text-[20px] leading-[160%] text-[#192B1A]">
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+                  It is a long established fact that a reader will be distracted by the readable
+                  content of a page when looking at its layout. The point of using Lorem Ipsum is
+                  that it has a more-or-less normal distribution of letters
                 </p>
               </div>
 
@@ -101,7 +103,7 @@ const RequestService = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default RequestService
+export default RequestService;

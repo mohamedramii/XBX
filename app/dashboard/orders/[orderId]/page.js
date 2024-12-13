@@ -11,7 +11,7 @@ const OrderDetailsPage = () => {
     { name: 'All', count: 12 },
     { name: 'Completed', count: 8 },
     { name: 'Pending', count: 4 },
-    { name: 'Cancelled', count: 2 }
+    { name: 'Cancelled', count: 2 },
   ];
 
   const orders = [
@@ -24,7 +24,7 @@ const OrderDetailsPage = () => {
       status: 'Pending',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
+      image: '/images/laptopproduct.png',
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const OrderDetailsPage = () => {
       status: 'Delivered',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
+      image: '/images/laptopproduct.png',
     },
     {
       id: 3,
@@ -46,8 +46,8 @@ const OrderDetailsPage = () => {
       status: 'Cancelled',
       username: '@lordseif07',
       orderDate: '20 Nov 2024',
-      image: '/images/laptopproduct.png'
-    }
+      image: '/images/laptopproduct.png',
+    },
   ];
 
   const router = useRouter();
@@ -124,7 +124,10 @@ const OrderDetailsPage = () => {
       {/* Orders List */}
       <div className="flex flex-col gap-4 sm:gap-[20px] w-full">
         {orders.map((order) => (
-          <div key={order.id} className="relative w-full bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-[20px] overflow-hidden flex flex-col sm:flex-row items-start sm:items-center px-3 sm:px-0 py-3 sm:py-0 h-auto sm:h-[144px] gap-2 sm:gap-0">
+          <div
+            key={order.id}
+            className="relative w-full bg-white shadow-[0px_5px_10px_rgba(0,0,0,0.1)] rounded-[20px] overflow-hidden flex flex-col sm:flex-row items-start sm:items-center px-3 sm:px-0 py-3 sm:py-0 h-auto sm:h-[144px] gap-2 sm:gap-0"
+          >
             {/* Product Image */}
             <div className="w-full sm:w-[169px] h-[120px] sm:h-[144px] relative">
               <Image
@@ -141,7 +144,8 @@ const OrderDetailsPage = () => {
                 {order.productName}
               </h3>
               <p className="font-poppins font-semibold text-[12px] sm:text-[14px] text-[#11A900]">
-                Quantity : {order.quantity} | Price Per Piece : {order.pricePerPiece}$ | Total Price : {order.totalPrice}$ | Status : {order.status}
+                Quantity : {order.quantity} | Price Per Piece : {order.pricePerPiece}$ | Total Price
+                : {order.totalPrice}$ | Status : {order.status}
               </p>
               <p className="font-poppins font-semibold text-[12px] sm:text-[14px] text-[#061404]">
                 UserName : {order.username} | OrderDate : {order.orderDate}
@@ -150,10 +154,7 @@ const OrderDetailsPage = () => {
 
             {/* Status Icon */}
             {getStatusIcon(order.status) && (
-              <div 
-                className="absolute"
-                style={getStatusIconStyle(order.status)}
-              >
+              <div className="absolute" style={getStatusIconStyle(order.status)}>
                 <Image
                   src={getStatusIcon(order.status)}
                   alt={order.status}
@@ -165,7 +166,7 @@ const OrderDetailsPage = () => {
 
             {/* Update Button */}
             <div className="absolute right-3 bottom-3 sm:bottom-auto sm:top-auto sm:right-[40px] sm:top-[111px]">
-              <button 
+              <button
                 className="font-poppins font-semibold text-[12px] sm:text-[15px] text-[#787777]"
                 onClick={() => handleUpdate(order.id)}
               >

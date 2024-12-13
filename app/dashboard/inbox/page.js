@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const messages = [
   {
@@ -13,8 +13,9 @@ const messages = [
     isVerified: true,
     unreadCount: 2,
     timestamp: '7:08 PM 12 Dec 2024',
-    message: 'Hello , I need more details about HP Victus 15-fa0031dx Gaming Laptop . Can you clarify its features and availability?',
-    isUnread: true
+    message:
+      'Hello , I need more details about HP Victus 15-fa0031dx Gaming Laptop . Can you clarify its features and availability?',
+    isUnread: true,
   },
   {
     id: 2,
@@ -24,8 +25,9 @@ const messages = [
     isVerified: true,
     unreadCount: 0,
     timestamp: '2:08 PM 12 Dec 2024',
-    message: "Hi , I'm interested in investing in Revolutionizing the Way We Rent and Stay. Could you provide me with details about current opportunities and the project's roadmap?",
-    isUnread: false
+    message:
+      "Hi , I'm interested in investing in Revolutionizing the Way We Rent and Stay. Could you provide me with details about current opportunities and the project's roadmap?",
+    isUnread: false,
   },
   {
     id: 3,
@@ -35,8 +37,9 @@ const messages = [
     isVerified: true,
     unreadCount: 0,
     timestamp: '2:08 PM 12 Dec 2024',
-    message: "Hi , I'm interested in investing in Revolutionizing the Way We Rent and Stay. Could you provide me with details about current opportunities and the project's roadmap?",
-    isUnread: false
+    message:
+      "Hi , I'm interested in investing in Revolutionizing the Way We Rent and Stay. Could you provide me with details about current opportunities and the project's roadmap?",
+    isUnread: false,
   },
   {
     id: 4,
@@ -46,8 +49,9 @@ const messages = [
     isVerified: false,
     unreadCount: 8,
     timestamp: '7:08 PM 12 Dec 2024',
-    message: 'Hello , I need more details about HP Victus 15-fa0031dx Gaming Laptop . Can you clarify its features and availability?',
-    isUnread: true
+    message:
+      'Hello , I need more details about HP Victus 15-fa0031dx Gaming Laptop . Can you clarify its features and availability?',
+    isUnread: true,
   },
   {
     id: 5,
@@ -57,10 +61,11 @@ const messages = [
     isVerified: false,
     unreadCount: 0,
     timestamp: '2:38 AM 12 Dec 2024',
-    message: "Hi [Admin 2's Name], could you share the latest list of products available on the platform? I need it for an upcoming update/report. If there have been any recent additions or removals, please include those as well. Thanks!",
-    isUnread: false
-  }
-]
+    message:
+      "Hi [Admin 2's Name], could you share the latest list of products available on the platform? I need it for an upcoming update/report. If there have been any recent additions or removals, please include those as well. Thanks!",
+    isUnread: false,
+  },
+];
 
 export default function InboxPage() {
   return (
@@ -104,22 +109,17 @@ export default function InboxPage() {
             <div className="flex items-center justify-between mb-[20px]">
               {/* User Info */}
               <div className="flex items-center gap-[10px]">
-                <span className="text-[20px] font-semibold text-[#11A900]">
-                  {message.username}
-                </span>
+                <span className="text-[20px] font-semibold text-[#11A900]">{message.username}</span>
                 <div className="w-0 h-[20px] border-l-2 border-black" />
-                <span className={`text-[20px] ${
-                  message.isUnread ? 'font-semibold text-[#11A900]' : 'font-medium text-[#AEADAD]'
-                }`}>
+                <span
+                  className={`text-[20px] ${
+                    message.isUnread ? 'font-semibold text-[#11A900]' : 'font-medium text-[#AEADAD]'
+                  }`}
+                >
                   {message.userType}
                 </span>
                 {message.isVerified && (
-                  <Image
-                    src="/icons/verified-icon.svg"
-                    width={24}
-                    height={24}
-                    alt="Verified"
-                  />
+                  <Image src="/icons/verified-icon.svg" width={24} height={24} alt="Verified" />
                 )}
                 {message.unreadCount > 0 && (
                   <div className="w-[30px] h-[30px] flex items-center justify-center bg-[#FF0101] rounded-full">
@@ -133,12 +133,10 @@ export default function InboxPage() {
               <span className="text-[20px] text-[#AEADAD]">{message.timestamp}</span>
             </div>
             {/* Message Content */}
-            <p className="text-[20px] text-[#787777] leading-[30px]">
-              {message.message}
-            </p>
+            <p className="text-[20px] text-[#787777] leading-[30px]">{message.message}</p>
           </Link>
         ))}
       </div>
     </div>
-  )
+  );
 }

@@ -65,9 +65,7 @@ const ServicesPage = () => {
           href="/dashboard/services/add"
           className="flex justify-center items-center gap-2 sm:gap-[10px] w-[100px] sm:w-[130px] md:w-[160px] h-[35px] sm:h-[40px] bg-[#11A900] rounded-[20px] text-white"
         >
-          <span className="text-[14px] sm:text-[16px] md:text-[20px] font-semibold">
-            Add New
-          </span>
+          <span className="text-[14px] sm:text-[16px] md:text-[20px] font-semibold">Add New</span>
           <div className="w-[8px] sm:w-[10px] md:w-[14px] h-[8px] sm:h-[10px] md:h-[14px] border-2 sm:border-4 border-white rounded-full" />
         </Link>
       </div>

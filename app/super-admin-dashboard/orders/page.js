@@ -10,19 +10,55 @@ const OrdersPage = () => {
   const categories = [
     { name: 'All Users', count: 12 },
     { name: 'XBX Customers', count: 8 },
-    { name: 'XBX Investors', count: 4 }
+    { name: 'XBX Investors', count: 4 },
   ];
 
   const users = [
     { username: '@lordseif07', email: 'corosempi@gmail.com', orders: 12, status: 'active' },
     { username: '@lordseif07', email: 'corosempi@gmail.com', orders: 0, status: 'inactive' },
     { username: '@lordseif07', email: 'corosempi@gmail.com', orders: 3, status: 'pending' },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 0, status: 'inactive', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 6, status: 'active', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 6, status: 'active', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 5, status: 'pending', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 6, status: 'active', verified: true },
-    { username: '@lordseif07', email: 'corozan07@gmail.com', orders: 6, status: 'active', verified: true }
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 0,
+      status: 'inactive',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 6,
+      status: 'active',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 6,
+      status: 'active',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 5,
+      status: 'pending',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 6,
+      status: 'active',
+      verified: true,
+    },
+    {
+      username: '@lordseif07',
+      email: 'corozan07@gmail.com',
+      orders: 6,
+      status: 'active',
+      verified: true,
+    },
   ];
 
   const router = useRouter();
@@ -82,7 +118,9 @@ const OrdersPage = () => {
                       : 'bg-[rgba(224,224,224,0.6)] text-[#787777]'
                   }`}
                 >
-                  <span className={`text-base md:text-xl font-${activeCategory === category.name ? 'bold' : 'medium'}`}>
+                  <span
+                    className={`text-base md:text-xl font-${activeCategory === category.name ? 'bold' : 'medium'}`}
+                  >
                     {category.name}
                   </span>
                 </button>
@@ -112,11 +150,20 @@ const OrdersPage = () => {
                 {user.username}
               </span>
               {user.verified ? (
-                <div className={`hidden md:block absolute w-6 h-6 left-[143px] top-6 border-2 rounded-full`} style={{ borderColor: getStatusColor(user.status) }} />
+                <div
+                  className={`hidden md:block absolute w-6 h-6 left-[143px] top-6 border-2 rounded-full`}
+                  style={{ borderColor: getStatusColor(user.status) }}
+                />
               ) : (
-                <div className={`hidden md:flex justify-center items-center w-7 h-7 left-[143px] top-[22px] bg-[rgba(${
-                  user.status === 'active' ? '17,169,0' : user.status === 'pending' ? '205,223,7' : '120,119,119'
-                },0.2)] rounded-full absolute`}>
+                <div
+                  className={`hidden md:flex justify-center items-center w-7 h-7 left-[143px] top-[22px] bg-[rgba(${
+                    user.status === 'active'
+                      ? '17,169,0'
+                      : user.status === 'pending'
+                        ? '205,223,7'
+                        : '120,119,119'
+                  },0.2)] rounded-full absolute`}
+                >
                   <Image
                     src={getStatusIcon(user.status)}
                     alt={`${user.status} icon`}
@@ -129,10 +176,13 @@ const OrdersPage = () => {
               <span className="font-poppins font-medium text-base md:text-lg leading-[160%] text-[#787777]">
                 {user.email}
               </span>
-              <span className={`font-poppins font-bold text-base md:text-lg leading-[160%]`} style={{ color: getStatusColor(user.status) }}>
+              <span
+                className={`font-poppins font-bold text-base md:text-lg leading-[160%]`}
+                style={{ color: getStatusColor(user.status) }}
+              >
                 {user.orders} orders
               </span>
-              <button 
+              <button
                 className="font-poppins font-bold text-base md:text-lg leading-[160%] text-[#11A900] hover:text-[#0e8a00] transition-colors"
                 onClick={() => handleViewOrder(user.username.replace('@', ''))}
               >

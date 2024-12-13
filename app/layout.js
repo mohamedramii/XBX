@@ -21,19 +21,22 @@ export default function RootLayout({ children }) {
   const pathname = usePathname();
 
   // Check if current path is dashboard or auth related
-  const isDashboardOrAuth = pathname.includes('/dashboard') || 
-                           pathname.includes('/admin-sign-in') || 
-                           pathname.includes('/super-admin-sign-in') ||
-                           pathname.includes('/super-admin-dashboard') ||
-                           pathname.includes('/sign-in') ||
-                           pathname.includes('/sign-up') ||
-                           pathname.includes('/email-verification');
+  const isDashboardOrAuth =
+    pathname.includes('/dashboard') ||
+    pathname.includes('/admin-sign-in') ||
+    pathname.includes('/super-admin-sign-in') ||
+    pathname.includes('/super-admin-dashboard') ||
+    pathname.includes('/sign-in') ||
+    pathname.includes('/sign-up') ||
+    pathname.includes('/email-verification');
 
   // Only show header and footer for non-dashboard/auth pages
   const showHeaderFooter = !isDashboardOrAuth;
 
   // Hide subheader on category and product detail pages
-  const hideSubHeader = pathname.includes('/products/') || pathname.includes('/services/') && pathname.split('/').length > 2;
+  const hideSubHeader =
+    pathname.includes('/products/') ||
+    (pathname.includes('/services/') && pathname.split('/').length > 2);
 
   return (
     <html lang="en" className={poppins.className}>
@@ -46,9 +49,7 @@ export default function RootLayout({ children }) {
                 {!hideSubHeader && <SubHeader />}
               </>
             )}
-            <main className="dark:bg-[#1a1a1a]">
-              {children}
-            </main>
+            <main className="dark:bg-[#1a1a1a]">{children}</main>
             {showHeaderFooter && <Footer />}
           </AuthProvider>
         </ReduxProvider>

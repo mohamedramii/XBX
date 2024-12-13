@@ -1,6 +1,6 @@
 :root {
   /** sunny side **/
-  --blue-background: #C2E9F6;
+  --blue-background: #c2e9f6;
   --blue-border: #72cce3;
   --blue-color: #96dcee;
   --yellow-background: #fffaa8;
@@ -84,7 +84,7 @@
 }
 
 .toggle--label-background:before {
-  content: "";
+  content: '';
   position: absolute;
   top: -5px;
   width: 40px;
@@ -96,7 +96,7 @@
 }
 
 .toggle--label-background:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 5px;
   width: 40px;
@@ -112,7 +112,7 @@
   animation-duration: 350ms;
   animation-fill-mode: forwards;
   transition: all 350ms ease-in;
-  content: "";
+  content: '';
   width: 82px;
   height: 82px;
   border: 5px solid var(--yellow-border);
@@ -127,8 +127,10 @@
   transition-delay: 0ms;
   transition: all 250ms ease-in;
   position: absolute;
-  content: "";
-  box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
+  content: '';
+  box-shadow:
+    var(--gray-dots) -13px 0 0 2px,
+    var(--gray-dots) -24px 14px 0 -2px;
   left: 143px;
   top: 23px;
   width: 10px;

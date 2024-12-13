@@ -41,16 +41,10 @@ export async function POST(request) {
       return res;
     } else {
       console.error('Sign-in failed:', data);
-      return NextResponse.json(
-        { error: data.error || 'Sign-in failed' },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: data.error || 'Sign-in failed' }, { status: 401 });
     }
   } catch (error) {
     console.error('Error in sign-in API route:', error);
-    return NextResponse.json(
-      { error: 'Server error', details: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Server error', details: error.message }, { status: 500 });
   }
 }

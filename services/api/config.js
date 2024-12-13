@@ -9,13 +9,13 @@ export const ENDPOINTS = {
     adminSignOut: '/admin/signout',
     refreshToken: '/admin/refresh-token',
   },
-  
+
   // Dashboard endpoints
   dashboard: {
     overview: '/dashboard/overview',
     stats: '/dashboard/stats',
   },
-  
+
   // Users management
   users: {
     list: '/users',
@@ -24,7 +24,7 @@ export const ENDPOINTS = {
     delete: '/users/:id',
     getById: '/users/:id',
   },
-  
+
   // Products management
   products: {
     list: '/products',
@@ -34,7 +34,7 @@ export const ENDPOINTS = {
     getById: '/products/:id',
     categories: '/products/categories',
   },
-  
+
   // Investors management
   investors: {
     list: '/investors',
