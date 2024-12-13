@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 const RequestService = () => {
@@ -106,4 +107,10 @@ const RequestService = () => {
   );
 };
 
-export default RequestService;
+export default function RequestServicePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RequestService />
+    </Suspense>
+  );
+}

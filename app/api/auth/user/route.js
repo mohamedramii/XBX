@@ -1,16 +1,16 @@
 // app/api/auth/user/route.js
 import { NextResponse } from 'next/server';
+import { cookies } from 'next/headers';
+
+export const dynamic = 'force-dynamic';
 
 export async function GET(request) {
   try {
-    // Get the token from cookies
-    const token = request.cookies.get('token')?.value;
-
-    console.log('Token from cookies in user route:', token);
+    const cookieStore = cookies();
+    const token = cookieStore.get('token');
 
     if (!token) {
-      console.error('No token found in cookies');
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json({ error: 'No token found' }, { status: 401 });
     }
 
     // Fetch user data from the external API

@@ -314,10 +314,20 @@ export default function ChatPage({ params }) {
                 type="submit"
                 className="flex justify-center items-center p-0 gap-[10px] w-[50px] h-[50px] bg-[#11A900] rounded-[1000px] flex-none order-0 flex-grow-0"
               >
-                <Image src="/icons/send-msg-dashboard.svg" width={29.35} height={33.57} alt="Send message" />
+                <Image
+                  src="/icons/send-msg-dashboard.svg"
+                  width={29.35}
+                  height={33.57}
+                  alt="Send message"
+                />
               </button>
               <div className="box-border flex justify-center items-center p-0 gap-[10px] w-[50px] h-[50px] border border-[#11A900] rounded-[1000px] flex-none order-1 flex-grow-0">
-                <Image src="/icons/upload-msg-dashboard.svg" width={25} height={25} alt="Add attachment" />
+                <Image
+                  src="/icons/upload-msg-dashboard.svg"
+                  width={25}
+                  height={25}
+                  alt="Add attachment"
+                />
               </div>
             </form>
 

@@ -2,52 +2,32 @@
 
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { setUser, clearUser } from '../redux/slices/userSlice';
-import { getUserData } from '../services/api';
+import { setUser } from '../redux/slices/userSlice';
 import { getToken } from '../utils/token';
+import { getUserData } from '../services/api/auth';
 
 export default function AuthProvider({ children }) {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    const token = getToken();
-    console.log('Retrieved token:', token);
-
-    if (token) {
-      fetchUserData(token);
-    } else {
-      console.log('No token found, clearing user state.');
-      dispatch(clearUser());
-    }
-  }, [dispatch]);
-
-  const fetchUserData = async (token) => {
+  const fetchUserData = useCallback(async () => {
     try {
-      console.log('Fetching user data with token:', token);
       const response = await getUserData();
-      const data = response.data;
-      console.log('User data received:', data);
-
-      if (data.user) {
-        dispatch(setUser({ token, userDetails: data.user }));
-      } else {
-        console.log('No user data found, clearing user state.');
-        dispatch(clearUser());
+      if (response?.data) {
+        dispatch(setUser(response.data));
       }
     } catch (error) {
       console.error('Error fetching user data:', error);
-      dispatch(clearUser());
     }
-  };
+  }, [dispatch]);
 
   useEffect(() => {
     const token = getToken();
     if (token) {
-      fetchUserData(token);
+      fetchUserData();
     }
-  }, [fetchUserData, getToken]);
+  }, [fetchUserData]);
 
   return children;
 }
