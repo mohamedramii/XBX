@@ -40,17 +40,21 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={poppins.className}>
-      <body className="transition-colors duration-300 dark:bg-[#1a1a1a] dark:text-white">
+      <body className="min-h-screen w-full overflow-x-hidden transition-colors duration-300 dark:bg-[#1a1a1a] dark:text-white">
         <ReduxProvider>
           <AuthProvider>
-            {showHeaderFooter && (
-              <>
-                <Header />
-                {!hideSubHeader && <SubHeader />}
-              </>
-            )}
-            <main className="dark:bg-[#1a1a1a]">{children}</main>
-            {showHeaderFooter && <Footer />}
+            <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
+              {showHeaderFooter && (
+                <>
+                  <Header />
+                  {!hideSubHeader && <SubHeader />}
+                </>
+              )}
+              <main className="flex-grow w-full overflow-x-hidden dark:bg-[#1a1a1a]">
+                {children}
+              </main>
+              {showHeaderFooter && <Footer />}
+            </div>
           </AuthProvider>
         </ReduxProvider>
       </body>

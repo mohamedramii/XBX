@@ -470,7 +470,7 @@ export default function HomePage() {
               </div>
 
               {/* Frame 976 */}
-              <div className="flex flex-col items-start gap-4 w-full md:w-[499px] h-[512px] relative">
+              <div className="flex flex-col items-start gap-4 w-full md:w-[499px] h-[512px] relative scale-[0.7] md:scale-100">
                 {/* Background Pattern */}
                 <div className="absolute top-[-50px] left-[-100px] w-[600px] h-[600px] z-0">
                   <Image
@@ -674,7 +674,7 @@ export default function HomePage() {
       </div>
 
       {/* Why Choose XBX Section */}
-      <div className="relative w-full bg-transparent dark:bg-[#0e1b0f] py-20 overflow-hidden">
+      <div className="relative w-full bg-transparent dark:bg-[#0e1b0f] py-20 px-4 overflow-hidden">
         {/* Background Pattern Layer */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
@@ -728,7 +728,7 @@ export default function HomePage() {
       {/* Contact Us Section */}
       <div className="relative w-full bg-[#FBFBFB] dark:bg-[#0e1b0f] py-20 transition-colors duration-300">
         <div className="relative w-full bg-[#E4F3E2] dark:bg-[#49584A]  rounded-[56px] mx-auto py-10 px-4 max-w-[1013px] transition-colors duration-300">
-          <div className="flex flex-col items-center gap-7 mx-auto max-w-[638px]">
+          <div className="flex flex-col juxtify-center items-center gap-7 mx-auto max-w-[638px]">
             {/* Title and Subtitle */}
             <div className="flex flex-col items-center gap-1">
               <h2 className="text-[40px] leading-[80px] font-bold text-[#19272B] dark:text-[#FBFBFB] text-center">
@@ -739,7 +739,7 @@ export default function HomePage() {
               </p>
             </div>
             {/* Contact Information */}
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-[104px] w-full mt-6">
+            <div className="flex flex-col justify-center md:flex-row items-center md:items-center gap-[104px] w-full mt-6">
               {/* Email Info */}
               <div className="flex flex-col items-start">
                 <div className="flex flex-row items-center gap-2">
