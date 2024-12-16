@@ -76,7 +76,7 @@ const InvestmentPage = () => {
                 onClick={handleExploreClick}
                 className="flex justify-center items-center px-4 py-[16px] gap-2 w-[335px] h-[67px]  border-2 border-[#2C3C2D] dark:border-[#0fcd1c] rounded-[16px]"
               >
-                <span className="font-poppins font-bold text-[22px] leading-[160%] text-white dark:text-[#0fcd1c]">
+                <span className="font-poppins font-bold text-[22px] leading-[160%] text-[#2c3c2d] dark:text-[#0fcd1c]">
                   Start Your Investment Now
                 </span>
               </button>
@@ -131,7 +131,7 @@ const InvestmentPage = () => {
                 onClick={handleExploreClick}
                 className="flex justify-center items-center px-4 py-[16px] gap-2 w-[212px] h-[67px] border-2 border-[#2C3C2D] dark:border-[#0fcd1c] rounded-[16px]"
               >
-                <span className="font-poppins font-bold text-[22px] leading-[160%] text-[#FBFBFB] dark:text-[#0fcd1c]">
+                <span className="font-poppins font-bold text-[22px] leading-[160%] text-[#2c3c2d] dark:text-[#0fcd1c]">
                   Explore Projects
                 </span>
               </button>
