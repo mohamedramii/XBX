@@ -84,9 +84,9 @@ export default function AdminSignIn() {
 
   return (
     <main className="min-h-screen w-full bg-[#FDFDFD] relative overflow-hidden">
-      <div className="max-w-[1536px] mx-auto px-4 py-8 relative">
+      <div className="max-w-[1536px] mx-auto px-4 py-8 relative z-10">
         {/* Logo and Title */}
-        <div className="max-w-[262px] space-y-2">
+        <div className="max-w-[262px] space-y-2 sm:max-w-[300px] lg:max-w-[362px]">
           <Image
             priority
             src="/pattern/xbxlogo.svg"
@@ -95,42 +95,42 @@ export default function AdminSignIn() {
             height={90}
             className="w-full"
           />
-          <h2 className="font-poppins font-semibold text-[30px] text-[#11A900]">Dashboard</h2>
+          <h2 className="font-poppins font-semibold text-[24px] sm:text-[28px] lg:text-[30px] text-[#11A900]">Dashboard</h2>
         </div>
 
         {/* Sign In Form */}
-        <div className="max-w-[400px] mx-auto mt-20">
-          <form onSubmit={handleSubmit} className="space-y-8">
-            <h1 className="text-center font-poppins font-semibold text-[50px] text-[#11A900]">
+        <div className="max-w-[320px] sm:max-w-[360px] lg:max-w-[400px] mx-auto mt-12 sm:mt-16 lg:mt-20">
+          <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
+            <h1 className="text-center font-poppins font-semibold text-[36px] sm:text-[44px] lg:text-[50px] text-[#11A900]">
               SIGN IN
             </h1>
 
-            <div className="space-y-5">
+            <div className="space-y-4 sm:space-y-5">
               {/* Error Message */}
-              {error && <div className="text-red-500 text-center font-poppins">{error}</div>}
+              {error && <div className="text-red-500 text-center font-poppins text-sm sm:text-base">{error}</div>}
 
               {/* Username Input */}
-              <div className="relative">
+              <div className="relative z-20">
                 <input
                   type="text"
                   name="username"
                   value={formData.username}
                   onChange={handleInputChange}
                   placeholder="UserName"
-                  className="w-full h-[60px] px-[20px] font-poppins text-[20px] text-[#7F7F7F] bg-transparent outline-none border-[1.5px] border-[#11A900] rounded-[100px]"
+                  className="w-full h-[50px] sm:h-[55px] lg:h-[60px] px-[16px] sm:px-[20px] font-poppins text-[16px] sm:text-[18px] lg:text-[20px] text-[#7F7F7F] bg-[#FDFDFD] outline-none border-[1.5px] border-[#11A900] rounded-[100px]"
                   required
                 />
               </div>
 
               {/* Password Input */}
-              <div className="relative">
+              <div className="relative z-20">
                 <input
                   type="password"
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
                   placeholder="Password"
-                  className="w-full h-[60px] px-[20px] font-poppins text-[20px] text-[#7F7F7F] bg-transparent outline-none border-[1.5px] border-[#11A900] rounded-[100px]"
+                  className="w-full h-[50px] sm:h-[55px] lg:h-[60px] px-[16px] sm:px-[20px] font-poppins text-[16px] sm:text-[18px] lg:text-[20px] text-[#7F7F7F] bg-[#FDFDFD] outline-none border-[1.5px] border-[#11A900] rounded-[100px]"
                   required
                 />
               </div>
@@ -139,9 +139,9 @@ export default function AdminSignIn() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full h-[60px] flex justify-center items-center px-[20px] bg-[#11A900] rounded-[100px] transition-opacity hover:opacity-90 disabled:opacity-50"
+                className="w-full h-[50px] sm:h-[55px] lg:h-[60px] flex justify-center items-center px-[16px] sm:px-[20px] bg-[#11A900] rounded-[100px] transition-opacity hover:opacity-90 disabled:opacity-50"
               >
-                <span className="font-poppins font-bold text-[20px] text-white">
+                <span className="font-poppins font-bold text-[16px] sm:text-[18px] lg:text-[20px] text-white">
                   {isLoading ? 'Signing in...' : 'SIGN IN'}
                 </span>
               </button>
@@ -150,13 +150,15 @@ export default function AdminSignIn() {
         </div>
 
         {/* Footer */}
-        <footer className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full max-w-[425px] text-center">
-          <p className="font-poppins font-bold text-[20px] text-[#8C8C8C]">
+        <footer className="relative z-10 mt-16 sm:mt-20 text-center">
+          <p className="font-poppins font-bold text-[16px] sm:text-[18px] lg:text-[20px] text-[#8C8C8C]">
             2024 XBX Company. All rights reserved.
           </p>
         </footer>
+      </div>
 
-        {/* Background Dots */}
+      {/* Background Dots */}
+      <div className="fixed inset-0 pointer-events-none">
         <BackgroundDots />
       </div>
     </main>
@@ -168,7 +170,7 @@ function BackgroundDots() {
   return (
     <>
       {/* Top Right Dots */}
-      <div className="absolute -top-44 -right-24 w-[400px] h-[497px] flex flex-wrap gap-[50px] -rotate-[66.59deg]">
+      <div className="absolute -top-44 -right-24 w-[300px] sm:w-[350px] lg:w-[400px] h-[497px] flex flex-wrap gap-[50px] -rotate-[66.59deg] opacity-30 sm:opacity-50 lg:opacity-100">
         <Image
           src="/pattern/circles-dashboard-signin.svg"
           width={400}
@@ -179,7 +181,7 @@ function BackgroundDots() {
       </div>
 
       {/* Bottom Left Dots */}
-      <div className="absolute -bottom-24 -left-24 w-[400px] h-[497px] flex flex-wrap gap-[50px] rotate-[66.59deg]">
+      <div className="absolute -bottom-24 -left-24 w-[300px] sm:w-[350px] lg:w-[400px] h-[497px] flex flex-wrap gap-[50px] rotate-[66.59deg] opacity-30 sm:opacity-50 lg:opacity-100">
         <Image
           src="/pattern/circles-dashboard-signin.svg"
           width={400}
