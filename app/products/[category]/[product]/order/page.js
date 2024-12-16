@@ -23,11 +23,11 @@ export default function OrderPage() {
   };
 
   return (
-    <div className="flex justify-center items-start pt-[100px] sm:pt-[140px] lg:pt-[174px] px-4 sm:px-8 lg:px-[104px] w-full max-w-[1440px] mx-auto">
+    <div className="flex justify-center items-start pt-[100px] sm:pt-[140px] lg:pt-[174px] px-4 sm:px-8 lg:px-[104px] w-full max-w-[1440px] mx-auto dark:bg-[#0e1b0f]">
       <div className="flex flex-col lg:flex-row justify-center items-start gap-8 sm:gap-[80px] lg:gap-[166px] w-full max-w-[1230px]">
         {/* Left Side - Form */}
         <div className="flex flex-col items-start gap-6 sm:gap-[48px] w-full max-w-[627px]">
-          <h1 className="font-poppins font-bold text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[160%] text-[#192B1A] w-full">
+          <h1 className="font-poppins font-bold text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[160%] text-[#192B1A] dark:text-[#0fcd1c] w-full">
             please fill this form to proceed your order
           </h1>
 
@@ -46,7 +46,7 @@ export default function OrderPage() {
                   <input
                     type="text"
                     placeholder={field.label}
-                    className="w-full h-[38px] font-poppins font-bold text-[16px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#192B1A] border-b border-black pb-2 focus:outline-none"
+                    className="w-full h-[38px] font-poppins font-bold text-[16px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb] border-b border-black pb-2 focus:outline-none dark:bg-[#0e1b0f]"
                     value={formData[field.name]}
                     onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
                   />
@@ -58,18 +58,18 @@ export default function OrderPage() {
           {/* Price Section */}
           <div className="flex flex-col md:flex-row justify-between items-center w-full gap-6 sm:gap-[48px] h-auto md:h-[174px]">
             <div className="relative w-full max-w-[260px] h-auto">
-              <h3 className="font-poppins font-bold text-[20px] sm:text-[24px] md:text-[28px] leading-[160%] text-[#BF1111]">
+              <h3 className="font-poppins font-bold text-[20px] sm:text-[24px] md:text-[28px] leading-[160%] text-[#0fcd1c]">
                 Price
               </h3>
-              <div className="mt-4 sm:mt-[30px] font-poppins font-bold text-[16px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#192B1A] relative">
+              <div className="mt-4 sm:mt-[30px] font-poppins font-bold text-[16px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#192B1A] dark:text-[#0fcd1c] relative">
                 BEFORE SALE
-                <span className="absolute left-[130px] sm:left-[193px] top-[3px] font-medium text-[16px] sm:text-[18px] md:text-[20px]">
+                <span className="absolute left-[130px] sm:left-[193px] top-[3px] font-medium text-[16px] sm:text-[18px] md:text-[20px] dark:text-[#fbfbfb]">
                   20500
                 </span>
               </div>
-              <div className="mt-6 sm:mt-[40px] font-poppins font-bold text-[16px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#192B1A] relative">
+              <div className="mt-6 sm:mt-[40px] font-poppins font-bold text-[16px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#192B1A]  dark:text-[#0fcd1c] relative">
                 AFTER SALE
-                <span className="absolute left-[120px] sm:left-[183px] font-bold text-[16px] sm:text-[20px] md:text-[24px]">
+                <span className="absolute left-[120px] sm:left-[183px] font-bold text-[16px] sm:text-[20px] md:text-[24px] dark:text-[#fbfbfb]">
                   20000
                 </span>
               </div>
@@ -77,9 +77,9 @@ export default function OrderPage() {
 
             <button
               onClick={handleSubmit}
-              className="flex justify-center items-center px-4 py-3 sm:py-4 border-2 border-[#192B1A] rounded-2xl w-[100px] sm:w-[116px] h-[50px] sm:h-[67px]"
+              className="flex justify-center items-center px-4 py-3 sm:py-4 border-2 border-[#192B1A] dark:border-[#0fcd1c] rounded-2xl w-[100px] sm:w-[116px] h-[50px] sm:h-[67px]"
             >
-              <span className="font-poppins font-bold text-[16px] sm:text-[20px] md:text-[22px] leading-[160%] text-[#192B1A]">
+              <span className="font-poppins font-bold text-[16px] sm:text-[20px] md:text-[22px] leading-[160%] text-[#192B1A] dark:text-[#0fcd1c]">
                 SUBMIT
               </span>
             </button>
@@ -102,7 +102,7 @@ export default function OrderPage() {
               <h3 className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#BF1111]">
                 NOTE
               </h3>
-              <p className="font-poppins font-semibold text-[16px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#192B1A]">
+              <p className="font-poppins font-semibold text-[16px] sm:text-[20px] md:text-[24px] leading-[160%] text-[#192B1A] dark:text-[#0fcd1c]">
                 our team will contact you once you submit your order
               </p>
             </div>

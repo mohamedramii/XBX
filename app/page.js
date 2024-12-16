@@ -28,28 +28,28 @@ export default function HomePage() {
           alt="Hero Pattern"
           width={420.45}
           height={340.63}
-          className="absolute top-[3em] -left-[6.25em] z-10 scale-50 transition-opacity duration-300"
+          className="absolute top-[3em] -left-[6.25em] z-10 scale-50 sm:scale-75 md:scale-100 transition-opacity duration-300"
         />
         <Image
           src="/pattern/pattern-dots-hero.svg"
           alt="Hero Pattern"
           width={420.45}
           height={340.63}
-          className="absolute top-[3em] -right-[6.25em] z-10 scale-50 transition-opacity duration-300"
+          className="absolute top-[3em] -right-[6.25em] z-10 scale-50 sm:scale-75 md:scale-100 transition-opacity duration-300"
         />
 
         {/* Overlay Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-          <div className="p-4 flex flex-col justify-center items-center rounded-xl max-w-2xl backdrop-blur-sm transition-colors duration-300">
-            <h1 className="text-[2.5rem] font-bold text-white mb-4">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-8">
+          <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center items-center rounded-xl max-w-2xl backdrop-blur-sm transition-colors duration-300">
+            <h1 className="text-[2rem] sm:text-[2.25rem] md:text-[2.5rem] font-bold text-white mb-4">
               WELCOME TO <span className="text-[#0FCD1C]">XBX</span>
             </h1>
-            <p className="text-[1.375rem] w-full max-w-[52.8125em] text-center text-white mb-4">
+            <p className="text-base sm:text-lg md:text-[1.375rem] w-full max-w-[52.8125em] text-center text-white mb-4">
               Explore our comprehensive range of services designed to elevate your ideas into
               impactful solutions. From cutting-edge industrial automation to creative digital
               marketing strategies, our expert team is dedicated to helping you achieve your goals.
             </p>
-            <button className="w-[270px] h-16 bg-gradient-to-b from-[#11510D] to-[#03230F] border border-[#FBFBFB] dark:border-dark-secondary shadow-lg rounded-2xl text-[#EBEEF4] font-bold text-2xl hover:opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0FCD1C]">
+            <button className="w-[200px] sm:w-[240px] md:w-[270px] h-12 sm:h-14 md:h-16 bg-gradient-to-b from-[#11510D] to-[#03230F] border border-[#FBFBFB] dark:border-dark-secondary shadow-lg rounded-2xl text-[#EBEEF4] font-bold text-xl sm:text-2xl hover:opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0FCD1C]">
               Contact Us
             </button>
           </div>
@@ -57,74 +57,41 @@ export default function HomePage() {
       </div>
 
       {/* About Section */}
-      <div className="relative w-full bg-[#FBFBFB] dark:bg-[#0e1b0f] py-20 overflow-hidden">
-        {/* Background Patterns Layer */}
-        <div className="absolute inset-0 pointer-events-none">
-          <Image
-            src="/pattern/pattern-dots2.svg"
-            alt="Dots Pattern"
-            width={300}
-            height={300}
-            className="absolute top-10 -right-10 [filter:brightness(1)_invert(0)] dark:[filter:brightness(0.6)_invert(0.3)_sepia(1)_saturate(3)_hue-rotate(90deg)]"
-          />
-          <Image
-            src="/pattern/bwithheart.png"
-            alt="Heart Pattern"
-            width={300}
-            height={300}
-            className="absolute bottom-0 right-0 opacity-20"
-          />
-          <Image
-            src="/pattern/bwithheart.png"
-            alt="Heart Pattern"
-            width={300}
-            height={300}
-            className="absolute -top-10 -left-10 opacity-20"
-          />
-          <Image
-            src="/pattern/line-pattern.svg"
-            alt="Line Pattern"
-            width={220.58}
-            height={520}
-            className="absolute top-20 left-0 [filter:brightness(1)_invert(0)] dark:[filter:brightness(0.6)_invert(0.3)_sepia(1)_saturate(3)_hue-rotate(90deg)]"
-          />
-        </div>
-
+      <div className="relative w-full bg-[#FBFBFB] dark:bg-[#0e1b0f] py-12 sm:py-16 md:py-20 overflow-hidden">
         {/* Content Layer */}
         <div className="relative">
           {/* About XBX Title */}
-          <h2 className="text-center text-[#0D0D0D] dark:text-[#FBFBFB] font-bold text-[40px] leading-[80px] font-poppins mb-12 transition-colors duration-300">
+          <h2 className="text-center text-[#0D0D0D] dark:text-[#FBFBFB] font-bold text-[32px] sm:text-[36px] md:text-[40px] leading-[1.6] font-poppins mb-8 sm:mb-10 md:mb-12 transition-colors duration-300">
             About <span className="text-[#0FCD1C]">XBX</span>
           </h2>
 
           {/* Flex Container */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-[40px] max-w-[1142px] mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-8 md:gap-[40px] max-w-[1142px] mx-auto px-4 sm:px-6 md:px-8">
             {/* Left Item (Image and Overlay) */}
-            <div className="relative w-full md:w-[507px] h-[518.58px]">
+            <div className="relative w-full sm:w-[80%] md:w-[507px] h-[400px] sm:h-[450px] md:h-[518.58px]">
               {/* Overlay */}
               <div className="absolute inset-0 bg-[rgba(13,22,24,0.6)] dark:bg-[rgba(13,22,24,0.8)] border border-[rgba(242,220,194,0.16)] dark:border-dark-accent rounded-[24px] transition-all duration-300" />
               {/* Image */}
-              <div className="absolute top-[21.38px] left-[29.4px] w-[477.6px] h-[497.2px]">
+              <div className="absolute top-[5%] left-[5%] w-[90%] h-[90%]">
                 <Image
                   src="/images/Office chair still life-sec1.png"
                   alt="Office chair still life"
-                  width={477.6}
-                  height={497.2}
+                  fill
                   className="rounded-[24px] object-cover"
                 />
               </div>
             </div>
 
             {/* Right Item (Paragraph) */}
-            <div className="w-full md:w-[595px]">
-              <p className="font-poppins font-normal text-[20px] leading-[160%] text-[#0D0D0D] dark:text-[#FBFBFB] transition-colors duration-300">
+            <div className="w-full sm:w-[80%] md:w-[595px]">
+              <p className="font-poppins font-normal text-base sm:text-lg md:text-[20px] leading-[160%] text-[#0D0D0D] dark:text-[#FBFBFB] transition-colors duration-300">
                 We are XBX, an industrial and commercial company created by innovators from around
                 the globe, specializing in technological services and digital transformation
                 solutions. Our mission is to be your primary partner in turning every idea into an
                 achievement and every system into advanced technology. We transform your vision into
                 a tangible reality.
               </p>
-              <p className="font-poppins font-normal text-[20px] leading-[160%] text-[#0D0D0D] dark:text-[#FBFBFB] transition-colors duration-300 mt-4">
+              <p className="font-poppins font-normal text-base sm:text-lg md:text-[20px] leading-[160%] text-[#0D0D0D] dark:text-[#FBFBFB] transition-colors duration-300 mt-4">
                 Our core goal is to convert everything we touch into technology and drive progress
                 across all sectors we serve, from heavy industries to daily services, along with
                 support and development.
@@ -142,14 +109,16 @@ export default function HomePage() {
           alt="Line Pattern"
           width={358}
           height={826.45}
-          className="absolute -top-0 right-[-100px] z-0 [filter:brightness(1)_invert(0)] dark:[filter:brightness(0.6)_invert(0.3)_sepia(1)_saturate(3)_hue-rotate(90deg)]"
+          className="absolute -top-0 right-[-100px] [filter:brightness(1)_invert(0)] dark:[filter:brightness(0.6)_invert(0.3)_sepia(1)_saturate(3)_hue-rotate(90deg)] z-0"
         />
-        <h2 className="text-center text-[#0D0D0D] dark:text-[#FBFBFB] font-bold text-[36px] leading-[80px] font-poppins mb-8 transition-colors duration-300">
+
+        <h2 className="relative text-center text-[#0D0D0D] dark:text-[#FBFBFB] font-bold text-[36px] leading-[80px] font-poppins mb-8 transition-colors duration-300 z-20">
           Our <span className="text-[#0FCD1C]">Overview</span>
         </h2>
+
         <div className="relative w-full flex flex-col md:flex-row items-center gap-8">
           {/* Left Section */}
-          <div className="relative w-[991px] l:w-[1200px]  h-[412px] overflow-hidden flex flex-col justify-center items-start">
+          <div className="relative w-full md:w-[991px] xl:w-[1200px] h-auto overflow-hidden flex flex-col justify-center items-start">
             {/* Background Image */}
 
             {/* White Rectangle */}
@@ -158,7 +127,7 @@ export default function HomePage() {
               alt="White Rectangle"
               width={1200}
               height={426}
-              className="absolute top-0 left-0 z-10 transition-opacity duration-300  2xl:w-[1400px]"
+              className="absolute top-0 left-0 z-10 transition-opacity duration-300 hidden md:block 2xl:w-[1400px]"
             />
             {/* Green Rectangle */}
             <Image
@@ -166,13 +135,13 @@ export default function HomePage() {
               alt="Green Rectangle"
               width={991}
               height={426}
-              className="absolute top-0 -left-[20px] z-10 transition-opacity duration-300  2xl:w-[1400px]"
+              className="absolute top-0 -left-[20px] z-10 transition-opacity duration-300 hidden md:block 2xl:w-[1400px]"
             />
             {/* Overview Items */}
-            <div className="relative z-20 pl-20 space-y-8">
+            <div className="relative z-20 px-6 py-6  md:px-20 space-y-8 bg-[#192b1a]">
               {/* Vision */}
-              <div className="flex items-center gap-4">
-                <div className="w-[80px] h-[80px] rounded-full bg-[#0FCD1C] flex items-center justify-center">
+              <div className="flex items-start gap-4">
+                <div className="w-[60px] md:w-[80px] h-[60px] md:h-[80px] rounded-full bg-[#0FCD1C] flex items-center justify-center">
                   <Image
                     src="/icons/vision.svg"
                     alt="Vision Icon"
@@ -182,18 +151,18 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[24px] font-bold text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
+                  <h3 className="text-[18px] md:text-[24px] font-bold text-[#fbfbfb] dark:text-[#FBFBFB] transition-colors duration-300">
                     Vision
                   </h3>
-                  <p className="text-[16px] text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
+                  <p className="text-[14px] md:text-[16px] text-[#fbfbfb] dark:text-[#FBFBFB] transition-colors duration-300">
                     To be the leading technology partner in industrial and digital transformation
                   </p>
                 </div>
               </div>
 
               {/* Mission */}
-              <div className="flex items-center gap-4">
-                <div className="w-[80px] h-[80px] rounded-full bg-[#0FCD1C] flex items-center justify-center">
+              <div className="flex items-start gap-4">
+                <div className="w-[60px] md:w-[80px] h-[60px] md:h-[80px] rounded-full bg-[#0FCD1C] flex items-center justify-center">
                   <Image
                     src="/icons/mission.svg"
                     alt="Mission Icon"
@@ -203,18 +172,18 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[24px] font-bold text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
+                  <h3 className="text-[18px] md:text-[24px] font-bold text-[#fbfbfb] dark:text-[#FBFBFB] transition-colors duration-300">
                     Mission
                   </h3>
-                  <p className="text-[16px] text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
+                  <p className="text-[14px] md:text-[16px] text-[#fbfbfb] dark:text-[#FBFBFB] transition-colors duration-300">
                     Empowering businesses through innovative technological solutions
                   </p>
                 </div>
               </div>
 
               {/* Values */}
-              <div className="flex items-center gap-4">
-                <div className="w-[80px] h-[80px] rounded-full bg-[#0FCD1C] flex items-center justify-center">
+              <div className="flex items-start gap-4">
+                <div className="w-[60px] md:w-[80px] h-[60px] md:h-[80px] rounded-full bg-[#0FCD1C] flex items-center justify-center">
                   <Image
                     src="/icons/values.svg"
                     alt="Values Icon"
@@ -224,10 +193,10 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[24px] font-bold text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
+                  <h3 className="text-[18px] md:text-[24px] font-bold text-[#fbfbfb] dark:text-[#FBFBFB] transition-colors duration-300">
                     Values
                   </h3>
-                  <p className="text-[16px] text-[#f7f7f7] dark:text-[#FBFBFB] transition-colors duration-300">
+                  <p className="text-[14px] md:text-[16px] text-[#fbfbfb] dark:text-[#FBFBFB] transition-colors duration-300">
                     Innovation, Excellence, Integrity, and Customer Success
                   </p>
                 </div>
@@ -236,43 +205,34 @@ export default function HomePage() {
           </div>
 
           {/* Overview Right Image */}
-          <div className="absolute right-0 w-[900px]   xl:w-[1200px]  h-[412px]">
+          <div className="relative w-full md:w-[900px] xl:w-[1200px] h-[250px] md:h-[412px]">
             <Image
               src="/images/sec3.png"
               alt="Overview Section Image"
               fill
-              className="object-cover rounded-[20px]"
+              className="object-cover rounded-[20px] z-10"
             />
           </div>
         </div>
       </div>
 
       {/* What We Offer Section */}
-      <div className="relative w-full bg-[#FBFBFB] dark:bg-[#0e1b0f] py-20 transition-colors duration-300">
+      <div className="relative w-full bg-[#FBFBFB] dark:bg-[#0e1b0f] py-12 sm:py-16 md:py-20 transition-colors duration-300">
         {/* Section Title and Subtitle */}
-        <div className="flex flex-col items-center gap-2 mb-12">
-          <h2 className="text-center text-[#0D0D0D] dark:text-[#FBFBFB] font-bold text-[40px] leading-[80px] font-poppins transition-colors duration-300">
+        <div className="flex flex-col items-center gap-2 mb-8 sm:mb-10 md:mb-12 px-4">
+          <h2 className="text-center text-[#0D0D0D] dark:text-[#FBFBFB] font-bold text-[32px] sm:text-[36px] md:text-[40px] leading-[1.6] font-poppins transition-colors duration-300">
             What We Offer
           </h2>
-          <p className="text-center text-[#0D0D0D] dark:text-[#FBFBFB] font-medium text-[24px] leading-[160%] max-w-[899px] transition-colors duration-300">
+          <p className="text-center text-[#0D0D0D] dark:text-[#FBFBFB] font-medium text-[18px] sm:text-[20px] md:text-[24px] leading-[160%] max-w-[899px] transition-colors duration-300">
             At <span className="text-[#0FCD1C]">XBX</span>, we provide integrated solutions across
             various domains, including:
           </p>
         </div>
 
-        {/* Background Images */}
-        <Image
-          src="/images/XBXfingerprintG.png"
-          alt="Fingerprint Graphic"
-          width={424}
-          height={424}
-          className="absolute top-[178px] right-[50px]  transition-opacity duration-300"
-        />
-
         {/* Main Content */}
-        <div className="max-w-[1234px] mx-auto flex flex-col md:flex-row items-start md:items-center gap-8 relative px-4">
+        <div className="max-w-[1234px] mx-auto flex flex-col md:flex-row items-start md:items-center gap-8 relative px-4 sm:px-6 md:px-8">
           {/* Left Side (Image with Overlay and Text) */}
-          <div className="relative w-full md:w-[446px] h-[529px]">
+          <div className="relative w-full sm:w-[80%] md:w-[446px] h-[400px] sm:h-[450px] md:h-[529px] mx-auto">
             {/* Image */}
             <div className="absolute inset-0">
               <Image
@@ -282,14 +242,14 @@ export default function HomePage() {
                 className="rounded-[16px] object-cover"
               />
               {/* Gradient Overlay */}
-              <div className="absolute inset-0    rounded-[16px] transition-opacity duration-300" />
+              <div className="absolute inset-0 rounded-[16px] transition-opacity duration-300" />
             </div>
             {/* Text on Image */}
             <div className="absolute inset-0 flex flex-col justify-center items-center p-6 gap-6">
-              <h3 className="font-poppins font-bold text-[28px] leading-[170%] text-[#FBFBFB] text-center">
+              <h3 className="font-poppins font-bold text-[24px] sm:text-[26px] md:text-[28px] leading-[170%] text-[#FBFBFB] text-center">
                 (XBX Marketing)
               </h3>
-              <p className="font-poppins font-medium text-[20px] leading-[170%] text-[#FBFBFB] text-start">
+              <p className="font-poppins font-medium text-[16px] sm:text-[18px] md:text-[20px] leading-[170%] text-[#FBFBFB] text-start">
                 - Digital marketing (SEO, paid advertising, and performance analysis).
                 <br />
                 <br />
@@ -304,58 +264,58 @@ export default function HomePage() {
           </div>
 
           {/* Right Side (Service Cards) */}
-          <div className="w-full md:w-auto flex flex-col gap-8">
+          <div className="w-full md:w-auto flex flex-col gap-6 sm:gap-8">
             {/* First Row */}
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
               {/* Industrial Services */}
-              <div className="flex justify-center items-center px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full md:w-[288px] h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
-                <p className="font-poppins font-bold text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
+              <div className="flex justify-center items-center px-4 sm:px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full sm:w-[288px] h-[90px] sm:h-[100px] md:h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
+                <p className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
                   Industrial Services (XBX Industrial)
                 </p>
               </div>
               {/* Business Solutions */}
-              <div className="flex justify-center items-center px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full md:w-[357px] h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
-                <p className="font-poppins font-bold text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
+              <div className="flex justify-center items-center px-4 sm:px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full sm:w-[357px] h-[90px] sm:h-[100px] md:h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
+                <p className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
                   Business Solutions (XBX Business Solutions)
                 </p>
               </div>
             </div>
 
             {/* Second Row */}
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
               {/* Design and Creativity */}
-              <div className="flex justify-center items-center px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full md:w-[321px] h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
-                <p className="font-poppins font-bold text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
+              <div className="flex justify-center items-center px-4 sm:px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full sm:w-[321px] h-[90px] sm:h-[100px] md:h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
+                <p className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
                   Design and Creativity (XBX Creative)
                 </p>
               </div>
               {/* Technological Solutions */}
-              <div className="flex justify-center items-center px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full md:w-[343px] h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
-                <p className="font-poppins font-bold text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
+              <div className="flex justify-center items-center px-4 sm:px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full sm:w-[343px] h-[90px] sm:h-[100px] md:h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
+                <p className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
                   Technological Solutions (XBX Tech)
                 </p>
               </div>
             </div>
 
             {/* Third Row */}
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
               {/* Projects */}
-              <div className="flex justify-center items-center px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full md:w-[227px] h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
-                <p className="font-poppins font-bold text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
+              <div className="flex justify-center items-center px-4 sm:px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full sm:w-[227px] h-[90px] sm:h-[100px] md:h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
+                <p className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
                   Projects (XBX Projects)
                 </p>
               </div>
               {/* Operations and Development */}
-              <div className="flex justify-center items-center px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full md:w-[417px] h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
-                <p className="font-poppins font-bold text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
+              <div className="flex justify-center items-center px-4 sm:px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full sm:w-[417px] h-[90px] sm:h-[100px] md:h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
+                <p className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
                   Operations and Development (XBX Operations)
                 </p>
               </div>
             </div>
 
             {/* Fourth Row */}
-            <div className="flex justify-center items-center px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full md:w-[417px] h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
-              <p className="font-poppins font-bold text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
+            <div className="flex justify-center items-center px-4 sm:px-6 py-4 bg-[#E7FFE7] dark:bg-[#E7FFE7] rounded-[20px] w-full sm:w-[417px] h-[90px] sm:h-[100px] md:h-[114px] hover:bg-[#505F50] dark:hover:bg-[#324733] group transition-all duration-300">
+              <p className="font-poppins font-bold text-[18px] sm:text-[20px] md:text-[24px] leading-[170%] text-[#000000] dark:text-[#000000] text-center group-hover:text-[#FBFBFB] transition-colors duration-300">
                 Advertising and Marketing (XBX Marketing)
               </p>
             </div>
@@ -363,31 +323,8 @@ export default function HomePage() {
         </div>
 
         {/* View All Button */}
-        <div className="flex justify-center mt-12">
-          <button
-            className="
-              w-[270px]
-              h-16
-              bg-gradient-to-b
-              from-[#11510D]
-              to-[#03230F]
-              dark:from-[#0FCD1C]
-              dark:to-[#11510D]
-              border
-              border-[#FBFBFB]
-              shadow-lg
-              rounded-2xl
-              text-[#EBEEF4]
-              font-bold
-              text-[26px]
-              leading-[150%]
-              hover:opacity-90
-              transition-all
-              focus:outline-none
-              focus:ring-2
-              focus:ring-white
-            "
-          >
+        <div className="flex justify-center mt-8 sm:mt-10 md:mt-12">
+          <button className="w-[200px] sm:w-[240px] md:w-[270px] h-12 sm:h-14 md:h-16 bg-gradient-to-b from-[#11510D] to-[#03230F] dark:from-[#0FCD1C] dark:to-[#11510D] border border-[#FBFBFB] shadow-lg rounded-2xl text-[#EBEEF4] font-bold text-xl sm:text-2xl hover:opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white">
             View All
           </button>
         </div>
@@ -430,9 +367,9 @@ export default function HomePage() {
         {/* Content Layer */}
         <div className="relative">
           {/* Frame 978 */}
-          <div className="flex flex-col items-center gap-7 mx-auto max-w-[1440px] px-4">
+          <div className="flex flex-col  items-center gap-7 mx-auto max-w-[1440px] px-4">
             {/* Frame 977 */}
-            <div className="flex flex-col md:flex-row justify-around items-center w-full h-auto">
+            <div className="flex flex-col md:flex-row juscify-center md:justify-around items-center w-full h-auto">
               {/* Frame 975 */}
               <div className="flex flex-col items-start w-full md:w-[596px] h-auto">
                 {/* Our Vision and Goals Title */}
@@ -470,7 +407,7 @@ export default function HomePage() {
               </div>
 
               {/* Frame 976 */}
-              <div className="flex flex-col items-start gap-4 w-full md:w-[499px] h-[512px] relative scale-[0.7] md:scale-100">
+              <div className="flex flex-col  items-center gap-4 w-[100%] md:w-[499px] h-[512px] relative scale-[0.70] md:scale-100">
                 {/* Background Pattern */}
                 <div className="absolute top-[-50px] left-[-100px] w-[600px] h-[600px] z-0">
                   <Image
@@ -567,7 +504,7 @@ export default function HomePage() {
         {/* Content Layer */}
         <div className="relative">
           {/* Frame 980 */}
-          <div className="flex flex-row justify-center items-center gap-[75px] mx-auto max-w-[1105px] px-4">
+          <div className="flex  flex-col md:flex-row justify-center items-center gap-[75px] mx-auto max-w-[1105px] px-4">
             {/* Woman accessories with leaves on black */}
             <div className="w-[385px] h-[578px] bg-cover rounded-[20px]">
               <Image
@@ -580,26 +517,26 @@ export default function HomePage() {
             </div>
 
             {/* Our Core Values (XBX Values) */}
-            <div className="flex flex-col items-start gap-4 w-[645px] h-[606px]">
+            <div className="flex flex-col items-start gap-4 w-full md:w-[645px] h-auto">
               {/* Our Core Values Title */}
-              <h3 className="text-[40px] font-bold text-[#0D0D0D] dark:text-[#FBFBFB] font-poppins">
+              <h3 className="text-[28px] md:text-[40px] font-bold text-[#0D0D0D] dark:text-[#FBFBFB] font-poppins">
                 Our Core Values (XBX Values)
               </h3>
 
               {/* Our Values Description */}
-              <p className="font-poppins font-normal text-[22px] leading-[42px] text-[#192B1A] dark:text-[#FBFBFB] transition-colors duration-300">
+              <p className="font-poppins font-normal text-[16px] md:text-[22px] leading-[28px] md:leading-[42px] text-[#192B1A] dark:text-[#FBFBFB] transition-colors duration-300">
                 - Creativity: We constantly strive to create new ideas and solutions.
                 <br />
                 <br />
                 - Quality: We adhere to the highest quality standards in everything we provide.
                 <br />
                 <br />
-                - Partnership: We build long-term relationships with our clients and partners, as
-                success is what matters most to us.
+                - Partnership: We build long-term relationships with our clients and partners, as success is
+                what matters most to us.
                 <br />
-                <br />- Sustainability: We aim to balance technology with environmental
-                responsibility and our duty towards humanity, developing technologies to assist
-                people, not to surpass them.
+                <br />
+                - Sustainability: We aim to balance technology with environmental responsibility and our duty
+                towards humanity, developing technologies to assist people, not to surpass them.
               </p>
             </div>
           </div>
@@ -695,7 +632,7 @@ export default function HomePage() {
 
         {/* Content Layer */}
         <div className="relative">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-[120px] w-full max-w-[1065px] mx-auto h-auto py-0">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-[20px] md:gap-[120px] w-full max-w-[1065px] mx-auto h-auto py-0">
             {/* Left Side */}
             <div className="flex flex-col items-start gap-2 w-full md:w-[645px] h-auto">
               <h2 className="text-[40px] leading-[80px] font-bold text-[#0D0D0D] dark:text-[#E7FFE7]">

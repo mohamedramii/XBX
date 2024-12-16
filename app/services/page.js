@@ -43,7 +43,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <main className="relative w-full min-h-screen">
+    <main className="relative w-full min-h-screen dark:bg-[#0e1b0f] ">
       {/* Hero Section */}
       <section
         className="relative h-[700px] w-full bg-[url('/images/services-bg.svg')] bg-cover bg-center flex items-center justify-center 
@@ -73,15 +73,15 @@ const ServicesPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="mt-[64px] flex flex-col items-center gap-20 sm:gap-[200px] lg:gap-[300px] xl:gap-[407px] w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-0">
+      <section className="mt-[64px] flex flex-col items-center gap-20 sm:gap-[32px] lg:gap-[300px] xl:gap-[407px] w-full max-w-[screen]  px-4 sm:px-8 lg:px-0">
         <div className="flex flex-col items-center gap-10 sm:gap-[80px] lg:gap-[127px] w-full max-w-[1432px] mx-auto">
           {/* Services We Provide */}
           <div className="flex flex-col items-start gap-4 sm:gap-[16px] w-full max-w-[1249px]">
-            <h1 className="w-full font-poppins font-bold text-[24px] sm:text-[28px] md:text-[32px] leading-[160%] text-[#192B1A] capitalize">
+            <h1 className="w-full font-poppins font-bold text-[24px] sm:text-[28px] md:text-[32px] leading-[160%] text-[#192B1A] dark:text-[#0fcd1c]   capitalize">
               services we provide
             </h1>
             <div className="flex flex-col items-start gap-6 sm:gap-[53px] w-full">
-              <p className="w-full max-w-[1023px] font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] text-[#192B1A]">
+              <p className="w-full max-w-[1023px] font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb]">
                 We offer a comprehensive range of services in design, programming, marketing, and
                 cybersecurity. We specialize in digital, graphic, fashion, and architectural design,
                 along with programming solutions, digital marketing, and data protection. We also
@@ -91,66 +91,49 @@ const ServicesPage = () => {
 
               {/* Services Grid */}
               <div className="flex flex-col justify-end items-center gap-6 w-full">
-                <div className="flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-[20px] w-full flex-wrap">
-                  {services.slice(0, 3).map((service, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col items-start p-4 sm:p-[18px_16px] gap-[25px] w-full max-w-[376px] h-auto sm:h-[365px] bg-[linear-gradient(158.73deg,#F7FED0_14.01%,#FDFFEF_52.67%)] rounded-[24px]"
-                    >
-                      <Image
-                        src={service.icon}
-                        alt={service.title}
-                        width={163}
-                        height={142}
-                        priority={index === 0}
-                        className="w-auto h-auto"
-                      />
-                      <h3 className="w-full max-w-[344px] font-poppins font-bold text-[20px] sm:text-[24px] md:text-[28px] leading-[160%] text-[#192B1A] capitalize">
-                        {service.title}
-                      </h3>
-                      <p className="w-full max-w-[344px] font-poppins font-medium text-[16px] sm:text-[18px] md:text-[19px] leading-[160%] text-[#192B1A]">
-                        {service.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-[20px] w-full flex-wrap">
-                  {services.slice(3).map((service, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col items-start p-4 sm:p-[18px_16px] gap-[25px] w-full max-w-[376px] h-auto sm:h-[365px] bg-[linear-gradient(158.73deg,#F7FED0_14.01%,#FDFFEF_52.67%)] rounded-[24px]"
-                    >
-                      <Image
-                        src={service.icon}
-                        alt={service.title}
-                        width={154}
-                        height={135}
-                        priority={index === 0}
-                        className="w-auto h-auto"
-                      />
-                      <h3 className="w-full max-w-[344px] font-poppins font-bold text-[20px] sm:text-[24px] md:text-[28px] leading-[160%] text-[#192B1A] capitalize">
-                        {service.title}
-                      </h3>
-                      <p className="w-full max-w-[344px] font-poppins font-medium text-[16px] sm:text-[18px] md:text-[19px] leading-[160%] text-[#192B1A]">
-                        {service.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <Link href="/services/all-services">
-                  <button className="flex flex-row justify-center items-center p-3 sm:p-[12px_14px] gap-[8px] w-[100px] sm:w-[124px] border-2 border-[#192B1A] rounded-[16px]">
-                    <span className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] text-[#0D0D0D]">
-                      see more
-                    </span>
-                  </button>
-                </Link>
-              </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-[20px] w-full">
+    {services.map((service, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-start p-4 sm:p-[18px_16px] gap-[25px] bg-[linear-gradient(158.73deg,#F7FED0_14.01%,#FDFFEF_52.67%)] rounded-[24px]"
+      >
+        <Image
+          src={service.icon}
+          alt={service.title}
+          width={163}
+          height={142}
+          priority={index === 0}
+          className="w-auto h-auto"
+        />
+        <h3 className="font-poppins font-bold text-[20px] sm:text-[24px] md:text-[28px] leading-[160%] text-[#192B1A] capitalize">
+          {service.title}
+        </h3>
+        <p className="font-poppins font-medium text-[16px] sm:text-[18px] md:text-[19px] leading-[160%] text-[#192B1A]">
+          {service.description}
+        </p>
+      </div>
+    ))}
+  </div>
+
+  <Link href="/services/all-services">
+    <button className="flex flex-row justify-center items-center p-3 sm:p-[12px_14px] gap-[8px] w-[140px] sm:w-[160px] border-2 border-[#192B1A] dark:border-[#0fcd1c] rounded-[16px]">
+      <span className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] text-[#0D0D0D] dark:text-[#0fcd1c]">
+        Explore now
+      </span>
+    </button>
+  </Link>
+</div>
+
+
+
+
+
             </div>
           </div>
 
           {/* Professional Team Section */}
-          <div className="flex flex-col items-center p-0 gap-[10px] w-full max-w-[1600px] h-[400px] bg-[#192B1A] z-50">
-            <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-start w-full max-w-[1398px] py-8 sm:py-12 lg:py-16 px-4 sm:px-8">
+          <div className="flex flex-col items-center  md:items-center p-0 gap-[10px] w-screen  h-[screen] sm:h-[400px] md:h-[1150px] lg:h-[400px] bg-[#192B1A] z-50">
+            <div className="flex flex-col  lg:flex-row justify-center lg:justify-between md:items-center lg:items-start w-full max-w-[screen] py-8 sm:py-12 lg:py-16 px-4 sm:px-8">
               {/* Team Image */}
               <div className="flex justify-center items-center relative w-full max-w-[693px] h-auto mb-8 lg:mb-0">
                 <div className="absolute w-[300px] sm:w-[500px] md:w-[650px] lg:w-[731px] h-[300px] sm:h-[500px] md:h-[650px] lg:h-[729px] bg-[#334A34] rounded-full -z-10" />
@@ -159,12 +142,12 @@ const ServicesPage = () => {
                   alt="Professional Team"
                   width={693}
                   height={729}
-                  className="rounded-full z-10 object-cover max-w-full h-auto"
+                  className="rounded-full z-10  object-cover max-w-full h-auto"
                 />
               </div>
 
               {/* Team Content */}
-              <div className="flex flex-col items-start gap-[28px] w-full max-w-[669px] text-center lg:text-left">
+              <div className="flex flex-col items-center md:items-center lg:items-start gap-[28px] w-full max-w-[669px] text-center lg:text-left">
                 <h2 className="font-poppins font-bold text-[24px] sm:text-[28px] md:text-[32px] leading-[160%] text-[#FBFBFB] capitalize">
                   Our Professional Team Delivers Excellence
                 </h2>
@@ -190,52 +173,52 @@ const ServicesPage = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center p-0 w-full max-w-[1356px] mx-auto gap-8 sm:gap-12 lg:gap-0">
           <div className="flex flex-col justify-center items-start p-0 gap-[32px] w-full max-w-[1056px] h-auto px-4 sm:px-8">
             <div className="flex flex-col items-start p-0 gap-[24px] w-full">
-              <h2 className="w-full font-poppins font-bold text-[20px] sm:text-[24px] md:text-[28px] leading-[160%] text-[#192B1A]">
+              <h2 className="w-full font-poppins font-bold text-[20px] sm:text-[24px] md:text-[28px] leading-[160%] text-[#192B1A] dark:text-[#0fcd1c]">
                 Steps to Request a Service:
               </h2>
               <div className="w-full font-poppins text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] flex flex-col gap-6 sm:gap-8">
                 <div>
-                  <h3 className="font-bold text-black">Choose the desired service</h3>
-                  <p className="font-semibold text-black">
+                  <h3 className="font-bold text-black dark:text-[#fbfbfb]">Choose the desired service</h3>
+                  <p className="font-semibold text-black dark:text-[#fbfbfb]">
                     Review our list of services and select the one that best suits your needs.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-black">Fill out the request form</h3>
-                  <p className="font-semibold text-black">
+                  <h3 className="font-bold text-black dark:text-[#fbfbfb]">Fill out the request form</h3>
+                  <p className="font-semibold text-black dark:text-[#fbfbfb]">
                     Complete the service or consultation request form on the website, ensuring all
                     necessary details are provided.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-black">Connect with our team</h3>
-                  <p className="font-semibold text-black">
+                  <h3 className="font-bold text-black dark:text-[#fbfbfb]">Connect with our team</h3>
+                  <p className="font-semibold text-black dark:text-[#fbfbfb]">
                     Once we receive your request, one of our team members will reach out to clarify
                     service details and schedule a consultation if needed.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-black">Receive a customized offer</h3>
-                  <p className="font-semibold text-black">
+                  <h3 className="font-bold text-black dark:text-[#fbfbfb]">Receive a customized offer</h3>
+                  <p className="font-semibold text-black dark:text-[#fbfbfb]">
                     Based on your requirements, a tailored offer will be provided, including all
                     details related to the chosen service.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-black">Start working with the team</h3>
-                  <p className="font-semibold text-black">
+                  <h3 className="font-bold text-black dark:text-[#fbfbfb]">Start working with the team</h3>
+                  <p className="font-semibold text-black dark:text-[#fbfbfb]">
                     After approving the offer, our team will begin working on delivering the
                     requested service efficiently and professionally.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-black">Delivery and follow-up</h3>
-                  <p className="font-semibold text-black">
+                  <h3 className="font-bold text-black dark:text-[#fbfbfb]">Delivery and follow-up</h3>
+                  <p className="font-semibold text-black dark:text-[#fbfbfb]">
                     Once the service is completed, we will deliver the work to you and follow up to
                     ensure your complete satisfaction.
                   </p>
@@ -243,8 +226,8 @@ const ServicesPage = () => {
               </div>
             </div>
             <Link href="/contact">
-              <button className="flex flex-row justify-center items-center p-3 sm:p-[16px] gap-[8px] w-[180px] sm:w-[220px] md:w-[265px] h-auto border-2 border-[#0D0D0D] rounded-[16px] mt-4">
-                <span className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[22px] leading-[160%] text-[#192B1A]">
+              <button className="flex flex-row justify-center items-center p-3 sm:p-[16px] gap-[8px] w-[220px] sm:w-[220px] md:w-[265px] h-auto border-2 border-[#0D0D0D] dark:border-[#0fcd1c] rounded-[16px] mt-4">
+                <span className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[22px] leading-[160%] text-[#192B1A] dark:text-[#0fcd1c]">
                   submit request form
                 </span>
               </button>

@@ -26,10 +26,10 @@ const InvestmentOpportunities = () => {
   ];
 
   return (
-    <main className="flex flex-col items-start w-full min-h-screen">
+    <main className="flex flex-col items-start w-full min-h-screen dark:bg-[#0e1b0f] ">
       {/* Title Section */}
       <div className="w-full mt-[64px] mb-[69px]">
-        <h1 className="font-poppins font-bold text-[28px] leading-[160%] text-center text-[#2C3C2D]">
+        <h1 className="font-poppins font-bold text-[28px] leading-[160%] text-center text-[#2C3C2D] dark:text-[#0fcd1c]">
           Explore Investment Opportunities
         </h1>
       </div>
@@ -48,10 +48,10 @@ const InvestmentOpportunities = () => {
                   {project.title}
                 </h2>
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171] dark:text-[#0fcd1c]">
                     description
                   </span>
-                  <p className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]">
+                  <p className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb]">
                     {project.description}
                   </p>
                 </div>
@@ -67,37 +67,37 @@ const InvestmentOpportunities = () => {
               {/* Left Column */}
               <div className="flex flex-col gap-10 w-full lg:w-[524px]">
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171] dark:text-[#0fcd1c]">
                     Number of Shares Available for Investment
                   </span>
-                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]">
+                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]  dark:text-[#fbfbfb]">
                     {project.details.availableShares}
                   </span>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171] dark:text-[#0fcd1c]">
                     The Minimum Number of Shares That Can Be Purchased
                   </span>
-                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]">
+                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb]">
                     {project.details.minShares}
                   </span>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171] dark:text-[#0fcd1c]">
                     Price of Shares Available for Investment
                   </span>
-                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]">
+                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb]">
                     {project.details.totalPrice}
                   </span>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171] dark:text-[#0fcd1c]">
                     Number of Current Investors
                   </span>
-                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]">
+                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb]">
                     {project.details.currentInvestors}
                   </span>
                 </div>
@@ -106,37 +106,37 @@ const InvestmentOpportunities = () => {
               {/* Right Column */}
               <div className="flex flex-col gap-[52px] w-full lg:w-[516px]">
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171] dark:text-[#0fcd1c]">
                     Share Price
                   </span>
-                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]">
+                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb]">
                     {project.details.sharePrice}
                   </span>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171] dark:text-[#0fcd1c]">
                     The Maximum Number of Shares That Can Be Purchased
                   </span>
-                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]">
+                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb]">
                     {project.details.maxShares}
                   </span>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171] dark:text-[#0fcd1c]">
                     Value of the Portion Offered for Investment
                   </span>
-                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]">
+                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb]">
                     {project.details.projectValue}
                   </span>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[22px] leading-[160%] text-[#717171] dark:text-[#0fcd1c]">
                     Number of Shares Remaining for Investment
                   </span>
-                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A]">
+                  <span className="font-poppins font-semibold text-[20px] leading-[160%] text-[#192B1A] dark:text-[#fbfbfb]">
                     {project.details.remainingShares}
                   </span>
                 </div>
@@ -146,9 +146,9 @@ const InvestmentOpportunities = () => {
             <div className="w-full flex justify-center mt-8">
               <button
                 onClick={() => router.push(`/investment/${index + 1}`)}
-                className="flex justify-center items-center w-[157px] h-[67px] bg-[#2C3C2D] border-2 border-[#2C3C2D] rounded-[16px]"
+                className="flex justify-center items-center w-[157px] h-[67px]  border-2 border-[#2C3C2D] dark:border-[#0fcd1c] rounded-[16px]"
               >
-                <span className="font-poppins font-bold text-[22px] leading-[160%] text-[#FBFBFB]">
+                <span className="font-poppins font-bold text-[22px] leading-[160%] text-[#FBFBFB] dark:text-[#0fcd1c]">
                   Invest Now
                 </span>
               </button>

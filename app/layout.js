@@ -43,17 +43,21 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen w-full overflow-x-hidden transition-colors duration-300 dark:bg-[#1a1a1a] dark:text-white">
         <ReduxProvider>
           <AuthProvider>
-            <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
+            <div className="flex flex-col min-h-screen w-full">
               {showHeaderFooter && (
-                <>
+                <div className="flex-none">
                   <Header />
                   {!hideSubHeader && <SubHeader />}
-                </>
+                </div>
               )}
-              <main className="flex-grow w-full overflow-x-hidden dark:bg-[#1a1a1a]">
+              <main className="flex-grow w-full dark:bg-[#1a1a1a]">
                 {children}
               </main>
-              {showHeaderFooter && <Footer />}
+              {showHeaderFooter && (
+                <div className="flex-none mt-auto  dark:bg-[#0e1b0f]">
+                  <Footer />
+                </div>
+              )}
             </div>
           </AuthProvider>
         </ReduxProvider>

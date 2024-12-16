@@ -11,7 +11,8 @@ const InvestmentPage = () => {
   };
 
   return (
-    <main className="w-full min-h-screen">
+    <main className="w-full min-h-screen dark:bg-[#0e1b0f]
+">
       {/* Hero Section from Products Page */}
       <section
         className="relative h-[700px] w-full bg-[url('/images/investment-bg.svg')] bg-cover bg-center flex items-center justify-center 
@@ -47,10 +48,10 @@ const InvestmentPage = () => {
           <div className="flex flex-col lg:flex-row items-center gap-[56px] w-full max-w-[1228px]">
             <div className="flex flex-col items-start gap-[40px] w-full lg:w-[693px]">
               <div className="flex flex-col items-start gap-[16px] w-full">
-                <h2 className="font-poppins font-bold text-[40px] leading-[160%] text-[#2C3C2D] w-full">
+                <h2 className="font-poppins font-bold text-[40px] leading-[160%] text-[#2C3C2D] dark:text-[#0fcd1c]  w-full">
                   Why Invest With Us
                 </h2>
-                <p className="font-poppins font-medium text-[22px] leading-[190%] text-[#2C3C2D]">
+                <p className="font-poppins font-medium text-[22px] leading-[190%] text-[#2C3C2D] dark:text-[#fbfbfb]">
                   Diverse Opportunities: We offer innovative projects in promising sectors like
                   technology, energy, and real estate.
                   <br />
@@ -73,9 +74,9 @@ const InvestmentPage = () => {
               </div>
               <button
                 onClick={handleExploreClick}
-                className="flex justify-center items-center px-4 py-[16px] gap-2 w-[335px] h-[67px] bg-[#2C3C2D] border-2 border-[#2C3C2D] rounded-[16px]"
+                className="flex justify-center items-center px-4 py-[16px] gap-2 w-[335px] h-[67px]  border-2 border-[#2C3C2D] dark:border-[#0fcd1c] rounded-[16px]"
               >
-                <span className="font-poppins font-bold text-[22px] leading-[160%] text-white">
+                <span className="font-poppins font-bold text-[22px] leading-[160%] text-white dark:text-[#0fcd1c]">
                   Start Your Investment Now
                 </span>
               </button>
@@ -104,10 +105,10 @@ const InvestmentPage = () => {
             </div>
             <div className="flex flex-col items-start gap-[40px] w-full lg:w-[715px]">
               <div className="flex flex-col items-start gap-[16px] w-full">
-                <h2 className="font-poppins font-bold text-[40px] leading-[160%] text-[#2C3C2D] w-full">
+                <h2 className="font-poppins font-bold text-[40px] leading-[160%] text-[#2C3C2D] dark:text-[#0fcd1c] w-full">
                   Invest in Fields That Inspire You
                 </h2>
-                <p className="font-poppins font-medium text-[22px] leading-[190%] text-[#2C3C2D]">
+                <p className="font-poppins font-medium text-[22px] leading-[190%] text-[#2C3C2D] dark:text-[#fbfbfb]">
                   Technology: Innovative projects in artificial intelligence and future
                   technologies.
                   <br />
@@ -128,9 +129,9 @@ const InvestmentPage = () => {
               </div>
               <button
                 onClick={handleExploreClick}
-                className="flex justify-center items-center px-4 py-[16px] gap-2 w-[212px] h-[67px] bg-[#2C3C2D] border-2 border-[#2C3C2D] rounded-[16px]"
+                className="flex justify-center items-center px-4 py-[16px] gap-2 w-[212px] h-[67px] border-2 border-[#2C3C2D] dark:border-[#0fcd1c] rounded-[16px]"
               >
-                <span className="font-poppins font-bold text-[22px] leading-[160%] text-[#FBFBFB]">
+                <span className="font-poppins font-bold text-[22px] leading-[160%] text-[#FBFBFB] dark:text-[#0fcd1c]">
                   Explore Projects
                 </span>
               </button>

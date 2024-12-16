@@ -88,7 +88,7 @@ const AllServices = () => {
       : services.filter((service) => service.category === selectedCategory);
 
   return (
-    <main className="relative w-full max-w-[full] mx-auto">
+    <main className="relative w-full max-w-[full] mx-auto dark:bg-[#0e1b0f]">
       {/* Hero Section */}
       <div className="relative h-[60vh] sm:h-[70vh] md:h-screen w-full overflow-hidden">
         {/* Background Image */}
@@ -104,7 +104,7 @@ const AllServices = () => {
         {/* Overlay Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
           <div className="p-4 sm:p-8 flex flex-col w-full max-w-[976px] h-auto justify-center items-center rounded-xl">
-            <h1 className="text-[24px] sm:text-[32px] md:text-[40px] font-bold text-[#2C3C2D] mb-4 sm:mb-6 md:text-nowrap ">
+            <h1 className="text-[24px] sm:text-[32px] md:text-[32px] font-bold text-[#2C3C2D] mb-4 sm:mb-6 md:text-nowrap ">
               A Diverse Journey of Creativity and Achievement
             </h1>
             <p className="text-[16px] sm:text-[18px] md:text-[22px] w-full max-w-[885px] text-center text-[#2C3C2D] mb-6 sm:mb-8 font-regular">
@@ -122,11 +122,11 @@ const AllServices = () => {
       <div className="flex flex-col items-center py-10 sm:py-16 w-full px-4 sm:px-8">
         {/* Title with Filter */}
         <div className="relative flex justify-center w-full mb-10 sm:mb-16">
-          <h2 className="font-poppins font-bold text-[22px] sm:text-[24px] md:text-[28px] text-[#2C3C2D]">
+          <h2 className="font-poppins font-bold text-[22px] sm:text-[24px] md:text-[28px] text-[#2C3C2D] dark:text-[#0fcd1c]">
             The Creativity and Diversity Showcase
           </h2>
           <div
-            className="absolute left-2 sm:left-9 -top-4 w-[50px] sm:w-[74px] h-[50px] sm:h-[74px] bg-[#FBFBFB] border border-[#11A900] rounded-[16px] flex items-center justify-center cursor-pointer"
+            className="absolute left-2 sm:left-9 top-20 md:-top-4 w-[50px] sm:w-[74px] h-[50px] sm:h-[74px] bg-[#FBFBFB] border border-[#11A900] rounded-[16px] flex items-center justify-center cursor-pointer"
             onClick={() => setIsFilterOpen(!isFilterOpen)}
           >
             <Image
@@ -175,28 +175,28 @@ const AllServices = () => {
                   {service.title}
                 </h3>
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[18px] sm:text-[20px] md:text-[22px] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[18px] sm:text-[20px] md:text-[22px] text-[#717171] dark:text-[#0fcd1c]">
                     description
                   </span>
-                  <p className="font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] text-[#192B1A]">
+                  <p className="font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] text-[#192B1A] dark:text-[#fbfbfb]">
                     {service.description}
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="font-poppins font-semibold text-[18px] sm:text-[20px] md:text-[22px] text-[#717171]">
+                  <span className="font-poppins font-semibold text-[18px] sm:text-[20px] md:text-[22px] text-[#717171] dark:text-[#0fcd1c]">
                     Working Hours
                   </span>
-                  <p className="font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] text-[#192B1A]">
+                  <p className="font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] text-[#192B1A] dark:text-[#fbfbfb]">
                     {service.workingHours}
                   </p>
                 </div>
 
                 <div className="w-full flex justify-between">
                   <div className="flex flex-col gap-2">
-                    <span className="font-poppins font-semibold text-[18px] sm:text-[20px] md:text-[22px] text-[#717171]">
+                    <span className="font-poppins font-semibold text-[18px] sm:text-[20px] md:text-[22px] text-[#717171] dark:text-[#0fcd1c]">
                       Category
                     </span>
-                    <p className="font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] text-[#192B1A]">
+                    <p className="font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] text-[#192B1A] dark:text-[#fbfbfb]">
                       {service.category}
                     </p>
                   </div>
@@ -206,9 +206,9 @@ const AllServices = () => {
                         `/services/request?category=${encodeURIComponent(service.category)}&service=${encodeURIComponent(service.title)}`
                       )
                     }
-                    className="flex flex-row justify-center items-center p-3 sm:p-[12px_14px] gap-[8px] w-[150px] sm:w-[160px] border-2 border-[#192B1A] rounded-[16px]"
+                    className="flex flex-row justify-center items-center p-3 sm:p-[12px_14px] gap-[8px] w-[150px] sm:w-[160px] border-2 border-[#192B1A] dark:border-[#0fcd1c] rounded-[16px]"
                   >
-                    <span className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] text-[#0D0D0D]">
+                    <span className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[20px] leading-[160%] text-[#0D0D0D] dark:text-[#0fcd1c]">
                       Start Service
                     </span>
                   </button>
@@ -247,8 +247,8 @@ const AllServices = () => {
         {/* Bottom Section */}
         <div className="flex flex-col items-center p-0 gap-[32px] w-full max-w-[631px] h-auto pt-10 px-4">
           {/* Request Service Button */}
-          <div className="box-border flex flex-row justify-center items-center p-[16px] gap-[8px] w-[160px] sm:w-[200px] md:w-[226px] h-[50px] sm:h-[67px] border-2 border-[#2C3C2D] rounded-[16px]">
-            <div className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[22px] leading-[160%] text-[#0D0D0D] flex-none">
+          <div className="box-border flex flex-row justify-center items-center p-[16px] gap-[8px] w-[160px] sm:w-[200px] md:w-[226px] h-[50px] sm:h-[67px] border-2 border-[#2C3C2D] dark:border-[#0fcd1c] rounded-[16px]">
+            <div className="font-poppins font-bold text-[16px] sm:text-[18px] md:text-[22px] leading-[160%] text-[#0D0D0D] dark:text-[#0fcd1c] flex-none">
               REQUEST SERVICE
             </div>
           </div>

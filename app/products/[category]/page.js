@@ -63,7 +63,8 @@ const CategoryContent = ({ items }) => {
     <div className="relative w-full max-w-[1798px] mx-auto py-10 sm:py-[80px] flex flex-col gap-8 sm:gap-[68px] px-4 sm:px-[40px] md:px-[80px]">
       {items.map((item, index) => (
         <div key={index} className="flex flex-col items-start gap-4 w-full">
-          <h2 className="font-poppins font-bold text-xl sm:text-2xl md:text-[28px] leading-[160%] text-[#192B1A] w-full">
+          <h2 className="font-poppins font-bold text-xl sm:text-2xl md:text-[28px] leading-[160%] text-[#192B1A] dark:text-[#0fcd1c]
+ w-full">
             {item.title}
           </h2>
 
@@ -222,7 +223,8 @@ export default function CategoryPage() {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full dark:bg-[#0e1b0f]
+">
       <CategoryHero
         title={data.title}
         description={data.description}
